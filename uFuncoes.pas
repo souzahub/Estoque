@@ -3,8 +3,8 @@ unit uFuncoes;
 interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms, Dialogs,
-  ComCtrls, ExtCtrls, DBCtrls, Grids, DBGrids, Buttons, Shapes, StdCtrls,
-  CurnEdit, LblEffct, Db, DBTables, Menus, Mask, Printers, WinProcs, OutLine, IniFiles, MaskUtils,jpeg;
+  ComCtrls, ExtCtrls, DBCtrls, Grids, DBGrids, Buttons, StdCtrls,
+   Db, Menus, Mask, Printers, WinProcs, OutLine, IniFiles, MaskUtils,jpeg;
 
 
 
