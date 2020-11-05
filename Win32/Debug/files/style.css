@@ -182,11 +182,11 @@
     background-color: #000000!important;
 }
       
-/* Chama a fonte para o projeto pelo servidor 
+/* Chama a fonte para o projeto pelo servidor */
 @font-face{
 font-family: "Yu Gothic UI";  
-src: url('files/font/YuGothR.ttc') format('truetype'); 
-}    */
+src: url('/files/font/yugothib.ttf') format('truetype'); 
+}    
        
 /* Retirar linha embaixo dos botoes */
 .x-btn:hover, a:hover {
@@ -275,6 +275,17 @@ text-decoration: none !important;
     font-weight: bold !important;
     margin: 5px 0 !important;
 } 
+/* cor do texto / tamanho */
+.x-treelist-item-text {
+    color: #000000
+    ;
+    margin-left: 25px;
+    margin-right: 18px;
+    font-size: 12px;
+    line-height: 32px;
+    font-weight: bolder;
+    text-overflow: ellipsis;
+}
 
 /* Espaço interno do Header do Grid */
 .x-column-header-inner {
@@ -308,6 +319,7 @@ text-decoration: none !important;
     border-radius: 2px !important;  /* arredonda as latertais - opcional */
 }
 
+
 /* Cor lado esquerdo do menu*/  
 .x-treelist-nav .x-treelist-item-selected > .x-treelist-row:before {
     background-color: #007bff;
@@ -322,6 +334,49 @@ text-decoration: none !important;
     background: #1b5bd39d;
 }
 
+/* edita menu de seleção */
+.x-treelist-nav {
+    background-color: #b9d1ea !important;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+} 
+.x-treelist-item-selected  {
+    background-color: #b9d1ea !important;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 1px;
+}
+.x-treelist-row {
+    background-color: #b9d1ea !important;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+
+
+/* Cor DO INCONE MENU LATERAL */
+.x-treelist-nav .x-treelist-item-icon, .x-treelist-nav .x-treelist-item-tool {
+    color: #000000!important;
+}
+.x-treelist-row-over > * > .x-treelist-item-expander {
+    color: #000000;
+    transition: color 0.5s;
+}
+.x-treelist-row-over > * > .x-treelist-item-icon {
+    color: #000000;
+    transition: color 0.5s;
+}
+
+.x-treelist-item-expander {
+    color: #000000;
+    font-size: 16px;
+    width: 18px;
+}
+
+.x-treelist-item-icon, .x-treelist-item-tool {
+    color: #2d2d36;
+    font-size: 16px;
+    width: 16px;
+}
 
 
 

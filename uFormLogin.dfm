@@ -499,8 +499,8 @@ object formLogin: TformLogin
     Transparent = True
   end
   object UniLabel5: TUniLabel
-    Left = 11
-    Top = 6
+    Left = 28
+    Top = 8
     Width = 51
     Height = 28
     Hint = ''

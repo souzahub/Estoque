@@ -7,7 +7,7 @@ object dmDados: TdmDados
     Compression = True
     CriptOptions.Use = False
     CriptOptions.Key = 'RDWBASEKEY256'
-    MyIP = '177.223.6.120'
+    MyIP = '177.223.6.10'
     Login = 'admin'
     Password = 'tifri2020'
     Proxy = False
@@ -113,7 +113,7 @@ object dmDados: TdmDados
     end
   end
   object RDWEntrada: TRESTDWClientSQL
-    Active = True
+    Active = False
     Filtered = False
     FieldDefs = <>
     IndexDefs = <>
@@ -671,7 +671,7 @@ object dmDados: TdmDados
     RaiseErrors = True
     ActionCursor = crSQLWait
     ReflectChanges = False
-    Left = 568
+    Left = 576
     Top = 520
     object IntegerField10: TIntegerField
       FieldName = 'ID'

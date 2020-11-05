@@ -20,7 +20,7 @@ object frCadastroFornec: TfrCadastroFornec
       Width = 1048
       Height = 556
       Hint = ''
-      ActivePage = Tab1
+      ActivePage = Tab2
       Align = alClient
       TabOrder = 1
       object Tab1: TUniTabSheet
@@ -115,7 +115,7 @@ object frCadastroFornec: TfrCadastroFornec
             Caption = 'Nome'
             ParentFont = False
             Font.Style = [fsBold]
-            TabOrder = 2
+            TabOrder = 10
           end
           object edCnpj: TUniEdit
             Left = 442
@@ -124,7 +124,7 @@ object frCadastroFornec: TfrCadastroFornec
             Hint = ''
             MaxLength = 14
             Text = 'edCnpj'
-            TabOrder = 3
+            TabOrder = 2
             ClientEvents.ExtEvents.Strings = (
               
                 'afterrender=function afterrender(sender, eOpts)'#13#10'{'#13#10'  Ext.create' +
@@ -146,7 +146,7 @@ object frCadastroFornec: TfrCadastroFornec
             Caption = 'Cnpj'
             ParentFont = False
             Font.Style = [fsBold]
-            TabOrder = 4
+            TabOrder = 11
           end
           object edFone: TUniEdit
             Left = 440
@@ -170,7 +170,7 @@ object frCadastroFornec: TfrCadastroFornec
             Caption = 'Telefone'
             ParentFont = False
             Font.Style = [fsBold]
-            TabOrder = 6
+            TabOrder = 12
           end
           object edCep: TUniEdit
             Left = 299
@@ -178,7 +178,7 @@ object frCadastroFornec: TfrCadastroFornec
             Width = 110
             Hint = ''
             Text = 'edCep'
-            TabOrder = 7
+            TabOrder = 13
             InputMask.Mask = '99.999-999'
             InputMask.UnmaskText = True
           end
@@ -191,7 +191,7 @@ object frCadastroFornec: TfrCadastroFornec
             Caption = 'CEP'
             ParentFont = False
             Font.Style = [fsBold]
-            TabOrder = 8
+            TabOrder = 14
           end
           object edUf: TUniEdit
             Left = 250
@@ -200,7 +200,7 @@ object frCadastroFornec: TfrCadastroFornec
             Hint = ''
             CharCase = ecUpperCase
             Text = 'UEDITUF'
-            TabOrder = 9
+            TabOrder = 4
             InputMask.Mask = 'aa'
             InputMask.MaskChar = ' '
             InputMask.UnmaskText = True
@@ -214,7 +214,7 @@ object frCadastroFornec: TfrCadastroFornec
             Caption = 'UF'
             ParentFont = False
             Font.Style = [fsBold]
-            TabOrder = 10
+            TabOrder = 15
           end
           object edCidade: TUniEdit
             Left = 41
@@ -224,7 +224,7 @@ object frCadastroFornec: TfrCadastroFornec
             CharCase = ecUpperCase
             MaxLength = 30
             Text = 'UEDITCIDADE'
-            TabOrder = 11
+            TabOrder = 3
           end
           object lbCidade: TUniLabel
             Left = 41
@@ -235,7 +235,7 @@ object frCadastroFornec: TfrCadastroFornec
             Caption = 'Cidade'
             ParentFont = False
             Font.Style = [fsBold]
-            TabOrder = 12
+            TabOrder = 16
           end
           object lbEndereco: TUniLabel
             Left = 42
@@ -246,7 +246,7 @@ object frCadastroFornec: TfrCadastroFornec
             Caption = 'Endere'#231'o'
             ParentFont = False
             Font.Style = [fsBold]
-            TabOrder = 13
+            TabOrder = 9
           end
           object edEndereco: TUniEdit
             Left = 41
@@ -257,7 +257,7 @@ object frCadastroFornec: TfrCadastroFornec
             CharCase = ecUpperCase
             MaxLength = 40
             Text = 'UNIEDIT1'
-            TabOrder = 14
+            TabOrder = 6
           end
           object edBairro: TUniEdit
             Left = 440
@@ -267,7 +267,7 @@ object frCadastroFornec: TfrCadastroFornec
             CharCase = ecUpperCase
             MaxLength = 30
             Text = 'UNIEDIT1'
-            TabOrder = 15
+            TabOrder = 7
           end
           object lbBairro: TUniLabel
             Left = 440
@@ -278,7 +278,7 @@ object frCadastroFornec: TfrCadastroFornec
             Caption = 'Bairro'
             ParentFont = False
             Font.Style = [fsBold]
-            TabOrder = 16
+            TabOrder = 17
           end
           object edEmail: TUniEdit
             Left = 41
@@ -288,7 +288,7 @@ object frCadastroFornec: TfrCadastroFornec
             CharCase = ecLowerCase
             MaxLength = 30
             Text = 'uniedit1'
-            TabOrder = 17
+            TabOrder = 8
           end
           object lbEmail: TUniLabel
             Left = 41

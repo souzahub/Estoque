@@ -821,10 +821,9 @@ object MainForm: TMainForm
     Hint = ''
     Margins.Top = 10
     ParentColor = False
-    Color = clNone
+    Color = clWhite
     Align = alLeft
     TabOrder = 3
-    LayoutConfig.Cls = 'color1'
     object imgUser: TUniImage
       AlignWithMargins = True
       Left = 0
@@ -1358,7 +1357,8 @@ object MainForm: TMainForm
       ScreenMask.Message = 'Carregando...'
       ScreenMask.Color = clWindow
       SourceMenu = UniMenuItems1
-      Color = clWhite
+      Color = clGradientActiveCaption
+      NavUI = False
       ExpanderOnly = False
     end
     object lbOla: TUniLabel
@@ -1376,7 +1376,7 @@ object MainForm: TMainForm
       Caption = 'usuario'
       Align = alTop
       ParentFont = False
-      Font.Color = clWhite
+      Font.Color = clBlack
       Font.Height = -13
       Font.Name = 'Yu Gothic UI'
       Font.Style = [fsBold]

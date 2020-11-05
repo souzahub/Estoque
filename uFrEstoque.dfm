@@ -26,9 +26,6 @@ object frEstoque: TfrEstoque
       object Tab1: TUniTabSheet
         Hint = ''
         Caption = 'Consulta'
-        DesignSize = (
-          1088
-          561)
         object UniDBGrid1: TUniDBGrid
           AlignWithMargins = True
           Left = 5
@@ -117,38 +114,14 @@ object frEstoque: TfrEstoque
               Width = 151
             end>
         end
-        object UniFSButton1: TUniFSButton
-          AlignWithMargins = True
-          Left = 1026
-          Top = 495
-          Width = 40
-          Height = 42
-          Hint = ''
-          StyleButton = Transparent
-          CaptionIconFont = '<i class="fas fa-angle-up"></i>'
-          BadgeText.Text = '0'
-          BadgeText.TextColor = '#FFFFFF'
-          BadgeText.TextSize = 10
-          BadgeText.TextStyle = 'bold'
-          BadgeText.BackgroundColor = '#D50000'
-          Caption = ''
-          Anchors = [akRight, akBottom]
-          ParentFont = False
-          Font.Color = clBlack
-          Font.Height = -20
-          Font.Style = [fsBold]
-          TabOrder = 1
-          ScreenMask.ShowMessage = False
-          OnClick = UniFSButton1Click
-        end
         object pnInfo: TUniPanel
-          Left = 370
-          Top = 144
+          Left = 0
+          Top = 48
           Width = 310
           Height = 193
           Hint = ''
           Visible = False
-          TabOrder = 2
+          TabOrder = 1
           Caption = ''
           Color = clSkyBlue
           object UniPanel2: TUniPanel
@@ -164,8 +137,6 @@ object frEstoque: TfrEstoque
             Font.Style = [fsBold]
             TabOrder = 1
             Caption = 'Detalhes do Produto'
-            ExplicitLeft = 5
-            ExplicitTop = 3
             object UniFSButton2: TUniFSButton
               Left = 271
               Top = 1
@@ -188,8 +159,6 @@ object frEstoque: TfrEstoque
               TabOrder = 1
               ScreenMask.ShowMessage = False
               OnClick = UniFSButton2Click
-              ExplicitLeft = 192
-              ExplicitHeight = 31
             end
           end
           object UniPanel3: TUniPanel
@@ -275,8 +244,6 @@ object frEstoque: TfrEstoque
           '('#39'Ext.tip.ToolTip'#39', {'#13#10'   target: sender.getEl(),'#13#10'   showDelay:' +
           '50,'#13#10'   hideDelay: 50,'#13#10'   html: "Exportar Html &nbsp"'#13#10'  });'#13#10'}')
       OnClick = sbExportHtmlClick
-      ExplicitLeft = 480
-      ExplicitTop = 25
     end
     object sbExportExcel: TUniFSButton
       AlignWithMargins = True
@@ -308,7 +275,6 @@ object frEstoque: TfrEstoque
           '50,'#13#10'   hideDelay: 50,'#13#10'   html: "Exportar Excel &nbsp"'#13#10'  });'#13#10 +
           '}')
       OnClick = sbExportExcelClick
-      ExplicitLeft = 711
     end
     object EdPesquisar: TUniEdit
       AlignWithMargins = True
@@ -337,7 +303,6 @@ object frEstoque: TfrEstoque
       FieldLabelFont.Height = -19
       FieldLabelFont.Style = [fsBold]
       OnChange = EdPesquisarChange
-      ExplicitLeft = 3
     end
   end
   object dsEstoque: TDataSource

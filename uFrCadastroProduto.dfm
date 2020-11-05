@@ -114,8 +114,10 @@ object frCadastroProduto: TfrCadastroProduto
               ParentShowHint = False
               Text = 'dbCbGrupos'
               TabOrder = 2
+              ReadOnly = True
               AnyMatch = True
               IconItems = <>
+              ReadOnlyMode = urmNotEditable
               Value = '0'
             end
             object UniLabel6: TUniLabel
@@ -278,13 +280,13 @@ object frCadastroProduto: TfrCadastroProduto
     end
     object EdPesquisar: TUniEdit
       AlignWithMargins = True
-      Left = 731
+      Left = 741
       Top = 5
       Width = 299
       Height = 35
       Hint = ''
       Margins.Top = 5
-      Margins.Right = 20
+      Margins.Right = 10
       Margins.Bottom = 2
       ParentShowHint = False
       CharCase = ecUpperCase
@@ -303,6 +305,7 @@ object frCadastroProduto: TfrCadastroProduto
       FieldLabelFont.Height = -19
       FieldLabelFont.Style = [fsBold]
       OnChange = EdPesquisarChange
+      ExplicitLeft = 731
     end
     object BtCan: TUniFSButton
       AlignWithMargins = True

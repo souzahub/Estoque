@@ -1,14 +1,14 @@
 object frEntrada: TfrEntrada
   Left = 0
   Top = 0
-  Width = 1233
+  Width = 1076
   Height = 630
   OnCreate = UniFrameCreate
   TabOrder = 0
   object PnUsuario: TUniPanel
     Left = 0
     Top = 42
-    Width = 1233
+    Width = 1076
     Height = 588
     Hint = ''
     Align = alClient
@@ -17,7 +17,7 @@ object frEntrada: TfrEntrada
     object PageCadastro: TUniPageControl
       Left = 1
       Top = 1
-      Width = 1231
+      Width = 1074
       Height = 586
       Hint = ''
       ActivePage = Tab1
@@ -30,7 +30,7 @@ object frEntrada: TfrEntrada
           AlignWithMargins = True
           Left = 5
           Top = 5
-          Width = 1213
+          Width = 1056
           Height = 548
           Hint = ''
           Margins.Left = 5
@@ -111,7 +111,7 @@ object frEntrada: TfrEntrada
         object UniScrollBox2: TUniScrollBox
           Left = 0
           Top = 0
-          Width = 1223
+          Width = 1066
           Height = 558
           Hint = ''
           Align = alClient
@@ -121,7 +121,7 @@ object frEntrada: TfrEntrada
             AlignWithMargins = True
             Left = 3
             Top = 3
-            Width = 1215
+            Width = 1058
             Height = 550
             Hint = ''
             AutoScroll = True
@@ -131,7 +131,7 @@ object frEntrada: TfrEntrada
             Color = clNone
             LayoutConfig.Cls = 'cor1'
             ScrollHeight = 582
-            ScrollWidth = 1215
+            ScrollWidth = 1058
             object edDataEntrada: TUniDateTimePicker
               Left = 32
               Top = 39
@@ -483,7 +483,7 @@ object frEntrada: TfrEntrada
   object UniPanel2: TUniPanel
     Left = 0
     Top = 0
-    Width = 1233
+    Width = 1076
     Height = 42
     Hint = ''
     Align = alTop
@@ -507,13 +507,13 @@ object frEntrada: TfrEntrada
     end
     object EdPesquisar: TUniEdit
       AlignWithMargins = True
-      Left = 914
+      Left = 767
       Top = 5
       Width = 299
       Height = 35
       Hint = ''
       Margins.Top = 5
-      Margins.Right = 20
+      Margins.Right = 10
       Margins.Bottom = 2
       ParentShowHint = False
       CharCase = ecUpperCase
@@ -600,6 +600,8 @@ object frEntrada: TfrEntrada
       Margins.Top = 6
       Margins.Right = 4
       Margins.Bottom = 6
+      Enabled = False
+      Visible = False
       StyleButton = GoogleBlue3Round
       BadgeText.Text = '0'
       BadgeText.TextColor = '#FFFFFF'

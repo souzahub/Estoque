@@ -303,3 +303,11 @@ EstoqueTi.exe: 000017C8: 17:03:07 [TUniGUISessionManager]:Session manager termin
 EstoqueTi.exe: 000017C8: 17:03:07 [TUniServerModule]:Server Shutdown Completed.
 EstoqueTi.exe: 000017C8: 17:03:07 []:<-------------------------------------------------------------->
 EstoqueTi.exe: 000017C8: 17:03:07 [Terminated]:Exit Code: 0
+EstoqueTi.exe: 00003050: 17:16:13 []:>--------------------------------------------------------------<
+EstoqueTi.exe: 00003050: 17:16:13 [TUniServerModule]:Server First Init.
+EstoqueTi.exe: 00003050: 17:16:13 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+EstoqueTi.exe: 00003050: 17:16:13 [TUniServerModule]:HTTP Server Started on Port: 8050
+EstoqueTi.exe: 00004194: 17:16:19 [127.0.0.1]:EUniSessionException : Sessão inválida ou tempo limite da sessão. (Session not found: tBNHFYTzOI10717DCD3 ) : Addr: $007D0BAE
+EstoqueTi.exe: 0000757C: 17:16:19 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+EstoqueTi.exe: 00007918: 17:16:20 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+EstoqueTi.exe: 00003B90: 17:16:28 [HandleFileRequest[127.0.0.1]]:File not found: D:\Projetos\2020\WebEstoqueTI-8050\Win32\Debug\favicon.ico

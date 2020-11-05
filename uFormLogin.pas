@@ -126,7 +126,7 @@ begin
       MainForm.lbNomeUsuario.Caption := dmDados.RDWUsuarioNOME.Value;
 
       // registra o log de entrada
-//      MainForm.RegistraLog('LOGIN', 'LOGOU NO SISTEMA');
+      MainForm.RegistraLog('LOGIN', 'LOGOU NO SISTEMA');
 
       MainForm.vADMIN := False;
       if dmDados.rdwUsuarioPERFIL.Value = 'ADMINISTRADOR' then

@@ -104,7 +104,7 @@ begin
   dmDados.RDWEntrada.SQL.Add('select * from ENTRADA  where');
   dmDados.RDWEntrada.SQL.Add('(NPRODUTO LIKE  '+QuotedStr('%'+EdPesquisar.Text+'%') );
   dmDados.RDWEntrada.SQL.Add('or CPRODUTO LIKE  '+QuotedStr('%'+EdPesquisar.Text+'%') );
-  dmDados.RDWEntrada.SQL.Add(')order by NPRODUTO ');
+  dmDados.RDWEntrada.SQL.Add(')order by ID desc ');
   dmDados.RDWEntrada.Open;
 
 end;

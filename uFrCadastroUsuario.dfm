@@ -191,8 +191,10 @@ object frCadastroUsuario: TfrCadastroUsuario
               'ADMINISTRADOR'
               'USU'#193'RIO')
             TabOrder = 1
+            ReadOnly = True
             CharCase = ecUpperCase
             IconItems = <>
+            ReadOnlyMode = urmNotEditable
           end
           object UniSenha: TUniFSEdit
             Left = 42
@@ -277,13 +279,13 @@ object frCadastroUsuario: TfrCadastroUsuario
     end
     object EdPesquisar: TUniEdit
       AlignWithMargins = True
-      Left = 731
+      Left = 741
       Top = 5
       Width = 299
       Height = 35
       Hint = ''
       Margins.Top = 5
-      Margins.Right = 20
+      Margins.Right = 10
       Margins.Bottom = 2
       ParentShowHint = False
       CharCase = ecUpperCase
@@ -303,6 +305,7 @@ object frCadastroUsuario: TfrCadastroUsuario
       FieldLabelFont.Height = -19
       FieldLabelFont.Style = [fsBold]
       OnChange = EdPesquisarChange
+      ExplicitLeft = 731
     end
     object BtCan: TUniFSButton
       AlignWithMargins = True

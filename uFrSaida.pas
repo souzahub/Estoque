@@ -278,7 +278,7 @@ begin
   dmDados.RDWSaida.SQL.Add('select * from SAIDA  where');
   dmDados.RDWSaida.SQL.Add('(NPRODUTO LIKE  '+QuotedStr('%'+EdPesquisar.Text+'%') );
   dmDados.RDWSaida.SQL.Add('or CPRODUTO LIKE  '+QuotedStr('%'+EdPesquisar.Text+'%') );
-  dmDados.RDWSaida.SQL.Add(')order by NPRODUTO ');
+  dmDados.RDWSaida.SQL.Add(')order by ID desc ');
   dmDados.RDWSaida.Open;
 
 end;

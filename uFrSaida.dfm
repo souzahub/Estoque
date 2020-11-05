@@ -20,7 +20,7 @@ object fraSaida: TfraSaida
       Width = 1073
       Height = 586
       Hint = ''
-      ActivePage = Tab2
+      ActivePage = Tab1
       Images = UniNativeImageList1
       Align = alClient
       TabOrder = 1
@@ -86,11 +86,6 @@ object fraSaida: TfraSaida
               FieldName = 'VPRODUTO'
               Title.Caption = 'CUSTO R$'
               Width = 57
-            end
-            item
-              FieldName = 'ID'
-              Title.Caption = ' '
-              Width = 21
             end>
         end
       end
@@ -313,8 +308,10 @@ object fraSaida: TfraSaida
                   'CASA -  AVIDES FRAGA')
                 ItemIndex = 0
                 TabOrder = 11
+                ReadOnly = True
                 CharCase = ecUpperCase
                 IconItems = <>
+                ReadOnlyMode = urmNotEditable
               end
               object UniLabel6: TUniLabel
                 Left = 23
@@ -520,13 +517,13 @@ object fraSaida: TfraSaida
     Color = clNone
     object EdPesquisar: TUniEdit
       AlignWithMargins = True
-      Left = 756
+      Left = 766
       Top = 5
       Width = 299
       Height = 35
       Hint = ''
       Margins.Top = 5
-      Margins.Right = 20
+      Margins.Right = 10
       Margins.Bottom = 2
       ParentShowHint = False
       CharCase = ecUpperCase

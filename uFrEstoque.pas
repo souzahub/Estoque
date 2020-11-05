@@ -27,7 +27,6 @@ type
     sbExportHtml: TUniFSButton;
     sbExportExcel: TUniFSButton;
     EdPesquisar: TUniEdit;
-    UniFSButton1: TUniFSButton;
     dsInfo: TDataSource;
     pnInfo: TUniPanel;
     UniPanel2: TUniPanel;
@@ -38,7 +37,6 @@ type
     procedure EdPesquisarChange(Sender: TObject);
     procedure sbExportHtmlClick(Sender: TObject);
     procedure sbExportExcelClick(Sender: TObject);
-    procedure UniFSButton1Click(Sender: TObject);
     procedure UniDBGrid1CellClick(Column: TUniDBGridColumn);
     procedure UniListBox1Click(Sender: TObject);
     procedure UniFSButton2Click(Sender: TObject);
@@ -122,11 +120,6 @@ begin
       exit;
     end
 
-end;
-
-procedure TfrEstoque.UniFSButton1Click(Sender: TObject);
-begin
-  UniFrameCreate(sender);
 end;
 
 procedure TfrEstoque.UniFSButton2Click(Sender: TObject);
