@@ -20,7 +20,7 @@ object frCadastroUsuario: TfrCadastroUsuario
       Width = 1048
       Height = 556
       Hint = ''
-      ActivePage = Tab2
+      ActivePage = Tab1
       Align = alClient
       TabOrder = 1
       object Tab1: TUniTabSheet
@@ -89,7 +89,7 @@ object frCadastroUsuario: TfrCadastroUsuario
           Align = alClient
           TabOrder = 0
           Caption = ''
-          Color = clNone
+          Color = clBackground
           LayoutConfig.Cls = 'cor1'
           ScrollHeight = 522
           ScrollWidth = 1034
@@ -305,7 +305,6 @@ object frCadastroUsuario: TfrCadastroUsuario
       FieldLabelFont.Height = -19
       FieldLabelFont.Style = [fsBold]
       OnChange = EdPesquisarChange
-      ExplicitLeft = 731
     end
     object BtCan: TUniFSButton
       AlignWithMargins = True

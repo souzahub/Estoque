@@ -77,6 +77,7 @@ type
     procedure BtGrvClick(Sender: TObject);
     procedure BtCanClick(Sender: TObject);
     procedure EdPesquisarChange(Sender: TObject);
+    procedure ConsultaDados;  // função de pesquisa
   private
      xIncluindo, xDeletando, xEditando, xSoAlerta, xGrupo : Boolean;
   public
@@ -90,7 +91,17 @@ implementation
 uses uFormBuscaProduto, Main, uDados, Mainm, uFuncoes, MainModule,
   relatFornec, ServerModule;
 
+procedure TfraSaida.ConsultaDados;  // função de pesquisa
+begin
+  // pesquisa dinamica na tabela Usuario
+  dmDados.RDWSaida.SQL.Clear;
+  dmDados.RDWSaida.SQL.Add('select * from SAIDA  where');
+  dmDados.RDWSaida.SQL.Add('(NPRODUTO LIKE  '+QuotedStr('%'+EdPesquisar.Text+'%') );
+  dmDados.RDWSaida.SQL.Add('or CPRODUTO LIKE  '+QuotedStr('%'+EdPesquisar.Text+'%') );
+  dmDados.RDWSaida.SQL.Add(')order by ID desc ');
+  dmDados.RDWSaida.Open;
 
+end;
 
 procedure TfraSaida.BtCanClick(Sender: TObject);
 begin
@@ -273,13 +284,7 @@ end;
 procedure TfraSaida.EdPesquisarChange(Sender: TObject);
 begin
 
-  // pesquisa dinamica na tabela Usuario
-  dmDados.RDWSaida.SQL.Clear;
-  dmDados.RDWSaida.SQL.Add('select * from SAIDA  where');
-  dmDados.RDWSaida.SQL.Add('(NPRODUTO LIKE  '+QuotedStr('%'+EdPesquisar.Text+'%') );
-  dmDados.RDWSaida.SQL.Add('or CPRODUTO LIKE  '+QuotedStr('%'+EdPesquisar.Text+'%') );
-  dmDados.RDWSaida.SQL.Add(')order by ID desc ');
-  dmDados.RDWSaida.Open;
+  ConsultaDados;
 
 end;
 
@@ -381,7 +386,8 @@ end;
 
 procedure TfraSaida.UniFrameCreate(Sender: TObject);
 begin
-  dmDados.RDWSaida.Open;
+  EdPesquisarChange(Sender);
+  dmDados.RDWEstoque.Close;
   dmDados.RDWEstoque.Open;
   PageCadastro.Pages[0].TabVisible := True  ;
   PageCadastro.Pages[1].TabVisible := False ;

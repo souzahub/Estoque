@@ -1,6 +1,6 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <ProjectGuid>{FCF2C13A-929A-48A8-9159-1E1AF7746616}</ProjectGuid>
+        <ProjectGuid>{136D990C-C55E-4539-BD40-21D7B7AD6F66}</ProjectGuid>
         <ProjectVersion>18.5</ProjectVersion>
         <FrameworkType>VCL</FrameworkType>
         <MainSource>EstoqueTi.dpr</MainSource>

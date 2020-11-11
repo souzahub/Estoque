@@ -1,12 +1,12 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <ProjectGuid>{ED115343-BFD5-4AF9-AA75-EA566B6579EB}</ProjectGuid>
+        <ProjectGuid>{F032C6C5-970F-4312-AFBA-7B37A04DBA92}</ProjectGuid>
     </PropertyGroup>
     <ItemGroup>
-        <Projects Include="EstoqueGrupo.dproj">
+        <Projects Include="EstoqueTi.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="..\..\WebGestaoDevo-8060\WebGestaoDevo\GestaoDevo.dproj">
+        <Projects Include="..\WebGestaoDevo-8060\WebGestaoDevo\GestaoDevo.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -17,32 +17,32 @@
             <Default.Personality/>
         </BorlandProject>
     </ProjectExtensions>
-    <Target Name="EstoqueGrupo">
-        <MSBuild Projects="EstoqueGrupo.dproj"/>
+    <Target Name="EstoqueTi">
+        <MSBuild Projects="EstoqueTi.dproj"/>
     </Target>
-    <Target Name="EstoqueGrupo:Clean">
-        <MSBuild Projects="EstoqueGrupo.dproj" Targets="Clean"/>
+    <Target Name="EstoqueTi:Clean">
+        <MSBuild Projects="EstoqueTi.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="EstoqueGrupo:Make">
-        <MSBuild Projects="EstoqueGrupo.dproj" Targets="Make"/>
+    <Target Name="EstoqueTi:Make">
+        <MSBuild Projects="EstoqueTi.dproj" Targets="Make"/>
     </Target>
     <Target Name="GestaoDevo">
-        <MSBuild Projects="..\..\WebGestaoDevo-8060\WebGestaoDevo\GestaoDevo.dproj"/>
+        <MSBuild Projects="..\WebGestaoDevo-8060\WebGestaoDevo\GestaoDevo.dproj"/>
     </Target>
     <Target Name="GestaoDevo:Clean">
-        <MSBuild Projects="..\..\WebGestaoDevo-8060\WebGestaoDevo\GestaoDevo.dproj" Targets="Clean"/>
+        <MSBuild Projects="..\WebGestaoDevo-8060\WebGestaoDevo\GestaoDevo.dproj" Targets="Clean"/>
     </Target>
     <Target Name="GestaoDevo:Make">
-        <MSBuild Projects="..\..\WebGestaoDevo-8060\WebGestaoDevo\GestaoDevo.dproj" Targets="Make"/>
+        <MSBuild Projects="..\WebGestaoDevo-8060\WebGestaoDevo\GestaoDevo.dproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
-        <CallTarget Targets="EstoqueGrupo;GestaoDevo"/>
+        <CallTarget Targets="EstoqueTi;GestaoDevo"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="EstoqueGrupo:Clean;GestaoDevo:Clean"/>
+        <CallTarget Targets="EstoqueTi:Clean;GestaoDevo:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="EstoqueGrupo:Make;GestaoDevo:Make"/>
+        <CallTarget Targets="EstoqueTi:Make;GestaoDevo:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
