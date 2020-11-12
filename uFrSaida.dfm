@@ -84,8 +84,16 @@ object fraSaida: TfraSaida
             end
             item
               FieldName = 'VPRODUTO'
+              Title.Alignment = taCenter
               Title.Caption = 'CUSTO R$'
-              Width = 57
+              Width = 86
+            end
+            item
+              FieldName = 'ID'
+              Title.Alignment = taCenter
+              Title.Caption = 'Print'
+              Width = 38
+              Alignment = taCenter
             end>
         end
       end

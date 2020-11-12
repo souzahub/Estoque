@@ -150,7 +150,7 @@ end;
 procedure TMainForm.RegistraLog( Tipo : String; Historico: String );
 var xERRO : String;
 begin
-      exit;
+//      exit;
       // registra o log ( função Log ) para todos
       dmDados.RDWAuxiliar.Close;
       dmDados.RDWAuxiliar.SQL.Clear;

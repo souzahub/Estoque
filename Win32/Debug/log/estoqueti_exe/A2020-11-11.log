@@ -50,3 +50,28 @@ EstoqueTi.exe: 000003DC: 09:53:15 [HandleFileRequest[127.0.0.1]]:File not found:
 EstoqueTi.exe: 00006980: 09:53:16 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
 EstoqueTi.exe: 00007F10: 09:55:09 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
 EstoqueTi.exe: 000049FC: 09:55:09 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+EstoqueTi.exe: 000077BC: 09:58:48 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+EstoqueTi.exe: 00007DC4: 09:58:49 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+EstoqueTi.exe: 00006C9C: 10:02:04 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+EstoqueTi.exe: 00006B6C: 10:02:04 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+EstoqueTi.exe: 000081F4: 10:02:18 []:>--------------------------------------------------------------<
+EstoqueTi.exe: 000081F4: 10:02:18 [TUniServerModule]:Server First Init.
+EstoqueTi.exe: 000081F4: 10:02:19 [TUniServerModule]:Global Cache Folder Erased. <149> Files deleted.
+EstoqueTi.exe: 000081F4: 10:02:19 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+EstoqueTi.exe: 000081F4: 10:02:19 [TUniServerModule]:HTTP Server Started on Port: 8050
+EstoqueTi.exe: 00002DA0: 10:02:20 [127.0.0.1]:EUniSessionException : Sessão inválida ou tempo limite da sessão. (Session not found: ZA8dLBhAYw107221692 ) : Addr: $007D0BAE
+EstoqueTi.exe: 00006810: 10:02:20 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+EstoqueTi.exe: 00005D98: 10:02:20 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+EstoqueTi.exe: 00004CB0: 10:08:51 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+EstoqueTi.exe: 00008154: 10:08:52 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+EstoqueTi.exe: 000081F4: 10:46:18 [TUniServerModule]:Shutting Down Server.
+EstoqueTi.exe: 000081F4: 10:46:18 [TUniServerModule]:Stopping HTTP Server.
+EstoqueTi.exe: 000081F4: 10:46:18 [TUniServerModule]:HTTP Server Stopped.
+EstoqueTi.exe: 000081F4: 10:46:18 [TUniGUISessionManager]:Terminating Session manager.
+EstoqueTi.exe: 000081F4: 10:46:18 [TUniGUISessionManager]:Stopping Cache Eraser...
+EstoqueTi.exe: 000081F4: 10:46:18 [TUniGUISessionManager]:Cache Eraser Stopped.
+EstoqueTi.exe: 000081F4: 10:46:18 [TUniGUISessionManager]:Destroying Worker Threads.
+EstoqueTi.exe: 000081F4: 10:46:18 [TUniGUISessionManager]:Session manager terminated.
+EstoqueTi.exe: 000081F4: 10:46:18 [TUniServerModule]:Server Shutdown Completed.
+EstoqueTi.exe: 000081F4: 10:46:18 []:<-------------------------------------------------------------->
+EstoqueTi.exe: 000081F4: 10:46:18 [Terminated]:Exit Code: 0

@@ -3,10 +3,10 @@
         <ProjectGuid>{F032C6C5-970F-4312-AFBA-7B37A04DBA92}</ProjectGuid>
     </PropertyGroup>
     <ItemGroup>
-        <Projects Include="EstoqueTi.dproj">
+        <Projects Include="..\WebGestaoDevo-8060\WebGestaoDevo\GestaoDevo.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="..\WebGestaoDevo-8060\WebGestaoDevo\GestaoDevo.dproj">
+        <Projects Include="EstoqueTi.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -17,15 +17,6 @@
             <Default.Personality/>
         </BorlandProject>
     </ProjectExtensions>
-    <Target Name="EstoqueTi">
-        <MSBuild Projects="EstoqueTi.dproj"/>
-    </Target>
-    <Target Name="EstoqueTi:Clean">
-        <MSBuild Projects="EstoqueTi.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="EstoqueTi:Make">
-        <MSBuild Projects="EstoqueTi.dproj" Targets="Make"/>
-    </Target>
     <Target Name="GestaoDevo">
         <MSBuild Projects="..\WebGestaoDevo-8060\WebGestaoDevo\GestaoDevo.dproj"/>
     </Target>
@@ -35,14 +26,23 @@
     <Target Name="GestaoDevo:Make">
         <MSBuild Projects="..\WebGestaoDevo-8060\WebGestaoDevo\GestaoDevo.dproj" Targets="Make"/>
     </Target>
+    <Target Name="EstoqueTi">
+        <MSBuild Projects="EstoqueTi.dproj"/>
+    </Target>
+    <Target Name="EstoqueTi:Clean">
+        <MSBuild Projects="EstoqueTi.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="EstoqueTi:Make">
+        <MSBuild Projects="EstoqueTi.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="EstoqueTi;GestaoDevo"/>
+        <CallTarget Targets="GestaoDevo;EstoqueTi"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="EstoqueTi:Clean;GestaoDevo:Clean"/>
+        <CallTarget Targets="GestaoDevo:Clean;EstoqueTi:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="EstoqueTi:Make;GestaoDevo:Make"/>
+        <CallTarget Targets="GestaoDevo:Make;EstoqueTi:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
