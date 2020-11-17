@@ -10,7 +10,7 @@ uses
   Vcl.Imaging.jpeg, uniImage, uniMultiItem, uniComboBox, uniScrollBox,
   uniBasicGrid, uniDBGrid, uniDBNavigator, uniLabel, uniEdit,
   uniPageControl, Data.DB, uniHTMLFrame, unimHTMLFrame, UniFSEdit,
-  UniFSButton;
+  UniFSButton, Main;
 
 type
   TfrCadastroUsuario = class(TUniFrame)
@@ -66,7 +66,6 @@ implementation
 {$R *.dfm}
 
 uses uDados, uFormAutentificacao;
-
 
 
 procedure TfrCadastroUsuario.BtAltClick(Sender: TObject);
@@ -210,6 +209,9 @@ begin
   uniEmail.Clear;
   uniLogin.Clear;
   uniSenha.Clear;
+
+
+
 
 end;
 

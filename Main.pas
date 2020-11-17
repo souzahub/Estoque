@@ -23,7 +23,6 @@ type
     UniMenuItems1: TUniMenuItems;
     DashBoard: TUniMenuItem;
     Cadastros1: TUniMenuItem;
-    DBClassMaster1: TUniMenuItem;
     ContasPadro1: TUniMenuItem;
     Ficha1: TUniMenuItem;
     Movimentaes1: TUniMenuItem;
@@ -90,12 +89,12 @@ type
     Sair1: TUniMenuItem;
     lbOla: TUniLabel;
     UniURLFrame1: TUniURLFrame;
+    Poduto1: TUniMenuItem;
     procedure mnuUsuarioClick(Sender: TObject);
     procedure xUniLblButtoDrowerClick(Sender: TObject);
     procedure UniFormScreenResize(Sender: TObject; AWidth,
       AHeight: Integer);
     procedure ContasPadro1Click(Sender: TObject);
-    procedure DBClassMaster1Click(Sender: TObject);
     procedure Ficha1Click(Sender: TObject);
     procedure Compras1Click(Sender: TObject);
     procedure Vendas1Click(Sender: TObject);
@@ -111,7 +110,8 @@ type
     procedure DashBoardClick(Sender: TObject);
     procedure Usuarios1Click(Sender: TObject);
     procedure Log2Click(Sender: TObject);
-    procedure Sair1Click(Sender: TObject); // ( função Log )
+    procedure Sair1Click(Sender: TObject);
+    procedure Poduto1Click(Sender: TObject); // ( função Log )
   private
     procedure NovaAba(nomeFormFrame: TFrame; descFormFrame: string; Fechar: Boolean);   // frame lateral
   public
@@ -245,12 +245,6 @@ begin
   PagePrincipal.ActivePage :=  TabHome; // ativa pagina Principal
 end;
 
-procedure TMainForm.DBClassMaster1Click(Sender: TObject);
-begin
-//  UniTreeMenu1.Micro := True;
-  NovaAba(TFrame(TfrCadastroProduto),'Produtos',True);
-end;
-
 procedure TMainForm.EstoqueCusto1Click(Sender: TObject);
 var
   FName, PDF, ArqPDF:String;
@@ -358,6 +352,12 @@ begin
 
       pagePrincipal.ActivePage := TabSheet;
 end;
+procedure TMainForm.Poduto1Click(Sender: TObject);
+begin
+  //  UniTreeMenu1.Micro := True;
+  NovaAba(TFrame(TfrCadastroProduto),'Produtos',True);
+end;
+
 procedure TMainForm.UniFileUploadButton1Completed(Sender: TObject;
   AStream: TFileStream);
 begin

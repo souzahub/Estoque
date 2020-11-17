@@ -70,6 +70,7 @@ type
     procedure UniDBGrid1CellClick(Column: TUniDBGridColumn);
     procedure UniFSButton1Click(Sender: TObject);
     procedure UniDBGrid1BodyDblClick(Sender: TObject); // procedure atualiza lista uploado
+    procedure VisualisaBotao;
   private
      xIncluindo, xDeletando, xEditando, xSoAlerta : Boolean;
      FUrl : string;
@@ -82,6 +83,21 @@ implementation
 {$R *.dfm}
 
 uses uDados, Main, uformCadGrupo, uFuncoes, ServerModule;
+
+procedure TfrCadastroProduto.VisualisaBotao;
+begin
+   if MainForm.vADMIN then
+    begin
+     BtExc.Visible := True;
+     exit;
+    end
+    else
+    begin
+     BtExc.Visible := False;
+     exit;
+    end;
+
+end;
 
 procedure TfrCadastroProduto.AtualizarLista;  // procedure atualiza lista uploado
 var
@@ -265,6 +281,7 @@ seq : Integer;
 seqGrupo : string ;
 
 begin
+  VisualisaBotao;
   EdPesquisar.Clear;
   EdPesquisarChange(Sender);  // é usado para que volte para o Id inicial independente de qual query esteja selecionada
   seq := dmDados.RDWCAD_PRODUTOID.Value+1;  // acrescenta +1 para o ID
@@ -466,6 +483,7 @@ end;
 
 procedure TfrCadastroProduto.UniFrameCreate(Sender: TObject);
 begin
+  VisualisaBotao;
   EdPesquisarChange(Sender);  // é usado para que volte para o Id inicial independente de qual query esteja selecionada
   dmDados.RDWGrupos.Open;
 //  UniLabel2.Caption := '<a class="btn" href="http://address.com"target="_new">Click</a>' ;  abre um link novo

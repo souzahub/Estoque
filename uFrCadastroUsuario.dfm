@@ -373,6 +373,7 @@ object frCadastroUsuario: TfrCadastroUsuario
       Margins.Top = 6
       Margins.Right = 4
       Margins.Bottom = 6
+      Visible = False
       StyleButton = GoogleBlue3Round
       BadgeText.Text = '0'
       BadgeText.TextColor = '#FFFFFF'

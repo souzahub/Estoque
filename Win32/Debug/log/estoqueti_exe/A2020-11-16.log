@@ -1,0 +1,19 @@
+EstoqueTi.exe: 00001B48: 11:05:39 []:>--------------------------------------------------------------<
+EstoqueTi.exe: 00001B48: 11:05:39 [TUniServerModule]:Server First Init.
+EstoqueTi.exe: 00001B48: 11:05:39 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+EstoqueTi.exe: 00001B48: 11:05:39 [TUniServerModule]:HTTP Server Started on Port: 8050
+EstoqueTi.exe: 00000F84: 11:05:44 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+EstoqueTi.exe: 000008A0: 11:05:44 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+EstoqueTi.exe: 00006CDC: 11:10:48 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+EstoqueTi.exe: 000019A4: 11:10:48 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+EstoqueTi.exe: 00001B48: 13:59:25 [TUniServerModule]:Shutting Down Server.
+EstoqueTi.exe: 00001B48: 13:59:25 [TUniServerModule]:Stopping HTTP Server.
+EstoqueTi.exe: 00001B48: 13:59:26 [TUniServerModule]:HTTP Server Stopped.
+EstoqueTi.exe: 00001B48: 13:59:26 [TUniGUISessionManager]:Terminating Session manager.
+EstoqueTi.exe: 00001B48: 13:59:26 [TUniGUISessionManager]:Stopping Cache Eraser...
+EstoqueTi.exe: 00001B48: 13:59:26 [TUniGUISessionManager]:Cache Eraser Stopped.
+EstoqueTi.exe: 00001B48: 13:59:26 [TUniGUISessionManager]:Destroying Worker Threads.
+EstoqueTi.exe: 00001B48: 13:59:26 [TUniGUISessionManager]:Session manager terminated.
+EstoqueTi.exe: 00001B48: 13:59:27 [TUniServerModule]:Server Shutdown Completed.
+EstoqueTi.exe: 00001B48: 13:59:27 []:<-------------------------------------------------------------->
+EstoqueTi.exe: 00001B48: 13:59:27 [Terminated]:Exit Code: 0

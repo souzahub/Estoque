@@ -1441,10 +1441,10 @@ object MainForm: TMainForm
         ImageIndex = 23
         OnClick = ContasPadro1Click
       end
-      object DBClassMaster1: TUniMenuItem
-        Caption = 'Produto'
-        ImageIndex = 24
-        OnClick = DBClassMaster1Click
+      object Poduto1: TUniMenuItem
+        Caption = 'Poduto'
+        ImageIndex = 16
+        OnClick = Poduto1Click
       end
     end
     object Ficha1: TUniMenuItem

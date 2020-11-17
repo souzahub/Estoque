@@ -7,7 +7,7 @@ object dmDados: TdmDados
     Compression = True
     CriptOptions.Use = False
     CriptOptions.Key = 'RDWBASEKEY256'
-    MyIP = '177.223.6.10'
+    MyIP = '177.155.224.141'
     Login = 'admin'
     Password = 'tifri2020'
     Proxy = False

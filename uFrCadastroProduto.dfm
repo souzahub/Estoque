@@ -20,7 +20,7 @@ object frCadastroProduto: TfrCadastroProduto
       Width = 1048
       Height = 595
       Hint = ''
-      ActivePage = Tab2
+      ActivePage = Tab1
       Align = alClient
       TabOrder = 1
       object Tab1: TUniTabSheet
@@ -114,7 +114,6 @@ object frCadastroProduto: TfrCadastroProduto
               ParentShowHint = False
               Text = 'dbCbGrupos'
               TabOrder = 2
-              ReadOnly = True
               AnyMatch = True
               IconItems = <>
               ReadOnlyMode = urmNotEditable
@@ -305,7 +304,6 @@ object frCadastroProduto: TfrCadastroProduto
       FieldLabelFont.Height = -19
       FieldLabelFont.Style = [fsBold]
       OnChange = EdPesquisarChange
-      ExplicitLeft = 731
     end
     object BtCan: TUniFSButton
       AlignWithMargins = True
@@ -333,6 +331,8 @@ object frCadastroProduto: TfrCadastroProduto
       Font.Style = [fsBold]
       TabOrder = 3
       ClientEvents.Enabled = False
+      ScreenMask.Enabled = True
+      ScreenMask.Message = 'Carregando...'
       OnClick = BtCanClick
     end
     object BtGrv: TUniFSButton
@@ -445,6 +445,8 @@ object frCadastroProduto: TfrCadastroProduto
       Font.Style = [fsBold]
       TabOrder = 7
       ClientEvents.Enabled = False
+      ScreenMask.Enabled = True
+      ScreenMask.Message = 'Carregando...'
       OnClick = BtIncClick
     end
   end
