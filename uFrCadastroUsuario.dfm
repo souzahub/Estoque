@@ -20,7 +20,7 @@ object frCadastroUsuario: TfrCadastroUsuario
       Width = 1048
       Height = 556
       Hint = ''
-      ActivePage = Tab1
+      ActivePage = Tab2
       Align = alClient
       TabOrder = 1
       object Tab1: TUniTabSheet
@@ -78,7 +78,7 @@ object frCadastroUsuario: TfrCadastroUsuario
       object Tab2: TUniTabSheet
         Hint = ''
         Caption = 'Ficha'
-        object UniPanel3: TUniPanel
+        object UniPanel2: TUniPanel
           AlignWithMargins = True
           Left = 3
           Top = 3
@@ -89,7 +89,7 @@ object frCadastroUsuario: TfrCadastroUsuario
           Align = alClient
           TabOrder = 0
           Caption = ''
-          Color = clBackground
+          Color = clNone
           LayoutConfig.Cls = 'cor1'
           ScrollHeight = 522
           ScrollWidth = 1034
@@ -102,82 +102,7 @@ object frCadastroUsuario: TfrCadastroUsuario
             Caption = 'Perfil'
             ParentFont = False
             Font.Style = [fsBold]
-            TabOrder = 5
-          end
-          object UniLabel4: TUniLabel
-            Left = 42
-            Top = 294
-            Width = 35
-            Height = 13
-            Hint = ''
-            Caption = 'Senha'
-            ParentFont = False
-            Font.Style = [fsBold]
-            TabOrder = 6
-          end
-          object UniLabel6: TUniLabel
-            Left = 42
-            Top = 109
-            Width = 32
-            Height = 13
-            Hint = ''
-            Caption = 'Nome'
-            ParentFont = False
-            Font.Style = [fsBold]
-            TabOrder = 7
-          end
-          object UniLabel3: TUniLabel
-            Left = 42
-            Top = 173
-            Width = 30
-            Height = 13
-            Hint = ''
-            Caption = 'Login'
-            ParentFont = False
-            Font.Style = [fsBold]
-            TabOrder = 8
-          end
-          object UniLabel5: TUniLabel
-            Left = 42
-            Top = 229
-            Width = 30
-            Height = 13
-            Hint = ''
-            Caption = 'Email'
-            ParentFont = False
-            Font.Style = [fsBold]
-            TabOrder = 9
-          end
-          object UniNome: TUniEdit
-            Left = 41
-            Top = 128
-            Width = 289
-            Hint = ''
-            CharCase = ecUpperCase
-            MaxLength = 60
-            Text = 'UNINOME'
-            TabOrder = 2
-          end
-          object UniLogin: TUniEdit
-            Left = 41
-            Top = 192
-            Width = 289
-            Hint = ''
-            BodyRTL = False
-            CharCase = ecUpperCase
-            MaxLength = 30
-            Text = 'UNIEDIT1'
-            TabOrder = 3
-          end
-          object UniEmail: TUniEdit
-            Left = 42
-            Top = 248
-            Width = 289
-            Hint = ''
-            CharCase = ecLowerCase
-            MaxLength = 150
-            Text = 'uniedit1'
-            TabOrder = 4
+            TabOrder = 1
           end
           object UniComboBox1: TUniComboBox
             Left = 41
@@ -190,11 +115,86 @@ object frCadastroUsuario: TfrCadastroUsuario
             Items.Strings = (
               'ADMINISTRADOR'
               'USU'#193'RIO')
-            TabOrder = 1
+            TabOrder = 2
             ReadOnly = True
             CharCase = ecUpperCase
             IconItems = <>
             ReadOnlyMode = urmNotEditable
+          end
+          object UniNome: TUniEdit
+            Left = 41
+            Top = 128
+            Width = 289
+            Hint = ''
+            CharCase = ecUpperCase
+            MaxLength = 60
+            Text = 'UNINOME'
+            TabOrder = 3
+          end
+          object UniLabel6: TUniLabel
+            Left = 42
+            Top = 109
+            Width = 32
+            Height = 13
+            Hint = ''
+            Caption = 'Nome'
+            ParentFont = False
+            Font.Style = [fsBold]
+            TabOrder = 4
+          end
+          object UniLabel3: TUniLabel
+            Left = 42
+            Top = 173
+            Width = 30
+            Height = 13
+            Hint = ''
+            Caption = 'Login'
+            ParentFont = False
+            Font.Style = [fsBold]
+            TabOrder = 5
+          end
+          object UniLogin: TUniEdit
+            Left = 41
+            Top = 192
+            Width = 289
+            Hint = ''
+            BodyRTL = False
+            CharCase = ecUpperCase
+            MaxLength = 30
+            Text = 'UNIEDIT1'
+            TabOrder = 6
+          end
+          object UniLabel5: TUniLabel
+            Left = 42
+            Top = 229
+            Width = 30
+            Height = 13
+            Hint = ''
+            Caption = 'Email'
+            ParentFont = False
+            Font.Style = [fsBold]
+            TabOrder = 7
+          end
+          object UniEmail: TUniEdit
+            Left = 42
+            Top = 248
+            Width = 289
+            Hint = ''
+            CharCase = ecLowerCase
+            MaxLength = 150
+            Text = 'uniedit1'
+            TabOrder = 8
+          end
+          object UniLabel4: TUniLabel
+            Left = 42
+            Top = 294
+            Width = 35
+            Height = 13
+            Hint = ''
+            Caption = 'Senha'
+            ParentFont = False
+            Font.Style = [fsBold]
+            TabOrder = 9
           end
           object UniSenha: TUniFSEdit
             Left = 42

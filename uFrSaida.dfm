@@ -20,7 +20,7 @@ object fraSaida: TfraSaida
       Width = 1073
       Height = 586
       Hint = ''
-      ActivePage = Tab1
+      ActivePage = Tab2
       Images = UniNativeImageList1
       Align = alClient
       TabOrder = 1
@@ -316,10 +316,8 @@ object fraSaida: TfraSaida
                   'CASA -  AVIDES FRAGA')
                 ItemIndex = 0
                 TabOrder = 11
-                ReadOnly = True
                 CharCase = ecUpperCase
                 IconItems = <>
-                ReadOnlyMode = urmNotEditable
               end
               object UniLabel6: TUniLabel
                 Left = 23
