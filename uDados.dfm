@@ -3,11 +3,10 @@ object dmDados: TdmDados
   Height = 605
   Width = 697
   object RDWConexao: TRESTDWDataBase
-    Active = True
+    Active = False
     Compression = True
     CriptOptions.Use = False
     CriptOptions.Key = 'RDWBASEKEY256'
-    MyIP = '177.155.224.141'
     Login = 'admin'
     Password = 'tifri2020'
     Proxy = False
