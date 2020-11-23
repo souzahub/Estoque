@@ -20,6 +20,7 @@ type
     dsEstoque: TDataSource;
     procedure EdPesquisarChange(Sender: TObject);
     procedure UnimFormCreate(Sender: TObject);
+    procedure UnimBitBtn1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -50,6 +51,11 @@ begin
   dmDados.RDWEstoque.SQL.Add(') order by PRODUTO');
   dmDados.RDWEstoque.Open;
 
+end;
+
+procedure TMainmForm.UnimBitBtn1Click(Sender: TObject);
+begin
+  Close;
 end;
 
 procedure TMainmForm.UnimFormCreate(Sender: TObject);

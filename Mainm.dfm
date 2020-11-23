@@ -23,8 +23,6 @@ object MainmForm: TMainmForm
     Margins.Top = 0
     Margins.Right = 0
     Align = alTop
-    ExplicitLeft = -1
-    ExplicitWidth = 321
     object UnimPanel1: TUnimPanel
       AlignWithMargins = True
       Left = 3
@@ -33,7 +31,6 @@ object MainmForm: TMainmForm
       Height = 37
       Hint = ''
       Align = alClient
-      ExplicitWidth = 315
       object UnimBitBtn1: TUnimBitBtn
         Left = 1
         Top = 1
@@ -43,6 +40,7 @@ object MainmForm: TMainmForm
         Align = alLeft
         UI = 'back'
         Caption = '<i class="fa fa-angle-left 5x"></i>'
+        OnClick = UnimBitBtn1Click
       end
       object UnimBitBtn2: TUnimBitBtn
         Left = 264
@@ -53,7 +51,6 @@ object MainmForm: TMainmForm
         Visible = False
         Align = alRight
         Caption = '<i class="fa fa-angle-right 5x"></i>'
-        ExplicitLeft = 265
       end
       object EdPesquisar: TUnimEdit
         AlignWithMargins = True
@@ -70,7 +67,6 @@ object MainmForm: TMainmForm
         ParentFont = False
         TabOrder = 3
         OnChange = EdPesquisarChange
-        ExplicitWidth = 205
       end
     end
   end
@@ -93,38 +89,38 @@ object MainmForm: TMainmForm
         '100%;vertical-align:middle;">'#39'+'#13#10'                '#39'<tr>'#39'+'#13#10'      ' +
         '           '#39'<td style="width:75px;text-align:center;">'#39'+'#13#10'      ' +
         '            '#39'<div class="crcldv" style="background:url(files/ima' +
-        'ges/user.svg);'#39'+'#13#10'                   '#39'background-size:24px auto;' +
-        'background-position:center;background-repeat:no-repeat;'#39'+'#13#10'     ' +
-        '              '#39'background-color:{[this.getColor()]};" '#39'+'#13#10'      ' +
-        '             '#39' onClick="javascript:MainmForm.UnimDBListGrid1.del' +
-        'eteRow({0});">'#39'+                                      '#13#10'        ' +
-        '          '#39'</div>'#39'+'#13#10'                 '#39'</td>'#39'+'#13#10'                ' +
-        ' '#39'<td>'#39'+'#13#10'                  '#39'<span style="font-weight:bold;font-' +
-        'size:13px;color:#0092f4;width:100%;display:inline-block;"> C'#243'd: ' +
-        '{0}</span>'#39'+'#13#10'                  '#39'<span style="font-size:11px;col' +
-        'or:#929292;width:100%;display:inline-block;"> Nome: {1}</span>'#39'+' +
-        #13#10'                  '#39'<span style="font-size:11px;color:#929292;w' +
-        'idth:100%;display:inline-block;"> Estoque: {2}</span>'#39'+'#13#10'       ' +
-        '           //'#39'<span style="font-size:11px;color:#929292;width:10' +
-        '0%;display:inline-block;">Estoque: {3}</span>'#39'+'#13#10'               ' +
-        '   '#13#10'                 '#39'</td>'#39'+'#13#10'                 '#39'<td style="wid' +
-        'th:55px;text-align:center;">'#39'+'#13#10'                  '#39'{[this.getNum' +
-        'ber()]}'#39'+'#13#10'                  /*'#39'<img src="files/images/up.svg" s' +
-        'tyle="width:12px;height12px;margin:auto;"/>'#39'+'#13#10'                 ' +
-        ' '#39'<span style="color:#f00;font-size:12px;">+ 150</span>'#39'+*/'#13#10'   ' +
-        '              '#39'</td>'#39'+'#13#10'                '#39'</tr>'#39'+'#13#10'              ' +
-        ' '#39'</table>'#39'+    '#13#10'              '#39'</div>'#39';  '#13#10'  config.itemTpl= n' +
-        'ew Ext.XTemplate('#13#10'   htmlRow,'#13#10'   {'#13#10'    getColor: function(){'#13 +
-        #10'     if(clrIndx>5){clrIndx=0;}'#13#10'     return clrs[clrIndx++];   ' +
-        '  '#13#10'    },  '#13#10'    getNumber:function(){'#13#10'     var i=randomIntFro' +
-        'mInterval(-200,200);'#13#10'     if(i>0){'#13#10'      return '#39'<img src="fil' +
-        'es/images/up.svg" style="width:12px;height12px;margin:auto;"/>'#39'+' +
-        #13#10'             '#39'<span style="color:#07d280;font-size:12px;">+ '#39'+' +
-        'i.toString()+'#39'</span>'#39';'#13#10'     }'#13#10'     else{'#13#10'      return '#39'<img ' +
-        'src="files/images/down.svg" style="width:12px;height12px;margin:' +
-        'auto;"/>'#39'+'#13#10'             '#39'<span style="color:#f37372;font-size:1' +
-        '2px;">- '#39'+(i*-1).toString()+'#39'</span>'#39';'#13#10'     }'#13#10'    }'#13#10'   }'#13#10'  )' +
-        ';'#13#10'}'#13#10)
+        'ges/settings.svg);'#39'+'#13#10'                   '#39'background-size:24px a' +
+        'uto;background-position:center;background-repeat:no-repeat;'#39'+'#13#10' ' +
+        '                  '#39'background-color:{[this.getColor()]};" '#39'+'#13#10'  ' +
+        '                 '#39' onClick="javascript:MainmForm.UnimDBListGrid1' +
+        '.deleteRow({0});">'#39'+                                      '#13#10'    ' +
+        '              '#39'</div>'#39'+'#13#10'                 '#39'</td>'#39'+'#13#10'            ' +
+        '     '#39'<td>'#39'+'#13#10'                  '#39'<span style="font-weight:bold;f' +
+        'ont-size:13px;color:#0092f4;width:100%;display:inline-block;"> C' +
+        #243'd: {0}</span>'#39'+'#13#10'                  '#39'<span style="font-size:11px' +
+        ';color:#929292;width:100%;display:inline-block;"> Nome: {1}</spa' +
+        'n>'#39'+'#13#10'                  '#39'<span style="font-size:11px;color:#9292' +
+        '92;width:100%;display:inline-block;"> Estoque: {2}</span>'#39'+'#13#10'   ' +
+        '               //'#39'<span style="font-size:11px;color:#929292;widt' +
+        'h:100%;display:inline-block;">Estoque: {3}</span>'#39'+'#13#10'           ' +
+        '       '#13#10'                 '#39'</td>'#39'+'#13#10'                 '#39'<td style=' +
+        '"width:55px;text-align:center;">'#39'+'#13#10'                  '#39'{[this.ge' +
+        'tNumber()]}'#39'+'#13#10'                  /*'#39'<img src="files/images/up.sv' +
+        'g" style="width:12px;height12px;margin:auto;"/>'#39'+'#13#10'             ' +
+        '     '#39'<span style="color:#f00;font-size:12px;">+ 150</span>'#39'+*/'#13 +
+        #10'                 '#39'</td>'#39'+'#13#10'                '#39'</tr>'#39'+'#13#10'          ' +
+        '     '#39'</table>'#39'+    '#13#10'              '#39'</div>'#39';  '#13#10'  config.itemTp' +
+        'l= new Ext.XTemplate('#13#10'   htmlRow,'#13#10'   {'#13#10'    getColor: function' +
+        '(){'#13#10'     if(clrIndx>5){clrIndx=0;}'#13#10'     return clrs[clrIndx++]' +
+        ';     '#13#10'    },  '#13#10'    getNumber:function(){'#13#10'     var i=randomIn' +
+        'tFromInterval(-200,200);'#13#10'     if(i>0){'#13#10'      return '#39'<img src=' +
+        '"files/images/up.svg" style="width:12px;height12px;margin:auto;"' +
+        '/>'#39'+'#13#10'             '#39'<span style="color:#07d280;font-size:12px;">' +
+        '+ '#39'+i.toString()+'#39'</span>'#39';'#13#10'     }'#13#10'     else{'#13#10'      return '#39'<' +
+        'img src="files/images/down.svg" style="width:12px;height12px;mar' +
+        'gin:auto;"/>'#39'+'#13#10'             '#39'<span style="color:#f37372;font-si' +
+        'ze:12px;">- '#39'+(i*-1).toString()+'#39'</span>'#39';'#13#10'     }'#13#10'    }'#13#10'   }'#13 +
+        #10'  );'#13#10'}'#13#10)
     Flex = 1
     Options = [dgRowLines]
     WebOptions.Paged = False
@@ -132,7 +128,7 @@ object MainmForm: TMainmForm
     Columns = <
       item
         Title.Caption = 'CODIGO'
-        FieldName = 'CODIGO'
+        FieldName = 'ID'
         Width = 114
       end
       item

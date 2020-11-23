@@ -2,7 +2,7 @@ object FormMlogin: TFormMlogin
   Left = 0
   Top = 0
   ClientHeight = 586
-  ClientWidth = 333
+  ClientWidth = 367
   Caption = 'Login'
   BorderIcons = []
   AutoHeight = False
@@ -21,7 +21,7 @@ object FormMlogin: TFormMlogin
   object CntPnlTop: TUnimContainerPanel
     Left = 0
     Top = 0
-    Width = 333
+    Width = 367
     Height = 201
     Hint = ''
     Align = alTop
@@ -30,28 +30,34 @@ object FormMlogin: TFormMlogin
       
         'beforeInit=function beforeInit(sender, config)'#13#10'{'#13#10'     config.c' +
         'ls = "corPn2" '#13#10'}')
+    ExplicitTop = -3
     object UnimLabel1: TUnimLabel
       AlignWithMargins = True
-      Left = 3
+      Left = 50
       Top = 80
-      Width = 327
+      Width = 267
       Height = 29
       Hint = ''
+      Margins.Left = 50
       Margins.Top = 80
+      Margins.Right = 50
       Alignment = taCenter
       AutoSize = False
-      Caption = 'EDENTIFICA'#199#195'O'
+      Caption = 'IDENTIFICA'#199#195'O'
       Align = alTop
       ParentFont = False
       Font.Color = clWhite
       Font.Height = -24
+      ExplicitLeft = 3
+      ExplicitTop = 96
+      ExplicitWidth = 361
     end
   end
   object edUsuario: TUnimEdit
     AlignWithMargins = True
     Left = 25
     Top = 231
-    Width = 283
+    Width = 317
     Height = 33
     Hint = ''
     Margins.Left = 25
@@ -69,7 +75,7 @@ object FormMlogin: TFormMlogin
   object UnimContainerPanel1: TUnimContainerPanel
     Left = 0
     Top = 264
-    Width = 333
+    Width = 367
     Height = 53
     Hint = ''
     Align = alTop
@@ -78,7 +84,7 @@ object FormMlogin: TFormMlogin
     AlignWithMargins = True
     Left = 25
     Top = 317
-    Width = 283
+    Width = 317
     Height = 33
     Hint = ''
     Margins.Left = 25
@@ -89,6 +95,7 @@ object FormMlogin: TFormMlogin
     Align = alTop
     Text = ''
     CharCase = ecUpperCase
+    PasswordChar = '*'
     EmptyText = 'SENHA'
     ParentFont = False
     TabOrder = 2
@@ -96,7 +103,7 @@ object FormMlogin: TFormMlogin
   object UnimContainerPanel2: TUnimContainerPanel
     Left = 0
     Top = 350
-    Width = 333
+    Width = 367
     Height = 27
     Hint = ''
     Align = alTop
@@ -105,7 +112,7 @@ object FormMlogin: TFormMlogin
     AlignWithMargins = True
     Left = 25
     Top = 407
-    Width = 283
+    Width = 317
     Height = 45
     Hint = ''
     Margins.Left = 25
