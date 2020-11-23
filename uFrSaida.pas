@@ -135,7 +135,7 @@ end;
 
 procedure TfraSaida.BtGrvClick(Sender: TObject);
 begin
-
+  ShowMessage(cbSetor.Text);
   EdPesquisar.Visible := True;
   //  usando  SweetAlert1
   if edCodProduto.Text = '' then

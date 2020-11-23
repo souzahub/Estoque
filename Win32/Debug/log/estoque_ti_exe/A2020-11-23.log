@@ -1,0 +1,18 @@
+Estoque_TI.exe: 00003954: 07:57:00 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00003954: 07:57:00 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00003954: 07:57:00 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00003954: 07:57:00 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 000011F0: 07:57:24 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 000011F0: 07:57:24 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 000011F0: 07:57:24 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+Estoque_TI.exe: 000011F0: 07:57:24 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 000011F0: 07:57:24 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 00003378: 07:57:30 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 000029D8: 07:57:30 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00000F0C: 07:58:38 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 000015BC: 07:58:38 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 000037B8: 08:06:14 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 000037B8: 08:06:14 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 000037B8: 08:06:15 [TUniServerModule]:Global Cache Folder Erased. <147> Files deleted.
+Estoque_TI.exe: 000037B8: 08:06:15 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 000037B8: 08:06:15 [TUniServerModule]:HTTP Server Started on Port: 8050

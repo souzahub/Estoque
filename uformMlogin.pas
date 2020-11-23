@@ -15,18 +15,14 @@ type
   TFormMlogin = class(TUnimLoginForm)
     CntPnlTop: TUnimContainerPanel;
     UnimLabel1: TUnimLabel;
-    UnimLabel2: TUnimLabel;
+    edUsuario: TUnimEdit;
     edSenha: TUnimEdit;
-    EdUsuario: TUnimEdit;
-    lbAberto: TUnimLabel;
-    lbFehado: TUnimLabel;
-    UniSweetAlert1: TUniSweetAlert;
+    sbConectarOs: TUnimBitBtn;
+    UnimContainerPanel1: TUnimContainerPanel;
+    UnimContainerPanel2: TUnimContainerPanel;
     UniNativeImageList1: TUniNativeImageList;
-    UnimBitBtn1: TUnimBitBtn;
-    procedure UnimBitBtn1Click(Sender: TObject);
-    procedure lbFehadoClick(Sender: TObject);
-    procedure lbAbertoClick(Sender: TObject);
-    procedure UnimLoginFormCreate(Sender: TObject);
+    UniSweetAlert1: TUniSweetAlert;
+    procedure sbConectarOsClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -47,23 +43,9 @@ begin
   Result := TFormMlogin(UniMainModule.GetFormInstance(TFormMlogin));
 end;
 
-procedure TFormMlogin.lbAbertoClick(Sender: TObject);
+procedure TFormMlogin.sbConectarOsClick(Sender: TObject);
 begin
-  edSenha.PasswordChar := '*' ;
-  lbFehado.Visible := True ;
-  lbAberto.Visible := False ;
-end;
-
-procedure TFormMlogin.lbFehadoClick(Sender: TObject);
-begin
-  edSenha.PasswordChar := #0 ;
-  lbFehado.Visible := False ;
-  lbAberto.Visible := True;
-end;
-
-procedure TFormMlogin.UnimBitBtn1Click(Sender: TObject);
-begin
-        dmDados.rdwUsuario.Open;
+    dmDados.rdwUsuario.Open;
       if dmDados.rdwUsuario.Locate('LOGIN', uppercase( EdUsuario.Text ), []) then
       begin
         if dmDados.rdwUsuarioSENHA.Value <> edSenha.Text then
@@ -73,7 +55,7 @@ begin
         UniSweetAlert1.AlertType := atWarning;
         UniSweetAlert1.ShowCancelButton := False;
         UniSweetAlert1.Title := 'ATENÇÃO';
-        UniSweetAlert1.Show('Usuario / Senha Incorreta');
+        UniSweetAlert1.Show('Erro ao fazer login');
         edUsuario.SetFocus;
         exit;
         end;
@@ -85,7 +67,7 @@ begin
         UniSweetAlert1.AlertType := atWarning;
         UniSweetAlert1.ShowCancelButton := False;
         UniSweetAlert1.Title := 'ATENÇÃO';
-        UniSweetAlert1.Show('Usuario / Senha Incorreta');
+        UniSweetAlert1.Show('Erro ao fazer login');
         edUsuario.SetFocus;
         exit;
       end;
@@ -99,17 +81,12 @@ begin
           UniSweetAlert1.ShowCancelButton := False;
           UniSweetAlert1.ConfirmButtonText := 'Ok';
           UniSweetAlert1.Width := 300;
-          UniSweetAlert1.Show('Usuário não autorizado');
+          UniSweetAlert1.Show('Erro ao fazer login');
           exit;
         end;
       end;
 
       ModalResult := mrOk;
-end;
-
-procedure TFormMlogin.UnimLoginFormCreate(Sender: TObject);
-begin
-  lbAberto.Visible := False;
 end;
 
 initialization

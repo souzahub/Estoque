@@ -1,8 +1,8 @@
 object FormMlogin: TFormMlogin
   Left = 0
   Top = 0
-  ClientHeight = 637
-  ClientWidth = 516
+  ClientHeight = 586
+  ClientWidth = 333
   Caption = 'Login'
   BorderIcons = []
   AutoHeight = False
@@ -13,7 +13,6 @@ object FormMlogin: TFormMlogin
   TitleButtons = <>
   ShowAnimation = 'fade'
   HideAnimation = 'fadeOut'
-  OnCreate = UnimLoginFormCreate
   PixelsPerInch = 96
   TextHeight = 13
   ScrollPosition = 0
@@ -22,128 +21,102 @@ object FormMlogin: TFormMlogin
   object CntPnlTop: TUnimContainerPanel
     Left = 0
     Top = 0
-    Width = 516
+    Width = 333
     Height = 201
     Hint = ''
     Align = alTop
-    Color = 15963681
+    Color = clHighlight
     ClientEvents.UniEvents.Strings = (
       
         'beforeInit=function beforeInit(sender, config)'#13#10'{'#13#10'     config.c' +
-        'ls = "pnlround" '#13#10'}')
-    LayoutConfig.Cls = 'pnlround'
-    DesignSize = (
-      516
-      201)
+        'ls = "corPn2" '#13#10'}')
     object UnimLabel1: TUnimLabel
-      Left = 215
-      Top = 132
-      Width = 73
+      AlignWithMargins = True
+      Left = 3
+      Top = 80
+      Width = 327
       Height = 29
       Hint = ''
+      Margins.Top = 80
       Alignment = taCenter
       AutoSize = False
-      Caption = 'Login'
-      Anchors = [akTop, akRight]
+      Caption = 'EDENTIFICA'#199#195'O'
+      Align = alTop
       ParentFont = False
       Font.Color = clWhite
       Font.Height = -24
     end
-    object UnimLabel2: TUnimLabel
-      Left = 148
-      Top = 56
-      Width = 54
-      Height = 70
-      Hint = ''
-      Alignment = taCenter
-      AutoSize = False
-      Caption = '<i class="fa fa-expeditedssl fa-5x" aria-hidden="true"></i>'
-      Anchors = [akLeft, akTop, akRight]
-      ParentColor = False
-      Color = clSilver
-      ParentFont = False
-      Font.Color = clWhite
-      Font.Height = -13
-    end
   end
-  object EdUsuario: TUnimEdit
-    Left = 52
-    Top = 254
-    Width = 295
-    Height = 33
-    Hint = ''
-    Margins.Left = 25
-    Margins.Top = 25
-    Margins.Right = 25
-    BodyRTL = False
-    Text = ''
-    EmptyText = 'usu'#225'rio'
-    ParentFont = False
-    TabOrder = 2
-  end
-  object edSenha: TUnimEdit
+  object edUsuario: TUnimEdit
     AlignWithMargins = True
-    Left = 52
-    Top = 335
-    Width = 253
+    Left = 25
+    Top = 231
+    Width = 283
     Height = 33
     Hint = ''
     Margins.Left = 25
-    Margins.Top = 25
-    Margins.Right = 120
+    Margins.Top = 30
+    Margins.Right = 25
+    Margins.Bottom = 0
+    BodyRTL = False
+    Align = alTop
     Text = ''
-    PasswordChar = '*'
-    EmptyText = 'senha'
+    CharCase = ecUpperCase
+    EmptyText = 'USU'#193'RIO'
     ParentFont = False
     TabOrder = 1
   end
-  object lbAberto: TUnimLabel
-    Left = 330
-    Top = 335
-    Width = 17
-    Height = 17
+  object UnimContainerPanel1: TUnimContainerPanel
+    Left = 0
+    Top = 264
+    Width = 333
+    Height = 53
     Hint = ''
-    AutoSize = False
-    Caption = '<i class="fa fa-eye fa-2x"></i> '
-    ParentFont = False
-    OnClick = lbAbertoClick
+    Align = alTop
   end
-  object lbFehado: TUnimLabel
-    Left = 330
-    Top = 335
-    Width = 17
-    Height = 17
-    Hint = ''
-    AutoSize = False
-    Caption = '<i class="fa fa-eye-slash fa-2x"></i> '
-    ParentFont = False
-    OnClick = lbFehadoClick
-  end
-  object UnimBitBtn1: TUnimBitBtn
+  object edSenha: TUnimEdit
     AlignWithMargins = True
-    Left = 52
-    Top = 437
-    Width = 295
-    Height = 50
+    Left = 25
+    Top = 317
+    Width = 283
+    Height = 33
     Hint = ''
     Margins.Left = 25
-    Margins.Top = 20
+    Margins.Top = 0
+    Margins.Right = 25
+    Margins.Bottom = 0
+    BodyRTL = False
+    Align = alTop
+    Text = ''
+    CharCase = ecUpperCase
+    EmptyText = 'SENHA'
+    ParentFont = False
+    TabOrder = 2
+  end
+  object UnimContainerPanel2: TUnimContainerPanel
+    Left = 0
+    Top = 350
+    Width = 333
+    Height = 27
+    Hint = ''
+    Align = alTop
+  end
+  object sbConectarOs: TUnimBitBtn
+    AlignWithMargins = True
+    Left = 25
+    Top = 407
+    Width = 283
+    Height = 45
+    Hint = ''
+    Margins.Left = 25
+    Margins.Top = 30
     Margins.Right = 25
     ParentShowHint = False
+    Align = alTop
     UI = 'round'
     Caption = 'Entrar'
     Font.Height = -17
-    LayoutConfig.Cls = 'bntLogin'
-    OnClick = UnimBitBtn1Click
-  end
-  object UniSweetAlert1: TUniSweetAlert
-    Title = 'Title'
-    ConfirmButtonText = 'OK'
-    CancelButtonText = 'Cancel'
-    Width = 360
-    Padding = 20
-    Left = 112
-    Top = 16
+    OnClick = sbConectarOsClick
   end
   object UniNativeImageList1: TUniNativeImageList
     Left = 40
@@ -151,5 +124,18 @@ object FormMlogin: TFormMlogin
     Images = {
       0200000000000000060E0000004E657749636F6E436C733B66613B0000000006
       0B0000007369676E2D696E3B66613B}
+  end
+  object UniSweetAlert1: TUniSweetAlert
+    Title = 'Title'
+    ConfirmButtonText = 'OK'
+    CancelButtonText = 'Cancel'
+    ImageIndex = 0
+    InputType = ItText
+    Width = 400
+    Padding = 20
+    ShowConfirmButton = False
+    ReverseButtons = True
+    Left = 136
+    Top = 24
   end
 end

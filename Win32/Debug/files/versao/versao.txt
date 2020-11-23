@@ -1,2 +1,0 @@
-versao 1.0.0 #normal
-04/11/2020 - versao 1.0.1 #acrescentado nono layout + upload de imagens e apresentação dos produtos pela imagem
