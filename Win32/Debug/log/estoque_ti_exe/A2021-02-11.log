@@ -1,0 +1,15 @@
+Estoque_TI.exe: 000031B4: 11:46:20 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 000031B4: 11:46:20 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 000031B4: 11:46:20 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 000031B4: 11:46:20 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 000031B4: 11:59:09 [TUniServerModule]:Shutting Down Server.
+Estoque_TI.exe: 000031B4: 11:59:09 [TUniServerModule]:Stopping HTTP Server.
+Estoque_TI.exe: 000031B4: 11:59:10 [TUniServerModule]:HTTP Server Stopped.
+Estoque_TI.exe: 000031B4: 11:59:10 [TUniGUISessionManager]:Terminating Session manager.
+Estoque_TI.exe: 000031B4: 11:59:10 [TUniGUISessionManager]:Stopping Cache Eraser...
+Estoque_TI.exe: 000031B4: 11:59:10 [TUniGUISessionManager]:Cache Eraser Stopped.
+Estoque_TI.exe: 000031B4: 11:59:10 [TUniGUISessionManager]:Destroying Worker Threads.
+Estoque_TI.exe: 000031B4: 11:59:10 [TUniGUISessionManager]:Session manager terminated.
+Estoque_TI.exe: 000031B4: 11:59:10 [TUniServerModule]:Server Shutdown Completed.
+Estoque_TI.exe: 000031B4: 11:59:10 []:<-------------------------------------------------------------->
+Estoque_TI.exe: 000031B4: 11:59:10 [Terminated]:Exit Code: 0

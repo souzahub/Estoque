@@ -91,6 +91,7 @@ object frCadastroUsuario: TfrCadastroUsuario
           Caption = ''
           Color = clNone
           LayoutConfig.Cls = 'cor1'
+          ExplicitLeft = 151
           ScrollHeight = 522
           ScrollWidth = 1034
           object UniLabel2: TUniLabel
@@ -105,7 +106,7 @@ object frCadastroUsuario: TfrCadastroUsuario
             TabOrder = 1
           end
           object UniComboBox1: TUniComboBox
-            Left = 41
+            Left = 42
             Top = 59
             Width = 154
             Hint = ''
@@ -114,12 +115,11 @@ object frCadastroUsuario: TfrCadastroUsuario
             Text = ''
             Items.Strings = (
               'ADMINISTRADOR'
-              'USU'#193'RIO')
+              'USUARIO')
             TabOrder = 2
-            ReadOnly = True
             CharCase = ecUpperCase
             IconItems = <>
-            ReadOnlyMode = urmNotEditable
+            OnChange = UniComboBox1Change
           end
           object UniNome: TUniEdit
             Left = 41

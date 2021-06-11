@@ -1,14 +1,14 @@
 object frEstoque: TfrEstoque
   Left = 0
   Top = 0
-  Width = 1098
+  Width = 1492
   Height = 636
   OnCreate = UniFrameCreate
   TabOrder = 0
   object PnUsuario: TUniPanel
     Left = 0
     Top = 45
-    Width = 1098
+    Width = 1492
     Height = 591
     Hint = ''
     Align = alClient
@@ -17,7 +17,7 @@ object frEstoque: TfrEstoque
     object PageCadastro: TUniPageControl
       Left = 1
       Top = 1
-      Width = 1096
+      Width = 1490
       Height = 589
       Hint = ''
       ActivePage = Tab1
@@ -26,11 +26,12 @@ object frEstoque: TfrEstoque
       object Tab1: TUniTabSheet
         Hint = ''
         Caption = 'Consulta'
+        OnBeforeActivate = Tab1BeforeActivate
         object UniDBGrid1: TUniDBGrid
           AlignWithMargins = True
           Left = 5
           Top = 5
-          Width = 1078
+          Width = 1472
           Height = 551
           Hint = ''
           Margins.Left = 5
@@ -40,7 +41,7 @@ object frEstoque: TfrEstoque
           BodyRTL = False
           DataSource = dsEstoque
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgTitleClick, dgFilterClearButton, dgAutoRefreshRow]
-          WebOptions.Paged = False
+          WebOptions.PageSize = 50
           LoadMask.Message = 'Loading data...'
           ForceFit = True
           BorderStyle = ubsNone
@@ -116,7 +117,7 @@ object frEstoque: TfrEstoque
         end
         object pnInfo: TUniPanel
           Left = 0
-          Top = 48
+          Top = 40
           Width = 310
           Height = 193
           Hint = ''
@@ -185,13 +186,160 @@ object frEstoque: TfrEstoque
           end
         end
       end
+      object TabEntrada: TUniTabSheet
+        Hint = ''
+        Caption = 'Entrada'
+        OnBeforeActivate = TabEntradaBeforeActivate
+        object UniDBGrid2: TUniDBGrid
+          AlignWithMargins = True
+          Left = 5
+          Top = 5
+          Width = 1472
+          Height = 551
+          Hint = ''
+          Margins.Left = 5
+          Margins.Top = 5
+          Margins.Right = 5
+          Margins.Bottom = 5
+          BodyRTL = False
+          DataSource = dsMovEntrada
+          Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgTitleClick, dgFilterClearButton, dgAutoRefreshRow]
+          LoadMask.Message = 'Loading data...'
+          ForceFit = True
+          BorderStyle = ubsNone
+          Align = alClient
+          TabOrder = 0
+          ParentColor = False
+          Color = clWindow
+          Columns = <
+            item
+              FieldName = 'CPRODUTO'
+              Title.Caption = 'C'#211'D'
+              Width = 58
+            end
+            item
+              FieldName = 'ENTRADA'
+              Title.Caption = 'ENTRADA'
+              Width = 81
+            end
+            item
+              FieldName = 'NPRODUTO'
+              Title.Caption = 'PRODUTO'
+              Width = 411
+            end
+            item
+              FieldName = 'TOTALITENS'
+              Title.Caption = 'TOTAL ITENS'
+              Width = 81
+              Alignment = taCenter
+            end
+            item
+              FieldName = 'VALORTOTAL'
+              Title.Caption = 'TOTAL R$'
+              Width = 68
+            end
+            item
+              FieldName = 'TIPO'
+              Title.Caption = 'TIPO'
+              Width = 52
+            end
+            item
+              FieldName = 'CUSTO'
+              Title.Caption = 'CUSTO R$'
+              Width = 66
+            end
+            item
+              FieldName = 'FORNECEDOR'
+              Title.Caption = 'FORNECEDOR'
+              Width = 234
+            end
+            item
+              FieldName = 'LOCALPRODUTO'
+              Title.Caption = 'LOCAL DO PRODUTO'
+              Width = 178
+            end
+            item
+              FieldName = 'PATRIMONIO'
+              Title.Alignment = taCenter
+              Title.Caption = 'PATRIM'#212'NIO'
+              Width = 75
+              Alignment = taCenter
+            end>
+        end
+      end
+      object TabSaida: TUniTabSheet
+        Hint = ''
+        Caption = 'Sa'#237'da'
+        OnBeforeActivate = TabSaidaBeforeActivate
+        object UniDBGrid3: TUniDBGrid
+          AlignWithMargins = True
+          Left = 5
+          Top = 5
+          Width = 1467
+          Height = 551
+          Hint = ''
+          Margins.Left = 5
+          Margins.Top = 5
+          Margins.Right = 10
+          Margins.Bottom = 5
+          BodyRTL = False
+          DataSource = dsMovSaida
+          Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgTitleClick, dgFilterClearButton, dgAutoRefreshRow]
+          LoadMask.Message = 'Loading data...'
+          ForceFit = True
+          BorderStyle = ubsNone
+          Align = alClient
+          TabOrder = 0
+          ParentColor = False
+          Color = clWindow
+          OnCellClick = UniDBGrid1CellClick
+          Columns = <
+            item
+              FieldName = 'CPRODUTO'
+              Title.Caption = 'C'#211'D'
+              Width = 43
+            end
+            item
+              FieldName = 'SAIDA'
+              Title.Caption = 'SAIDA'
+              Width = 80
+            end
+            item
+              FieldName = 'NPRODUTO'
+              Title.Caption = 'PRODUTO'
+              Width = 370
+            end
+            item
+              FieldName = 'SETOR'
+              Title.Caption = 'SETOR'
+              Width = 174
+            end
+            item
+              FieldName = 'USUARIO'
+              Title.Caption = 'USUARIO'
+              Width = 145
+            end
+            item
+              FieldName = 'QUANTIDADE'
+              Title.Caption = 'QUANTIDADE'
+              Width = 86
+              Alignment = taCenter
+            end
+            item
+              FieldName = 'VPRODUTO'
+              Title.Alignment = taCenter
+              Title.Caption = 'CUSTO R$'
+              Width = 86
+            end>
+        end
+      end
     end
   end
   object UniPanel1: TUniPanel
     AlignWithMargins = True
     Left = 0
     Top = 3
-    Width = 1098
+    Width = 1492
     Height = 42
     Hint = ''
     Margins.Left = 0
@@ -276,45 +424,125 @@ object frEstoque: TfrEstoque
           '}')
       OnClick = sbExportExcelClick
     end
-    object EdPesquisar: TUniEdit
+    object pnPesquisar: TUniContainerPanel
       AlignWithMargins = True
-      Left = 789
-      Top = 5
-      Width = 299
-      Height = 35
+      Left = 1088
+      Top = 3
+      Width = 401
+      Height = 36
       Hint = ''
-      Margins.Top = 5
-      Margins.Right = 10
-      Margins.Bottom = 2
-      ParentShowHint = False
-      CharCase = ecUpperCase
-      MaxLength = 40
-      Text = ''
-      ParentFont = False
-      Font.Color = clBlack
-      Font.Style = [fsBold]
+      ParentColor = False
       Align = alRight
       TabOrder = 4
-      EmptyText = 'PESQUISAR'
-      ClearButton = True
-      FieldLabel = '<i class="fas fa-search"></i>'
-      FieldLabelWidth = 20
-      FieldLabelSeparator = ' '
-      FieldLabelFont.Height = -19
-      FieldLabelFont.Style = [fsBold]
-      OnChange = EdPesquisarChange
+      object btLimpar: TUniFSButton
+        AlignWithMargins = True
+        Left = 360
+        Top = 5
+        Width = 31
+        Height = 26
+        Hint = ''
+        Margins.Left = 0
+        Margins.Top = 5
+        Margins.Right = 10
+        Margins.Bottom = 5
+        StyleButton = Primary
+        BadgeText.Text = '0'
+        BadgeText.TextColor = '#FFFFFF'
+        BadgeText.TextSize = 10
+        BadgeText.TextStyle = 'bold'
+        BadgeText.BackgroundColor = '#D50000'
+        Caption = ''
+        Align = alRight
+        ParentFont = False
+        Font.Color = clWhite
+        Font.Height = -24
+        Font.Name = 'Roboto'
+        Font.Style = [fsBold]
+        TabOrder = 1
+        ClientEvents.ExtEvents.Strings = (
+          
+            'afterrender=function afterrender(sender, eOpts)'#13#10'{'#13#10'   Ext.creat' +
+            'e('#39'Ext.tip.ToolTip'#39', {'#13#10'   target: sender.getEl(),'#13#10'   showDelay' +
+            ':50,'#13#10'   hideDelay: 50,'#13#10'   html: "Limpar"'#13#10'  });'#13#10'}')
+        ScreenMask.Enabled = True
+        ScreenMask.Message = 'Carregando...'
+        Images = UniNativeImageList1
+        ImageIndex = 23
+        OnClick = btLimparClick
+      end
+      object EdPesquisar: TUniEdit
+        AlignWithMargins = True
+        Left = 11
+        Top = 0
+        Width = 299
+        Height = 36
+        Hint = ''
+        Margins.Top = 0
+        Margins.Right = 10
+        Margins.Bottom = 0
+        ParentShowHint = False
+        CharCase = ecUpperCase
+        MaxLength = 40
+        CharEOL = #13
+        Text = ''
+        ParentFont = False
+        Font.Color = clBlack
+        Font.Style = [fsBold]
+        Align = alRight
+        TabOrder = 2
+        EmptyText = 'PESQUISAR'
+        FieldLabelWidth = 20
+        FieldLabelSeparator = ' '
+        FieldLabelFont.Height = -19
+        FieldLabelFont.Style = [fsBold]
+        OnKeyPress = EdPesquisarKeyPress
+      end
+      object btPesquisar: TUniFSButton
+        AlignWithMargins = True
+        Left = 320
+        Top = 5
+        Width = 30
+        Height = 26
+        Hint = ''
+        Margins.Left = 0
+        Margins.Top = 5
+        Margins.Right = 10
+        Margins.Bottom = 5
+        StyleButton = Transparent
+        CaptionIconFont = '<i class="fas fa-search"></i>'
+        BadgeText.Text = '0'
+        BadgeText.TextColor = '#FFFFFF'
+        BadgeText.TextSize = 10
+        BadgeText.TextStyle = 'bold'
+        BadgeText.BackgroundColor = '#D50000'
+        Caption = ''
+        Align = alRight
+        ParentFont = False
+        Font.Color = clBlack
+        Font.Height = -20
+        Font.Style = [fsBold]
+        TabOrder = 3
+        ClientEvents.ExtEvents.Strings = (
+          
+            'afterrender=function afterrender(sender, eOpts)'#13#10'{'#13#10'  Ext.create' +
+            '('#39'Ext.tip.ToolTip'#39', {'#13#10'   target: sender.getEl(),'#13#10'   showDelay:' +
+            '50,'#13#10'   hideDelay: 50,'#13#10'   html: "Busca dinamica &nbsp"'#13#10'  });'#13#10 +
+            '}')
+        OnClick = btPesquisarClick
+      end
     end
   end
   object dsEstoque: TDataSource
     DataSet = dmDados.RDWEstoque
-    Left = 404
-    Top = 82
+    OnDataChange = dsEstoqueDataChange
+    Left = 988
+    Top = 186
   end
   object UniNativeImageList1: TUniNativeImageList
     Left = 688
     Top = 128
     Images = {
-      1700000000000000060600000073613B66613B00000000060B0000006465736B
+      1800000000000000060600000073613B66613B00000000060B0000006465736B
       746F703B66613B000000000608000000656469743B66613B0000000006090000
       0074726173683B66613B000000000608000000736176653B66613B0000000006
       0B000000726574776565743B66613B0000000006090000006864642D6F3B6661
@@ -328,7 +556,22 @@ object frEstoque: TfrEstoque
       00706C75733B66613B00000000061100000070656E63696C2D7371756172653B
       66613B00000000061000000077696E646F772D636C6F73653B66613B00000000
       061400000066612D66696C652D657863656C2D6F3B66615F3B00000000061300
-      000066612D66696C652D636F64652D6F3B66615F3B}
+      000066612D66696C652D636F64652D6F3B66615F3BFFFFFF1F04CA0100008950
+      4E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF6100
+      000006624B474400FF00FF00FFA0BDA7930000017F49444154381195D3BF4B94
+      711C07F0E77B6468B4B8A85338080545B9069162B488A30D4D1E04228693116E
+      E5140EAD49D4A0B816A1A07F801804E611D49415081AB61804B744DDD3EBE3F1
+      C8DD11A2F27E7DBE3F9ECFF7CB3DC799B2ECF47F799E7738B5CE0F4E1F173C24
+      B29DA9FD94693FC955FA3A3920F23853BF1399567AB97DDC459ECF11A9297D25
+      CDDBFCE51B1719E2BF71A0C7832922EF524A5F92CD33561D54B9CC4E4AE997F1
+      287AC62D6E51E12B63ACE99B37D6A3E915917DE5427D37CBCCBB295ED334AF2A
+      F374153DD1D46EA331F78A8736DF50E6011F29F2C9243E7DBDD56295C84FA597
+      78BD27C6119EB2C938F7A910B9563FAD5AB571936EBA784DE4B7B2C4300B7C66
+      823B9C4DCE6626315E35BFC20077394F636A16CF58E106355FE2ACF1F08B2AB9
+      648BD6BCB4F181C6D42CE215AEC7E1521437C5EDF103AAC49A5D26D9A378CF19
+      F33F24E2D36D1A9BE3E6735C6282F7147994E7F9738A8C369F6C59E91A64831D
+      CABCA0C8624BFBF14BA726794B95659AFEE9FE01BBA6B199375228D500000000
+      49454E44AE426082}
   end
   object UniSweetAlert1: TUniSweetAlert
     Title = 'Title'
@@ -338,8 +581,8 @@ object frEstoque: TfrEstoque
     CancelButtonColor = 6835774
     Width = 350
     Padding = 20
-    Left = 508
-    Top = 130
+    Left = 844
+    Top = 226
   end
   object UniGridHTMLExporter1: TUniGridHTMLExporter
     FileExtention = 'html'
@@ -359,7 +602,17 @@ object frEstoque: TfrEstoque
   end
   object dsInfo: TDataSource
     DataSet = dmDados.RDWEstoque
-    Left = 446
-    Top = 82
+    Left = 990
+    Top = 98
+  end
+  object dsMovEntrada: TDataSource
+    DataSet = dmDados.RDWMOVIENTRADA
+    Left = 988
+    Top = 266
+  end
+  object dsMovSaida: TDataSource
+    DataSet = dmDados.RDWMOVISAIDA
+    Left = 988
+    Top = 362
   end
 end

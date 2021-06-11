@@ -1,0 +1,173 @@
+Estoque_TI.exe: 00000F54: 07:44:49 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00000F54: 07:44:49 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00000F54: 07:44:49 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00000F54: 07:44:49 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 00001DA4: 07:45:00 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00003E58: 07:45:01 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 000027F8: 07:45:07 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00002FB4: 07:45:08 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00003A44: 07:46:06 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00003A44: 07:46:06 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00003A44: 07:46:11 [TUniServerModule]:Global Cache Folder Erased. <165> Files deleted.
+Estoque_TI.exe: 00003A44: 07:46:11 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00003A44: 07:46:11 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 000019A4: 07:46:12 [127.0.0.1]:EUniSessionException : Sessão inválida ou tempo limite da sessão. (Session not found: iPOfQdr1ba107E2342C ) : Addr: $0080DA66
+Estoque_TI.exe: 000024A8: 07:46:12 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00002D68: 07:46:12 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00001F00: 07:48:33 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00001F00: 07:48:33 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00001F00: 07:48:38 [TUniServerModule]:Global Cache Folder Erased. <158> Files deleted.
+Estoque_TI.exe: 00001F00: 07:48:38 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00001F00: 07:48:38 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 00001D60: 07:48:39 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 000002A8: 07:48:39 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00003FF8: 07:54:30 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00003FF8: 07:54:30 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00003FF8: 07:54:35 [TUniServerModule]:Global Cache Folder Erased. <159> Files deleted.
+Estoque_TI.exe: 00003FF8: 07:54:35 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00003FF8: 07:54:35 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 00003904: 07:54:39 [127.0.0.1]:EUniSessionException : Sessão inválida ou tempo limite da sessão. (Session not found: m6SNQ8PZUS107E23520 ) : Addr: $0080DA66
+Estoque_TI.exe: 00003D14: 07:54:39 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00003C8C: 07:54:40 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00003E88: 07:55:14 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 000031D4: 07:55:14 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00003588: 07:58:57 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00000498: 07:59:22 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00002A90: 07:59:23 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00003FF8: 08:04:46 [TUniServerModule]:Shutting Down Server.
+Estoque_TI.exe: 00003FF8: 08:04:46 [TUniServerModule]:Stopping HTTP Server.
+Estoque_TI.exe: 00003FF8: 08:04:47 [TUniServerModule]:HTTP Server Stopped.
+Estoque_TI.exe: 00003FF8: 08:04:47 [TUniGUISessionManager]:Terminating Session manager.
+Estoque_TI.exe: 00003FF8: 08:04:47 [TUniGUISessionManager]:Stopping Cache Eraser...
+Estoque_TI.exe: 00003FF8: 08:04:47 [TUniGUISessionManager]:Cache Eraser Stopped.
+Estoque_TI.exe: 00003FF8: 08:04:47 [TUniGUISessionManager]:Destroying Worker Threads.
+Estoque_TI.exe: 00003FF8: 08:04:47 [TUniGUISessionManager]:Session manager terminated.
+Estoque_TI.exe: 00003FF8: 08:04:53 [TUniServerModule]:Server Shutdown Completed.
+Estoque_TI.exe: 00003FF8: 08:04:53 []:<-------------------------------------------------------------->
+Estoque_TI.exe: 00003FF8: 08:04:53 [Terminated]:Exit Code: 0
+Estoque_TI.exe: 000022E4: 08:06:44 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 000022E4: 08:06:44 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 000022E4: 08:06:44 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 000022E4: 08:06:44 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 000000E8: 08:06:48 [127.0.0.1]:EUniSessionException : Sessão inválida ou tempo limite da sessão. (Session not found: 1b2hma8UWw107E2380A ) : Addr: $0080DA66
+Estoque_TI.exe: 000000E8: 08:06:50 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 000029C0: 08:06:50 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 0000271C: 08:07:34 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 000025D4: 08:07:35 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00003AF0: 08:07:59 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00003AF0: 08:07:59 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00003AF0: 08:08:04 [TUniServerModule]:Global Cache Folder Erased. <160> Files deleted.
+Estoque_TI.exe: 00003AF0: 08:08:04 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00003AF0: 08:08:04 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 000033A4: 08:08:04 [127.0.0.1]:EUniSessionException : Sessão inválida ou tempo limite da sessão. (Session not found: EVGEXQ1YRR107E23A43 ) : Addr: $0080DA66
+Estoque_TI.exe: 0000247C: 08:08:04 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00000A84: 08:08:05 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00003E84: 08:12:00 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00003E84: 08:12:00 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00003E84: 08:12:00 [TUniServerModule]:Global Cache Folder Erased. <154> Files deleted.
+Estoque_TI.exe: 00003E84: 08:12:00 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00003E84: 08:12:00 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 00003D40: 08:12:05 [127.0.0.1]:EUniSessionException : Sessão inválida ou tempo limite da sessão. (Session not found: X1wjQdaKAL107E23A66 ) : Addr: $0080DA66
+Estoque_TI.exe: 00001F18: 08:12:05 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00000AD0: 08:12:06 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00001B30: 08:16:52 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00001B30: 08:16:52 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00001B30: 08:16:57 [TUniServerModule]:Global Cache Folder Erased. <152> Files deleted.
+Estoque_TI.exe: 00001B30: 08:16:57 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00001B30: 08:16:57 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 00003C28: 08:16:58 [127.0.0.1]:EUniSessionException : Sessão inválida ou tempo limite da sessão. (Session not found: jn41gQTkYp107E23B7C ) : Addr: $0080DA66
+Estoque_TI.exe: 00003D24: 08:16:58 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00003D7C: 08:16:59 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 000011DC: 08:18:48 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 000011DC: 08:18:48 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 000011DC: 08:18:52 [TUniServerModule]:Global Cache Folder Erased. <160> Files deleted.
+Estoque_TI.exe: 000011DC: 08:18:53 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 000011DC: 08:18:53 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 000009F8: 08:18:53 [127.0.0.1]:EUniSessionException : Sessão inválida ou tempo limite da sessão. (Session not found: O3N2uDysAp107E23CCF ) : Addr: $0080DA66
+Estoque_TI.exe: 000009F8: 08:18:53 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00000F90: 08:18:54 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00002FA8: 08:20:38 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00002FA8: 08:20:38 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00002FA8: 08:20:43 [TUniServerModule]:Global Cache Folder Erased. <158> Files deleted.
+Estoque_TI.exe: 00002FA8: 08:20:43 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00002FA8: 08:20:43 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 000028D4: 08:21:30 [127.0.0.1]:EUniSessionException : Sessão inválida ou tempo limite da sessão. (Session not found: ccQRVUEsvZ107E23D55 ) : Addr: $0080DA66
+Estoque_TI.exe: 00003FD4: 08:28:38 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00003FD4: 08:28:38 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00003FD4: 08:28:38 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+Estoque_TI.exe: 00003FD4: 08:28:38 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00003FD4: 08:28:38 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 00001AC0: 08:28:42 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00003320: 08:28:42 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00003FD4: 08:29:48 [TUniServerModule]:Shutting Down Server.
+Estoque_TI.exe: 00003FD4: 08:29:48 [TUniServerModule]:Stopping HTTP Server.
+Estoque_TI.exe: 00003FD4: 08:29:49 [TUniServerModule]:HTTP Server Stopped.
+Estoque_TI.exe: 00003FD4: 08:29:49 [TUniGUISessionManager]:Terminating Session manager.
+Estoque_TI.exe: 00003FD4: 08:29:49 [TUniGUISessionManager]:Stopping Cache Eraser...
+Estoque_TI.exe: 00003FD4: 08:29:49 [TUniGUISessionManager]:Cache Eraser Stopped.
+Estoque_TI.exe: 00003FD4: 08:29:49 [TUniGUISessionManager]:Destroying Worker Threads.
+Estoque_TI.exe: 00003FD4: 08:29:49 [TUniGUISessionManager]:Session manager terminated.
+Estoque_TI.exe: 00003FD4: 08:29:55 [TUniServerModule]:Server Shutdown Completed.
+Estoque_TI.exe: 00003FD4: 08:29:55 []:<-------------------------------------------------------------->
+Estoque_TI.exe: 00003FD4: 08:29:55 [Terminated]:Exit Code: 0
+Estoque_TI.exe: 00002638: 08:33:54 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00002638: 08:33:54 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00002638: 08:33:54 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00002638: 08:33:54 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 0000327C: 08:34:17 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 000014E0: 08:34:17 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00002638: 08:36:58 [TUniServerModule]:Shutting Down Server.
+Estoque_TI.exe: 00002638: 08:36:58 [TUniServerModule]:Stopping HTTP Server.
+Estoque_TI.exe: 00002638: 08:36:59 [TUniServerModule]:HTTP Server Stopped.
+Estoque_TI.exe: 00002638: 08:36:59 [TUniGUISessionManager]:Terminating Session manager.
+Estoque_TI.exe: 00002638: 08:36:59 [TUniGUISessionManager]:Stopping Cache Eraser...
+Estoque_TI.exe: 00002638: 08:36:59 [TUniGUISessionManager]:Cache Eraser Stopped.
+Estoque_TI.exe: 00002638: 08:36:59 [TUniGUISessionManager]:Destroying Worker Threads.
+Estoque_TI.exe: 00002638: 08:36:59 [TUniGUISessionManager]:Session manager terminated.
+Estoque_TI.exe: 00002638: 08:37:05 [TUniServerModule]:Server Shutdown Completed.
+Estoque_TI.exe: 00002638: 08:37:05 []:<-------------------------------------------------------------->
+Estoque_TI.exe: 00002638: 08:37:05 [Terminated]:Exit Code: 0
+Estoque_TI.exe: 00003DD8: 08:37:30 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00003DD8: 08:37:30 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00003DD8: 08:37:30 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00003DD8: 08:37:30 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 00001BD0: 08:37:31 [127.0.0.1]:EUniSessionException : Sessão inválida ou tempo limite da sessão. (Session not found: TaIQh9SyRL107E24182 ) : Addr: $0080DA66
+Estoque_TI.exe: 00001880: 08:37:31 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00002444: 08:37:32 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00002F8C: 08:38:51 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00002F8C: 08:38:51 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00002F8C: 08:38:55 [TUniServerModule]:Global Cache Folder Erased. <159> Files deleted.
+Estoque_TI.exe: 00002F8C: 08:38:55 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00002F8C: 08:38:55 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 00003174: 08:38:57 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00000514: 08:38:57 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00002F8C: 08:41:01 [TUniServerModule]:Shutting Down Server.
+Estoque_TI.exe: 00002F8C: 08:41:01 [TUniServerModule]:Stopping HTTP Server.
+Estoque_TI.exe: 00002F8C: 08:41:02 [TUniServerModule]:HTTP Server Stopped.
+Estoque_TI.exe: 00002F8C: 08:41:02 [TUniGUISessionManager]:Terminating Session manager.
+Estoque_TI.exe: 00002F8C: 08:41:02 [TUniGUISessionManager]:Stopping Cache Eraser...
+Estoque_TI.exe: 00002F8C: 08:41:02 [TUniGUISessionManager]:Cache Eraser Stopped.
+Estoque_TI.exe: 00002F8C: 08:41:02 [TUniGUISessionManager]:Destroying Worker Threads.
+Estoque_TI.exe: 00002F8C: 08:41:02 [TUniGUISessionManager]:Session manager terminated.
+Estoque_TI.exe: 00002F8C: 08:41:07 [TUniServerModule]:Server Shutdown Completed.
+Estoque_TI.exe: 00002F8C: 08:41:07 []:<-------------------------------------------------------------->
+Estoque_TI.exe: 00002F8C: 08:41:07 [Terminated]:Exit Code: 0
+Estoque_TI.exe: 00000EE4: 08:43:15 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00000EE4: 08:43:15 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00000EE4: 08:43:15 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00000EE4: 08:43:15 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 00003258: 08:43:21 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00000540: 08:43:22 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00000A90: 08:43:24 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00003D44: 08:43:25 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00000EE4: 09:26:48 [TUniServerModule]:Shutting Down Server.
+Estoque_TI.exe: 00000EE4: 09:26:48 [TUniServerModule]:Stopping HTTP Server.
+Estoque_TI.exe: 00000EE4: 09:26:49 [TUniServerModule]:HTTP Server Stopped.
+Estoque_TI.exe: 00000EE4: 09:26:49 [TUniGUISessionManager]:Terminating Session manager.
+Estoque_TI.exe: 00000EE4: 09:26:49 [TUniGUISessionManager]:Stopping Cache Eraser...
+Estoque_TI.exe: 00000EE4: 09:26:49 [TUniGUISessionManager]:Cache Eraser Stopped.
+Estoque_TI.exe: 00000EE4: 09:26:49 [TUniGUISessionManager]:Destroying Worker Threads.
+Estoque_TI.exe: 00000EE4: 09:26:49 [TUniGUISessionManager]:Session manager terminated.
+Estoque_TI.exe: 00000EE4: 09:26:54 [TUniServerModule]:Server Shutdown Completed.
+Estoque_TI.exe: 00000EE4: 09:26:54 []:<-------------------------------------------------------------->
+Estoque_TI.exe: 00000EE4: 09:26:54 [Terminated]:Exit Code: 0

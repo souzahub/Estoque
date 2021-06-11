@@ -117,11 +117,6 @@ type
     RDWAutentificacaoNOME_USUARIO: TStringField;
     RDWDataServidor: TRESTDWClientSQL;
     RDWDataServidorDATASERVIDOR: TSQLTimeStampField;
-    RDWIDEmpresa: TRESTDWClientSQL;
-    RDWIDEmpresaID: TIntegerField;
-    RDWIDEmpresaDATA_INICIO: TSQLTimeStampField;
-    RDWIDEmpresaDATA_FIM: TSQLTimeStampField;
-    RDWIDEmpresaNOME_SISTEMA: TStringField;
     RDWEntradaPATRIMONIO: TStringField;
     RDWEstoqueVISUALIZAR: TIntegerField;
     RDWCAD_PRODUTO: TRESTDWClientSQL;
@@ -136,6 +131,28 @@ type
     RDWCAD_PRODUTOESTOQUE_NOVO: TIntegerField;
     RDWCAD_PRODUTOGRUPO: TStringField;
     RDWCAD_PRODUTOID: TIntegerField;
+    RDWMOVISAIDA: TRESTDWClientSQL;
+    SQLTimeStampField3: TSQLTimeStampField;
+    IntegerField6: TIntegerField;
+    IntegerField7: TIntegerField;
+    FloatField2: TFloatField;
+    StringField4: TStringField;
+    StringField5: TStringField;
+    StringField6: TStringField;
+    IntegerField8: TIntegerField;
+    StringField7: TStringField;
+    RDWMOVIENTRADA: TRESTDWClientSQL;
+    SQLTimeStampField4: TSQLTimeStampField;
+    StringField8: TStringField;
+    FloatField3: TFloatField;
+    FloatField4: TFloatField;
+    IntegerField9: TIntegerField;
+    StringField9: TStringField;
+    IntegerField11: TIntegerField;
+    FloatField5: TFloatField;
+    IntegerField12: TIntegerField;
+    StringField10: TStringField;
+    StringField11: TStringField;
     procedure RDWEntradaTIPOGetText(Sender: TField; var Text: string;
       DisplayText: Boolean);
     procedure RDWEstoquePRECOGetText(Sender: TField; var Text: string;
@@ -184,7 +201,7 @@ procedure TdmDados.RDWEstoqueVISUALIZARGetText(Sender: TField;
   var Text: string; DisplayText: Boolean);
 begin
    if DisplayText then
-  Text := '<i title="Informações" class="x-fa fa-lg fa fa-info-circle"; style="color:#3442a8;cursor:pointer;font-style: normal;">&nbsp</i>';
+  Text := '<i title="Imagem" class="x-fa fa-lg fa fa-info-circle"; style="color:#3442a8;cursor:pointer;font-style: normal;">&nbsp</i>';
 end;
 
 procedure TdmDados.RDWSaidaIDGetText(Sender: TField; var Text: string;

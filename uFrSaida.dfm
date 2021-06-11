@@ -20,7 +20,7 @@ object fraSaida: TfraSaida
       Width = 1073
       Height = 586
       Hint = ''
-      ActivePage = Tab2
+      ActivePage = Tab1
       Images = UniNativeImageList1
       Align = alClient
       TabOrder = 1
@@ -54,7 +54,6 @@ object fraSaida: TfraSaida
               FieldName = 'CPRODUTO'
               Title.Caption = 'C'#211'D'
               Width = 43
-              Alignment = taLeftJustify
             end
             item
               FieldName = 'SAIDA'
@@ -120,7 +119,7 @@ object fraSaida: TfraSaida
             Align = alClient
             TabOrder = 0
             Caption = ''
-            Color = clNone
+            Color = clGradientInactiveCaption
             LayoutConfig.Cls = 'cor1'
             ScrollHeight = 550
             ScrollWidth = 1057
@@ -646,12 +645,12 @@ object fraSaida: TfraSaida
   end
   object dsSaida: TDataSource
     DataSet = dmDados.RDWSaida
-    Left = 777
-    Top = 65529
+    Left = 993
+    Top = 257
   end
   object UniNativeImageList1: TUniNativeImageList
-    Left = 704
-    Top = 40
+    Left = 896
+    Top = 360
     Images = {
       1400000000000000060600000073613B66613B00000000060B0000006465736B
       746F703B66613B000000000608000000656469743B66613B0000000006090000
@@ -677,8 +676,8 @@ object fraSaida: TfraSaida
     Padding = 20
     OnDismiss = UniSweetAlert1Dismiss
     OnConfirm = UniSweetAlert1Confirm
-    Left = 604
-    Top = 65530
+    Left = 892
+    Top = 282
   end
   object frxDBSaida: TfrxDBDataset
     UserName = 'frxSaida'
@@ -695,8 +694,8 @@ object fraSaida: TfraSaida
       'USUARIO=USUARIO')
     DataSet = dmDados.relatSaida
     BCDToCurrency = False
-    Left = 397
-    Top = 65531
+    Left = 997
+    Top = 427
   end
   object frxReport1: TfrxReport
     Version = '6.5.15'
@@ -707,14 +706,14 @@ object fraSaida: TfraSaida
     PrintOptions.Printer = 'Padr'#227'o'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 43949.673707465300000000
-    ReportOptions.LastChange = 44027.614064236100000000
+    ReportOptions.LastChange = 44335.620118298610000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
       ''
       'end.')
-    Left = 296
-    Top = 65528
+    Left = 896
+    Top = 496
     Datasets = <
       item
         DataSet = frxDBSaida
@@ -1811,12 +1810,12 @@ object fraSaida: TfraSaida
     PdfA = False
     PDFStandard = psNone
     PDFVersion = pv17
-    Left = 232
-    Top = 65528
+    Left = 992
+    Top = 360
   end
   object frxGradientObject1: TfrxGradientObject
-    Left = 344
-    Top = 65528
+    Left = 1000
+    Top = 496
   end
   object FSiGrowl: TUniFSiGrowl
     Messages = 'Hello World!'
@@ -1832,8 +1831,8 @@ object fraSaida: TfraSaida
     ExitAnimation = bounceOut
     PlacementX = right
     PlacementY = top
-    Left = 528
-    Top = 65528
+    Left = 896
+    Top = 424
   end
   object Toast: TUniFSToast
     TitleSize = 13
@@ -1867,7 +1866,7 @@ object fraSaida: TfraSaida
     TransitionOutMobile = fadeOutDown
     ButtonTextYes = 'Confirma'
     ButtonTextNo = 'Cancela'
-    Left = 472
-    Top = 3
+    Left = 888
+    Top = 211
   end
 end

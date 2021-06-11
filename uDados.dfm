@@ -3,15 +3,16 @@ object dmDados: TdmDados
   Height = 605
   Width = 697
   object RDWConexao: TRESTDWDataBase
-    Active = False
+    Active = True
     Compression = True
     CriptOptions.Use = False
     CriptOptions.Key = 'RDWBASEKEY256'
+    MyIP = '177.223.7.255'
     Login = 'admin'
     Password = 'tifri2020'
     Proxy = False
     ProxyOptions.Port = 8888
-    PoolerService = '170.81.40.199'
+    PoolerService = '24.152.36.8'
     PoolerPort = 9098
     PoolerName = 'TDMServer.RESTDWPoolerDB'
     StateConnection.AutoCheck = False
@@ -34,40 +35,11 @@ object dmDados: TdmDados
   object rdwUsuario: TRESTDWClientSQL
     Active = False
     Filtered = False
-    FieldDefs = <
-      item
-        Name = 'ID'
-        DataType = ftInteger
-      end
-      item
-        Name = 'NOME'
-        DataType = ftString
-        Size = 60
-      end
-      item
-        Name = 'EMAIL'
-        DataType = ftString
-        Size = 150
-      end
-      item
-        Name = 'LOGIN'
-        DataType = ftString
-        Size = 30
-      end
-      item
-        Name = 'SENHA'
-        DataType = ftString
-        Size = 20
-      end
-      item
-        Name = 'PERFIL'
-        DataType = ftString
-        Size = 20
-      end>
+    FieldDefs = <>
     IndexDefs = <>
     FetchOptions.AssignedValues = [evMode]
     FetchOptions.Mode = fmAll
-    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.AssignedValues = [rvStoreItems, rvSilentMode]
     ResourceOptions.SilentMode = True
     UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
     UpdateOptions.CheckRequired = False
@@ -265,7 +237,7 @@ object dmDados: TdmDados
     IndexDefs = <>
     FetchOptions.AssignedValues = [evMode]
     FetchOptions.Mode = fmAll
-    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.AssignedValues = [rvStoreItems, rvSilentMode]
     ResourceOptions.SilentMode = True
     UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
     UpdateOptions.CheckRequired = False
@@ -334,7 +306,7 @@ object dmDados: TdmDados
     IndexDefs = <>
     FetchOptions.AssignedValues = [evMode]
     FetchOptions.Mode = fmAll
-    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.AssignedValues = [rvStoreItems, rvSilentMode]
     ResourceOptions.SilentMode = True
     UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
     UpdateOptions.CheckRequired = False
@@ -348,7 +320,7 @@ object dmDados: TdmDados
     DataBase = RDWConexao
     SQL.Strings = (
       'select * from saida  order by NPRODUTO ')
-    CacheUpdateRecords = True
+    CacheUpdateRecords = False
     AutoCommitData = False
     AutoRefreshAfterCommit = False
     RaiseErrors = True
@@ -426,7 +398,7 @@ object dmDados: TdmDados
     IndexDefs = <>
     FetchOptions.AssignedValues = [evMode]
     FetchOptions.Mode = fmAll
-    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.AssignedValues = [rvStoreItems, rvSilentMode]
     ResourceOptions.SilentMode = True
     UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
     UpdateOptions.CheckRequired = False
@@ -483,8 +455,8 @@ object dmDados: TdmDados
     RaiseErrors = True
     ActionCursor = crSQLWait
     ReflectChanges = False
-    Left = 416
-    Top = 520
+    Left = 424
+    Top = 528
     object IntegerField1: TIntegerField
       FieldName = 'CODIGO'
     end
@@ -601,8 +573,8 @@ object dmDados: TdmDados
     RaiseErrors = True
     ActionCursor = crSQLWait
     ReflectChanges = False
-    Left = 504
-    Top = 520
+    Left = 520
+    Top = 528
     object RelatFornecENDERECO: TStringField
       FieldName = 'ENDERECO'
       Size = 40
@@ -670,8 +642,8 @@ object dmDados: TdmDados
     RaiseErrors = True
     ActionCursor = crSQLWait
     ReflectChanges = False
-    Left = 576
-    Top = 520
+    Left = 600
+    Top = 528
     object IntegerField10: TIntegerField
       FieldName = 'ID'
     end
@@ -814,7 +786,7 @@ object dmDados: TdmDados
     IndexDefs = <>
     FetchOptions.AssignedValues = [evMode]
     FetchOptions.Mode = fmAll
-    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.AssignedValues = [rvStoreItems, rvSilentMode]
     ResourceOptions.SilentMode = True
     UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
     UpdateOptions.CheckRequired = False
@@ -834,7 +806,7 @@ object dmDados: TdmDados
     RaiseErrors = True
     ActionCursor = crSQLWait
     ReflectChanges = False
-    Left = 464
+    Left = 512
     Top = 440
     object RDWAutentificacaoID: TIntegerField
       FieldName = 'ID'
@@ -890,49 +862,6 @@ object dmDados: TdmDados
       FieldName = 'DATASERVIDOR'
     end
   end
-  object RDWIDEmpresa: TRESTDWClientSQL
-    Active = False
-    Filtered = False
-    FieldDefs = <>
-    IndexDefs = <>
-    FetchOptions.AssignedValues = [evMode]
-    FetchOptions.Mode = fmAll
-    ResourceOptions.AssignedValues = [rvSilentMode]
-    ResourceOptions.SilentMode = True
-    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
-    UpdateOptions.CheckRequired = False
-    UpdateOptions.AutoCommitUpdates = True
-    StoreDefs = True
-    MasterCascadeDelete = True
-    BinaryRequest = True
-    Datapacks = -1
-    DataCache = False
-    Params = <>
-    DataBase = RDWConexao
-    SQL.Strings = (
-      'select *  from IDENTIFICACAO_SYS order by ID desc')
-    CacheUpdateRecords = True
-    AutoCommitData = False
-    AutoRefreshAfterCommit = False
-    RaiseErrors = True
-    ActionCursor = crSQLWait
-    ReflectChanges = False
-    Left = 568
-    Top = 448
-    object RDWIDEmpresaID: TIntegerField
-      FieldName = 'ID'
-    end
-    object RDWIDEmpresaDATA_INICIO: TSQLTimeStampField
-      FieldName = 'DATA_INICIO'
-    end
-    object RDWIDEmpresaDATA_FIM: TSQLTimeStampField
-      FieldName = 'DATA_FIM'
-    end
-    object RDWIDEmpresaNOME_SISTEMA: TStringField
-      FieldName = 'NOME_SISTEMA'
-      Size = 50
-    end
-  end
   object RDWCAD_PRODUTO: TRESTDWClientSQL
     Active = False
     Filtered = False
@@ -960,8 +889,8 @@ object dmDados: TdmDados
     RaiseErrors = True
     ActionCursor = crSQLWait
     ReflectChanges = False
-    Left = 344
-    Top = 64
+    Left = 112
+    Top = 112
     object RDWCAD_PRODUTOCODIGO: TIntegerField
       FieldName = 'CODIGO'
     end
@@ -997,6 +926,142 @@ object dmDados: TdmDados
     end
     object RDWCAD_PRODUTOID: TIntegerField
       FieldName = 'ID'
+    end
+  end
+  object RDWMOVISAIDA: TRESTDWClientSQL
+    Active = False
+    Filtered = False
+    FieldDefs = <>
+    IndexDefs = <>
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvStoreItems, rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.AutoCommitUpdates = True
+    StoreDefs = True
+    MasterCascadeDelete = True
+    BinaryRequest = True
+    Datapacks = -1
+    DataCache = False
+    Params = <>
+    DataBase = RDWConexao
+    SQL.Strings = (
+      'select * from saida  order by NPRODUTO ')
+    CacheUpdateRecords = True
+    AutoCommitData = False
+    AutoRefreshAfterCommit = False
+    RaiseErrors = True
+    ActionCursor = crSQLWait
+    ReflectChanges = False
+    Left = 112
+    Top = 464
+    object SQLTimeStampField3: TSQLTimeStampField
+      FieldName = 'SAIDA'
+    end
+    object IntegerField6: TIntegerField
+      FieldName = 'CPRODUTO'
+    end
+    object IntegerField7: TIntegerField
+      FieldName = 'QUANTIDADE'
+    end
+    object FloatField2: TFloatField
+      FieldName = 'VPRODUTO'
+      DisplayFormat = '#,##0.00'
+      EditFormat = '#,##0.00'
+    end
+    object StringField4: TStringField
+      FieldName = 'SETOR'
+      Size = 50
+    end
+    object StringField5: TStringField
+      FieldName = 'NPRODUTO'
+      Size = 40
+    end
+    object StringField6: TStringField
+      FieldName = 'PATRIMONIO'
+      Size = 5
+    end
+    object IntegerField8: TIntegerField
+      FieldName = 'ID'
+      OnGetText = RDWSaidaIDGetText
+    end
+    object StringField7: TStringField
+      FieldName = 'USUARIO'
+      Size = 40
+    end
+  end
+  object RDWMOVIENTRADA: TRESTDWClientSQL
+    Active = False
+    Filtered = False
+    FieldDefs = <>
+    IndexDefs = <>
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvStoreItems, rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.AutoCommitUpdates = True
+    StoreDefs = True
+    MasterCascadeDelete = True
+    BinaryRequest = True
+    Datapacks = -1
+    DataCache = False
+    Params = <>
+    DataBase = RDWConexao
+    SQL.Strings = (
+      'select * from entrada  order by NPRODUTO')
+    CacheUpdateRecords = True
+    AutoCommitData = False
+    AutoRefreshAfterCommit = False
+    RaiseErrors = True
+    ActionCursor = crSQLWait
+    ReflectChanges = False
+    Left = 112
+    Top = 176
+    object SQLTimeStampField4: TSQLTimeStampField
+      FieldName = 'ENTRADA'
+    end
+    object StringField8: TStringField
+      FieldName = 'FORNECEDOR'
+      Size = 50
+    end
+    object FloatField3: TFloatField
+      FieldName = 'TOTALITENS'
+    end
+    object FloatField4: TFloatField
+      FieldName = 'VALORTOTAL'
+      DisplayFormat = '#,##0.00'
+      EditFormat = '#,##0.00'
+    end
+    object IntegerField9: TIntegerField
+      FieldName = 'ID'
+    end
+    object StringField9: TStringField
+      FieldName = 'NPRODUTO'
+      Size = 40
+    end
+    object IntegerField11: TIntegerField
+      FieldName = 'TIPO'
+      OnGetText = RDWEntradaTIPOGetText
+    end
+    object FloatField5: TFloatField
+      FieldName = 'CUSTO'
+      DisplayFormat = '#,##0.00'
+      EditFormat = '#,##0.00'
+    end
+    object IntegerField12: TIntegerField
+      FieldName = 'CPRODUTO'
+    end
+    object StringField10: TStringField
+      FieldName = 'LOCALPRODUTO'
+      Size = 80
+    end
+    object StringField11: TStringField
+      FieldName = 'PATRIMONIO'
+      Size = 10
     end
   end
 end

@@ -1,0 +1,76 @@
+Estoque_TI.exe: 000029E0: 09:47:05 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 000029E0: 09:47:05 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 000029E0: 09:47:05 [TUniServerModule]:Start Path = D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\
+Estoque_TI.exe: 000029E0: 09:47:05 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 000029E0: 09:47:05 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 000029E0: 09:47:44 [TUniServerModule]:Shutting Down Server.
+Estoque_TI.exe: 000029E0: 09:47:44 [TUniServerModule]:Stopping HTTP Server.
+Estoque_TI.exe: 000029E0: 09:47:45 [TUniServerModule]:HTTP Server Stopped.
+Estoque_TI.exe: 000029E0: 09:47:45 [TUniGUISessionManager]:Terminating Session manager.
+Estoque_TI.exe: 000029E0: 09:47:45 [TUniGUISessionManager]:Stopping Cache Eraser...
+Estoque_TI.exe: 000029E0: 09:47:45 [TUniGUISessionManager]:Cache Eraser Stopped.
+Estoque_TI.exe: 000029E0: 09:47:45 [TUniGUISessionManager]:Destroying Worker Threads.
+Estoque_TI.exe: 000029E0: 09:47:45 [TUniGUISessionManager]:Session manager terminated.
+Estoque_TI.exe: 000029E0: 09:47:51 [TUniServerModule]:Server Shutdown Completed.
+Estoque_TI.exe: 000029E0: 09:47:51 []:<-------------------------------------------------------------->
+Estoque_TI.exe: 000029E0: 09:47:51 [Terminated]:Exit Code: 0
+Estoque_TI.exe: 000039C8: 09:52:14 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 000039C8: 09:52:14 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 000039C8: 09:52:14 [TUniServerModule]:Start Path = D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\
+Estoque_TI.exe: 000039C8: 09:52:14 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 000039C8: 09:52:14 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 00002110: 09:52:15 [127.0.0.1]:EUniSessionException : Sessão inválida ou tempo limite da sessão. (Session not found: dpBg7qIqyQ10845841E ) : Addr: $00810BF2
+Estoque_TI.exe: 00003234: 09:52:15 [127.0.0.1]:EUniSessionException : Sessão inválida ou tempo limite da sessão. (Session not found: dpBg7qIqyQ10845841E ) : Addr: $00810BF2
+Estoque_TI.exe: 00002884: 10:31:00 [127.0.0.1]:EUniSessionException : Sessão inválida ou tempo limite da sessão. (Session not found: cWucycAn6U108458718 ) : Addr: $00810BF2
+Estoque_TI.exe: 0000086C: 10:31:00 [127.0.0.1]:EUniSessionException : Sessão inválida ou tempo limite da sessão. (Session not found: cWucycAn6U108458718 ) : Addr: $00810BF2
+Estoque_TI.exe: 000008D0: 10:32:14 [127.0.0.1]:UniErrorException : Event:Toast, Object: O2E1 not found in session list. It could be timed out, refresh page and try again : Addr: $00000000
+Estoque_TI.exe: 000032AC: 10:47:49 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 000032AC: 10:47:49 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 000032AC: 10:47:49 [TUniServerModule]:Start Path = D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\
+Estoque_TI.exe: 000032AC: 10:47:50 [TUniServerModule]:Global Cache Folder Erased. <174> Files deleted.
+Estoque_TI.exe: 000032AC: 10:47:50 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 000032AC: 10:47:50 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 00000F28: 10:47:53 [192.168.0.96]:EUniSessionException : Sessão inválida ou tempo limite da sessão. (Session not found: 4XXENkpEYI108459306 ) : Addr: $00810BF2
+Estoque_TI.exe: 000018FC: 10:50:50 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 000018FC: 10:50:50 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 000018FC: 10:50:50 [TUniServerModule]:Start Path = D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\
+Estoque_TI.exe: 00001B24: 10:50:51 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00001B24: 10:50:51 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00001B24: 10:50:51 [TUniServerModule]:Start Path = D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\
+Estoque_TI.exe: 00001B24: 10:50:51 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__6121A1855D58533BBE79EECF.png" [OS Error:5]
+Estoque_TI.exe: 00001B24: 10:50:51 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__6121A4FA007CF390619E9863.png" [OS Error:2]
+Estoque_TI.exe: 00001B24: 10:50:51 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__61E073ECC519921B26FA09DF.png" [OS Error:2]
+Estoque_TI.exe: 00001B24: 10:50:51 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__66FD7F70D4242C673B21AB7A.png" [OS Error:2]
+Estoque_TI.exe: 00001B24: 10:50:51 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__6A8CF2FB9671551400FE4829.png" [OS Error:2]
+Estoque_TI.exe: 00001B24: 10:50:51 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__6C07EEBA39D96208A5E472D1.png" [OS Error:5]
+Estoque_TI.exe: 00001B24: 10:50:51 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__6C813E8A94A888040129C6BC.png" [OS Error:2]
+Estoque_TI.exe: 00001B24: 10:50:51 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__6C9F691883E99EC6F0891002.png" [OS Error:5]
+Estoque_TI.exe: 00001B24: 10:50:51 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__6E88B81FA20A3B5E12E95A26.png" [OS Error:2]
+Estoque_TI.exe: 00001B24: 10:50:51 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__6FD42808BD1832762CEC5ACD.png" [OS Error:2]
+Estoque_TI.exe: 00001B24: 10:50:51 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__70432E7E172E5B9087718D49.png" [OS Error:2]
+Estoque_TI.exe: 00001B24: 10:50:51 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__7790C742EB03A4BE62946B73.png" [OS Error:2]
+Estoque_TI.exe: 00001B24: 10:50:51 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__79AEE69BA34AEA291CF9D145.png" [OS Error:2]
+Estoque_TI.exe: 00001B24: 10:50:51 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__7BAE6D9C11CF82678D7DF004.png" [OS Error:2]
+Estoque_TI.exe: 00001B24: 10:50:51 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__7E0E8D694D740A10CB829713.png" [OS Error:5]
+Estoque_TI.exe: 00001B24: 10:50:51 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__8005997F9AE603851AEB9B2D.png" [OS Error:2]
+Estoque_TI.exe: 00001B24: 10:50:51 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__801EB3B0CE2D90A54E4C4775.png" [OS Error:2]
+Estoque_TI.exe: 00001B24: 10:50:51 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__8296B4D0279264B4AA291AED.png" [OS Error:2]
+Estoque_TI.exe: 00001B24: 10:50:51 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__843DA61180FBBFCD05396291.png" [OS Error:5]
+Estoque_TI.exe: 00001B24: 10:50:51 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__85570E5F001AF74885720B21.png" [OS Error:2]
+Estoque_TI.exe: 00001B24: 10:50:51 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__857DD170625FCDD5E7DD9F09.png" [OS Error:2]
+Estoque_TI.exe: 00001B24: 10:50:51 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__858FBEF560E4A291E6746006.png" [OS Error:5]
+Estoque_TI.exe: 00001B24: 10:50:52 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__8AAE599A2676A6A1B12503B4.png" [OS Error:2]
+Estoque_TI.exe: 00001B24: 10:50:52 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__8BC0D8950A01CFAB95C2A8DE.png" [OS Error:2]
+Estoque_TI.exe: 00001B24: 10:50:52 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__8C9E2D48BC45F2FD48E420BF.png" [OS Error:5]
+Estoque_TI.exe: 00001B24: 10:50:52 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__9078E3484FEC49F0E0652DDA.png" [OS Error:2]
+Estoque_TI.exe: 00001B24: 10:50:52 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__90AF4932D478AFE26527FA55.png" [OS Error:2]
+Estoque_TI.exe: 00001B24: 10:50:52 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__92538F34604290ECF2961EDA.png" [OS Error:5]
+Estoque_TI.exe: 00001B24: 10:50:52 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__93EC4B94B1B97C6D45A5C855.png" [OS Error:2]
+Estoque_TI.exe: 00003984: 10:50:57 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00003984: 10:50:57 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00003984: 10:50:57 [TUniServerModule]:Start Path = D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\
+Estoque_TI.exe: 00003984: 10:50:58 [TUniServerModule]:Global Cache Folder Erased. <58> Files deleted.
+Estoque_TI.exe: 00003984: 10:50:58 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00003984: 10:50:58 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 000010FC: 11:03:07 [192.168.0.96]:EUniSessionException : Sessão inválida ou tempo limite da sessão. (Session not found: tPZRU6aDJ9108459460 ) : Addr: $00810BF2
+Estoque_TI.exe: 00003984: 17:45:00 [Exit]:Unexpected attempt to terminate server application with Exit Code: 0

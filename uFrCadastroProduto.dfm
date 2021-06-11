@@ -92,7 +92,7 @@ object frCadastroProduto: TfrCadastroProduto
             Height = 512
             Hint = ''
             ParentColor = False
-            Color = clNone
+            Color = clWhite
             TabOrder = 1
             LayoutConfig.Cls = 'cor1'
             object lbGrupo: TUniLabel
@@ -117,7 +117,7 @@ object frCadastroProduto: TfrCadastroProduto
               AnyMatch = True
               IconItems = <>
               ReadOnlyMode = urmNotEditable
-              Value = '0'
+              Value = '-1'
             end
             object UniLabel6: TUniLabel
               Left = 42

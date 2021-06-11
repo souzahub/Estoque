@@ -1,0 +1,186 @@
+Estoque_TI.exe: 00002128: 07:56:50 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00002128: 07:56:50 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00002128: 07:56:50 [TUniServerModule]:Start Path = D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\
+Estoque_TI.exe: 00002128: 07:56:50 [TUniServerModule]:Global Cache Folder Erased. <147> Files deleted.
+Estoque_TI.exe: 00002128: 07:56:50 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00002128: 07:56:50 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 00001E00: 07:57:31 [192.168.0.96]:Exception : Socket Error # 10060
+Connection timed out. : Addr: $00A0D262
+Estoque_TI.exe: 00001E00: 07:57:59 [127.0.0.1]:Exception : Socket Error # 10060
+Connection timed out. : Addr: $00A0D262
+Estoque_TI.exe: 000035A4: 07:58:25 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 000035A4: 07:58:25 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 000035A4: 07:58:25 [TUniServerModule]:Start Path = D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\
+Estoque_TI.exe: 000035A4: 07:58:30 [TUniServerModule]:Global Cache Folder Erased. <145> Files deleted.
+Estoque_TI.exe: 000035A4: 07:58:30 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 000035A4: 07:58:30 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 00003788: 07:58:54 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00003788: 07:58:54 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00003788: 07:58:54 [TUniServerModule]:Start Path = D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\
+Estoque_TI.exe: 00003788: 07:58:54 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+Estoque_TI.exe: 00003788: 07:58:54 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00003788: 07:58:54 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 00003788: 07:59:41 [TUniServerModule]:Shutting Down Server.
+Estoque_TI.exe: 00003788: 07:59:41 [TUniServerModule]:Stopping HTTP Server.
+Estoque_TI.exe: 00003788: 07:59:42 [TUniServerModule]:HTTP Server Stopped.
+Estoque_TI.exe: 00003788: 07:59:42 [TUniGUISessionManager]:Terminating Session manager.
+Estoque_TI.exe: 00003788: 07:59:42 [TUniGUISessionManager]:Stopping Cache Eraser...
+Estoque_TI.exe: 00003788: 07:59:42 [TUniGUISessionManager]:Cache Eraser Stopped.
+Estoque_TI.exe: 00003788: 07:59:42 [TUniGUISessionManager]:Destroying Worker Threads.
+Estoque_TI.exe: 00003788: 07:59:42 [TUniGUISessionManager]:Session manager terminated.
+Estoque_TI.exe: 00003788: 07:59:42 [TUniServerModule]:Server Shutdown Completed.
+Estoque_TI.exe: 00003788: 07:59:42 []:<-------------------------------------------------------------->
+Estoque_TI.exe: 00003788: 07:59:42 [Terminated]:Exit Code: 0
+Estoque_TI.exe: 00000488: 07:59:53 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00000488: 07:59:53 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00000488: 07:59:53 [TUniServerModule]:Start Path = D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\
+Estoque_TI.exe: 00000488: 07:59:53 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00000488: 07:59:53 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 00000488: 08:00:40 [TUniServerModule]:Shutting Down Server.
+Estoque_TI.exe: 00000488: 08:00:41 [TUniServerModule]:Stopping HTTP Server.
+Estoque_TI.exe: 00000488: 08:00:41 [TUniServerModule]:HTTP Server Stopped.
+Estoque_TI.exe: 00000488: 08:00:41 [TUniGUISessionManager]:Terminating Session manager.
+Estoque_TI.exe: 00000488: 08:00:41 [TUniGUISessionManager]:Stopping Cache Eraser...
+Estoque_TI.exe: 00000488: 08:00:41 [TUniGUISessionManager]:Cache Eraser Stopped.
+Estoque_TI.exe: 00000488: 08:00:41 [TUniGUISessionManager]:Destroying Worker Threads.
+Estoque_TI.exe: 00000488: 08:00:41 [TUniGUISessionManager]:Session manager terminated.
+Estoque_TI.exe: 00000488: 08:00:41 [TUniServerModule]:Server Shutdown Completed.
+Estoque_TI.exe: 00000488: 08:00:41 []:<-------------------------------------------------------------->
+Estoque_TI.exe: 00000488: 08:00:41 [Terminated]:Exit Code: 0
+Estoque_TI.exe: 00001D98: 08:00:58 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00001D98: 08:00:58 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00001D98: 08:00:58 [TUniServerModule]:Start Path = D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\
+Estoque_TI.exe: 00001D98: 08:00:58 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00001D98: 08:00:58 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 00002E48: 08:01:33 [127.0.0.1]:Exception : Socket Error # 10060
+Connection timed out. : Addr: $00A0A003
+Estoque_TI.exe: 00002E48: 08:02:15 [Socket Error # 10060
+Connection timed out.-127.0.0.1]:Exception : Socket Error # 10060
+Connection timed out. : Addr: $00A0D262
+Estoque_TI.exe: 00000EA4: 08:05:21 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00000EA4: 08:05:21 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00000EA4: 08:05:21 [TUniServerModule]:Start Path = D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\
+Estoque_TI.exe: 00000EA4: 08:05:26 [TUniServerModule]:Global Cache Folder Erased. <153> Files deleted.
+Estoque_TI.exe: 00000EA4: 08:05:26 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00000EA4: 08:05:26 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 000028D4: 08:05:36 [127.0.0.1]:EUniSessionException : Sessão inválida ou tempo limite da sessão. (Session not found: Fkm6PkBTby108657245 ) : Addr: $0080F396
+Estoque_TI.exe: 00000270: 08:06:00 [127.0.0.1]:Exception : Socket Error # 10060
+Connection timed out. : Addr: $00A0A003
+Estoque_TI.exe: 00000270: 08:06:42 [Socket Error # 10060
+Connection timed out.-127.0.0.1]:Exception : Socket Error # 10060
+Connection timed out. : Addr: $00A0D262
+Estoque_TI.exe: 00000270: 08:07:12 [Socket Error # 10060
+Connection timed out.-127.0.0.1]:Exception : Socket Error # 10060
+Connection timed out. : Addr: $00A0D262
+Estoque_TI.exe: 00000EA4: 08:07:55 [TUniServerModule]:Shutting Down Server.
+Estoque_TI.exe: 00000EA4: 08:07:55 [TUniServerModule]:Stopping HTTP Server.
+Estoque_TI.exe: 00000EA4: 08:07:55 [TUniServerModule]:HTTP Server Stopped.
+Estoque_TI.exe: 00000EA4: 08:07:55 [TUniGUISessionManager]:Terminating Session manager.
+Estoque_TI.exe: 00000EA4: 08:07:55 [TUniGUISessionManager]:Stopping Cache Eraser...
+Estoque_TI.exe: 00000EA4: 08:07:55 [TUniGUISessionManager]:Cache Eraser Stopped.
+Estoque_TI.exe: 00000EA4: 08:07:55 [TUniGUISessionManager]:Destroying Worker Threads.
+Estoque_TI.exe: 00000EA4: 08:07:56 [TUniGUISessionManager]:Session manager terminated.
+Estoque_TI.exe: 0000284C: 08:07:57 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 0000284C: 08:07:57 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 0000284C: 08:07:57 [TUniServerModule]:Start Path = D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\
+Estoque_TI.exe: 0000284C: 08:07:57 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__3868EE63627A38209AE325E2.png" [OS Error:5]
+Estoque_TI.exe: 0000284C: 08:07:57 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__395BACA55AB651469411FF56.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:07:57 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__398B9BB88DD4D67CC760741C.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:07:57 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__39FF08BC118552D74B84E088.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:07:57 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__3A2F588398C38A8FD2F2E41F.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:07:57 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__3F9D774975F98EEFB59705AA.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:07:57 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__40BCDFD7AEAD020EEF69E1BD.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:07:58 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__4283B8806984A9E4AC08640B.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:07:58 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__4449C66B739FFFEBB7E9C854.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:07:58 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__47F2AB1AEA3042E33222EF54.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:07:58 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__47FA1BF43213410D7A0D5DD9.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:07:58 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__4A0FC52C02BF60F44CCF25F8.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:07:58 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__4A153C451CA3F3D266B92EA9.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:07:58 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__4A24F3ED7BD6DEF4C5FBD9D7.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:07:58 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__4AE4B11FE8139E2132F84F76.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:07:58 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__4B532FED3568896080BBB757.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:07:59 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__4DB7ECD0F28DB8B14045A631.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:07:59 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__4E1A00E1EEFCFCCE3D16FF43.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:07:59 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__4E23C3E55A0AABC3A82E714E.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:07:59 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__516A164CE1E0E2E9334AF6D2.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:07:59 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__5226F23EBCFCD9380F23CD57.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:07:59 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__53200F3861E05323B500655D.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:07:59 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__546EF15BA81E36A2FC8D25FA.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:07:59 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__5955EFFD31BABF0B8B10AF83.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:07:59 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__9A93DE38684F370C02E31699.png" [OS Error:5]
+Estoque_TI.exe: 0000284C: 08:08:00 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__9C7BCB80F12775A68DA34439.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:08:00 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__9DA4A5292CB2A94BCA574E67.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:08:00 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__A11866C751AF69C6F2C7D0CB.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:08:00 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__AABC6520656562B41021C937.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:08:00 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__ACF9FDBEB48389DB617D8A42.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:08:00 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__ADA7363AAAFF1B6458A653F3.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:08:00 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__ADE4258668FF95DB16E3BD14.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:08:00 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__ADFAB95C51C17700FFBC3385.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:08:00 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__AE363199B292355560C8666E.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:08:01 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__AECDAECE01449225B01243E3.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:08:01 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__B0E21D89D25C5CAE833E7BF7.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:08:01 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__B27A19F77C399A2A2EB3B595.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:08:01 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__B69DF387D2522F5488F022EA.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:08:01 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__B90E15FF54C091BA0DCEA70C.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:08:01 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__BAD52BD344FB33C4FFD06208.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:08:01 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__BFFDE37909EDAFB0C9EB93A6.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:08:01 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__C1F53CDCF9A40A66BB994894.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:08:01 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__C344C2AC961388C659584C67.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:08:02 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__C46F9866633254A727A1EB65.png" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:08:02 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__C70831C27D566DBD445EA0D0.png" [OS Error:5]
+Estoque_TI.exe: 0000284C: 08:08:02 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__CC87810E51A042091E27C519.png" [OS Error:5]
+Estoque_TI.exe: 0000284C: 08:08:02 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__CD34E8F76893ED6E36BEFF40.png" [OS Error:5]
+Estoque_TI.exe: 0000284C: 08:08:02 []:Error deleting file: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\__CDAC8A961F63DAEAED10664C.png" [OS Error:5]
+Estoque_TI.exe: 0000284C: 08:08:02 []:Error deleting folder: "D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\cache\estoque_ti_exe\res\" [OS Error:2]
+Estoque_TI.exe: 0000284C: 08:08:02 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+Estoque_TI.exe: 00000EA4: 08:08:02 [TUniServerModule]:Server Shutdown Completed.
+Estoque_TI.exe: 00000EA4: 08:08:02 []:<-------------------------------------------------------------->
+Estoque_TI.exe: 00000EA4: 08:08:02 [Terminated]:Exit Code: 0
+Estoque_TI.exe: 0000284C: 08:08:02 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 0000284C: 08:08:02 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 00000840: 08:08:34 [Socket Error # 10060
+Connection timed out.-127.0.0.1]:Exception : Socket Error # 10060
+Connection timed out. : Addr: $00A0D262
+Estoque_TI.exe: 0000284C: 08:17:32 [TUniServerModule]:Shutting Down Server.
+Estoque_TI.exe: 0000284C: 08:17:32 [TUniServerModule]:Stopping HTTP Server.
+Estoque_TI.exe: 0000284C: 08:17:32 [TUniServerModule]:HTTP Server Stopped.
+Estoque_TI.exe: 0000284C: 08:17:32 [TUniGUISessionManager]:Terminating Session manager.
+Estoque_TI.exe: 0000284C: 08:17:32 [TUniGUISessionManager]:Stopping Cache Eraser...
+Estoque_TI.exe: 0000284C: 08:17:32 [TUniGUISessionManager]:Cache Eraser Stopped.
+Estoque_TI.exe: 0000284C: 08:17:32 [TUniGUISessionManager]:Destroying Worker Threads.
+Estoque_TI.exe: 0000284C: 08:17:32 [TUniGUISessionManager]:Session manager terminated.
+Estoque_TI.exe: 0000284C: 08:17:38 [TUniServerModule]:Server Shutdown Completed.
+Estoque_TI.exe: 0000284C: 08:17:38 []:<-------------------------------------------------------------->
+Estoque_TI.exe: 0000284C: 08:17:38 [Terminated]:Exit Code: 0
+Estoque_TI.exe: 000015FC: 08:27:22 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 000015FC: 08:27:22 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 000015FC: 08:27:22 [TUniServerModule]:Start Path = D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\
+Estoque_TI.exe: 000015FC: 08:27:22 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 000015FC: 08:27:22 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 0000308C: 08:27:53 [Socket Error # 10060
+Connection timed out.-127.0.0.1]:Exception : Socket Error # 10060
+Connection timed out. : Addr: $00A0D262
+Estoque_TI.exe: 00000610: 08:28:28 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00000610: 08:28:28 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00000610: 08:28:28 [TUniServerModule]:Start Path = D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\
+Estoque_TI.exe: 00000610: 08:28:33 [TUniServerModule]:Global Cache Folder Erased. <149> Files deleted.
+Estoque_TI.exe: 00000610: 08:28:33 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00000610: 08:28:33 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 00002240: 08:28:34 [127.0.0.1]:EUniSessionException : Sessão inválida ou tempo limite da sessão. (Session not found: ilj4bGNvST1086579A4 ) : Addr: $0080F396
+Estoque_TI.exe: 00000964: 08:30:50 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00000964: 08:30:50 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00000964: 08:30:50 [TUniServerModule]:Start Path = D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\
+Estoque_TI.exe: 00000964: 08:30:55 [TUniServerModule]:Global Cache Folder Erased. <159> Files deleted.
+Estoque_TI.exe: 00000964: 08:30:55 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00000964: 08:30:55 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 00000964: 08:30:57 [TUniServerModule]:Shutting Down Server.
+Estoque_TI.exe: 00000964: 08:30:57 [TUniServerModule]:Stopping HTTP Server.
+Estoque_TI.exe: 00000964: 08:30:57 [TUniServerModule]:HTTP Server Stopped.
+Estoque_TI.exe: 00000964: 08:30:57 [TUniGUISessionManager]:Terminating Session manager.
+Estoque_TI.exe: 00000964: 08:30:57 [TUniGUISessionManager]:Stopping Cache Eraser...
+Estoque_TI.exe: 00000964: 08:30:57 [TUniGUISessionManager]:Cache Eraser Stopped.
+Estoque_TI.exe: 00000964: 08:30:57 [TUniGUISessionManager]:Destroying Worker Threads.
+Estoque_TI.exe: 00000964: 08:30:57 [TUniGUISessionManager]:Session manager terminated.
+Estoque_TI.exe: 00000964: 08:30:57 [TUniServerModule]:Server Shutdown Completed.
+Estoque_TI.exe: 00000964: 08:30:57 []:<-------------------------------------------------------------->
+Estoque_TI.exe: 00000964: 08:30:57 [Terminated]:Exit Code: 0

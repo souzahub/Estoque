@@ -773,7 +773,6 @@ object frCadastroFornec: TfrCadastroFornec
       'NOME=NOME'
       'CNPJ=CNPJ'
       'ID=ID')
-    DataSet = dmDados.RelatFornec
     BCDToCurrency = False
     Left = 128
     Top = 496

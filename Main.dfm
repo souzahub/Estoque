@@ -343,7 +343,7 @@ object MainForm: TMainForm
         Width = 100
       end
       item
-        Text = 'vers'#227'o : 1.0.1'
+        Text = 'vers'#227'o : 1.0.2'
         Width = 150
       end
       item

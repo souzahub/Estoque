@@ -1,0 +1,17 @@
+Estoque_TI.exe: 00001D68: 08:25:58 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00001D68: 08:25:58 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00001D68: 08:25:58 [TUniServerModule]:Start Path = D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\
+Estoque_TI.exe: 00001D68: 08:25:58 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00001D68: 08:25:58 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 00003720: 08:28:11 [HandleFileRequest[127.0.0.1]]:File not found: D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\favicon.ico
+Estoque_TI.exe: 00001D68: 10:13:37 [TUniServerModule]:Shutting Down Server.
+Estoque_TI.exe: 00001D68: 10:13:37 [TUniServerModule]:Stopping HTTP Server.
+Estoque_TI.exe: 00001D68: 10:13:38 [TUniServerModule]:HTTP Server Stopped.
+Estoque_TI.exe: 00001D68: 10:13:38 [TUniGUISessionManager]:Terminating Session manager.
+Estoque_TI.exe: 00001D68: 10:13:38 [TUniGUISessionManager]:Stopping Cache Eraser...
+Estoque_TI.exe: 00001D68: 10:13:38 [TUniGUISessionManager]:Cache Eraser Stopped.
+Estoque_TI.exe: 00001D68: 10:13:38 [TUniGUISessionManager]:Destroying Worker Threads.
+Estoque_TI.exe: 00001D68: 10:13:38 [TUniGUISessionManager]:Session manager terminated.
+Estoque_TI.exe: 00001D68: 10:13:38 [TUniServerModule]:Server Shutdown Completed.
+Estoque_TI.exe: 00001D68: 10:13:38 []:<-------------------------------------------------------------->
+Estoque_TI.exe: 00001D68: 10:13:38 [Terminated]:Exit Code: 0

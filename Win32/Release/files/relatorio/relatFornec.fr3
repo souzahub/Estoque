@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<TfrxReport Version="6.5.15" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="167935" PreviewOptions.Zoom="1" PrintOptions.Printer="Microsoft Print to PDF" PrintOptions.PrintOnSheet="9" ReportOptions.CreateDate="43949,6737074653" ReportOptions.Description.Text="" ReportOptions.LastChange="44000,59587875" ScriptLanguage="PascalScript" ScriptText.Text="begin&#13;&#10;&#13;&#10;end.">
+  <Datasets>
+    <item DataSet="frxrelatfornec" DataSetName="frxFornec"/>
+  </Datasets>
+  <TfrxDataPage Name="Data" Height="1000" Left="0" Top="0" Width="1000"/>
+  <TfrxReportPage Name="Page1" PaperWidth="210" PaperHeight="297" PaperSize="9" LeftMargin="10" RightMargin="10" TopMargin="10" BottomMargin="10" ColumnWidth="0" ColumnPositions.Text="" Frame.Typ="0" MirrorMode="0" PrintIfEmpty="False" PrintOnPreviousPage="True" ResetPageNumbers="True" HGuides.Text="" VGuides.Text="">
+    <TfrxMasterData Name="MasterData1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Frame.Typ="0" Height="105,58273436" Left="0" Top="18,89765" Width="718,1107" ColumnWidth="0" ColumnGap="0" DataSet="frxrelatfornec" DataSetName="frxFornec" RowCount="0">
+      <TfrxMemoView Name="Memo1" AllowVectorExport="True" Left="49,54929578" Top="29,72059591" Width="48,48825" Height="18,89765" DataField="ID" DataSet="frxrelatfornec" DataSetName="frxFornec" Frame.Typ="0" Text="[frxFornec.&#34;ID&#34;]"/>
+      <TfrxMemoView Name="Memo6" AllowVectorExport="True" Left="154,43661972" Top="48,68093601" Width="510,75585563" Height="16,89765" DataField="NOME" DataSet="frxrelatfornec" DataSetName="frxFornec" Frame.Typ="0" Text="[frxFornec.&#34;NOME&#34;]"/>
+      <TfrxMemoView Name="Memo8" AllowVectorExport="True" Left="8,88732394" Top="31,89958732" Width="42,48825" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" Frame.Typ="0" ParentFont="False" Text="Cód"/>
+      <TfrxMemoView Name="Memo9" AllowVectorExport="True" Left="7,40711395" Top="47,8573338" Width="147,85444718" Height="19,60187535" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" Frame.Typ="0" ParentFont="False" Text="Nome do Fornecedor:"/>
+      <TfrxMemoView Name="Memo10" AllowVectorExport="True" Left="7,81690141" Top="71,3870624" Width="72,76994014" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" Frame.Typ="0" ParentFont="False" Text="Endereço:"/>
+      <TfrxMemoView Name="Memo13" AllowVectorExport="True" Left="79,57746479" Top="73,09128775" Width="590,33332043" Height="16,89765" DataSet="frxrelatfornec" DataSetName="frxFornec" Frame.Typ="0" Text="[frxFornec.&#34;ENDERECO&#34;]"/>
+      <TfrxLineView Name="Line1" AllowVectorExport="True" Left="9,1549296" Top="97,13203012" Width="703,52112676" Height="0" Color="0" Frame.Style="fsDot" Frame.Typ="4"/>
+      <TfrxMemoView Name="Memo5" AllowVectorExport="True" Left="239,14084506" Top="5,55853688" Width="221,63136298" Height="25,30234226" DataSetName="frxDBDatasetCliente" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="1" Frame.Typ="0" HAlign="haCenter" ParentFont="False" VAlign="vaCenter" Text="Relatório Fornecedor"/>
+      <TfrxMemoView Name="Memo11" AllowVectorExport="True" Left="641,53521127" Top="5,83642009" Width="79,48825" Height="18,89765" Frame.Typ="0" Text="[Date] "/>
+      <TfrxMemoView Name="Memo12" AllowVectorExport="True" Left="596,23943662" Top="5,8364201" Width="43,48825" Height="18,89765" Frame.Typ="0" Text="Data -"/>
+    </TfrxMasterData>
+  </TfrxReportPage>
+</TfrxReport>

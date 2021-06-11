@@ -1,0 +1,23 @@
+Estoque_TI.exe: 00003650: 14:34:01 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00003650: 14:34:01 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00003650: 14:34:01 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00003650: 14:34:01 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 000031D4: 14:34:33 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00002DDC: 14:34:33 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 000024B8: 14:35:00 [127.0.0.1]:Exception : Pooler not found : Addr: $00A0CA32
+Estoque_TI.exe: 000024B8: 14:35:56 [127.0.0.1]:Exception : Pooler not found : Addr: $00A0CA32
+Estoque_TI.exe: 000024B8: 14:36:21 [127.0.0.1]:Exception : Pooler not found : Addr: $00A0CA32
+Estoque_TI.exe: 00002294: 14:38:38 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 000034F0: 14:38:39 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 000024B8: 14:39:12 [127.0.0.1]:Exception : Pooler not found : Addr: $00A0CA32
+Estoque_TI.exe: 00003650: 15:20:53 [TUniServerModule]:Shutting Down Server.
+Estoque_TI.exe: 00003650: 15:20:53 [TUniServerModule]:Stopping HTTP Server.
+Estoque_TI.exe: 00003650: 15:20:53 [TUniServerModule]:HTTP Server Stopped.
+Estoque_TI.exe: 00003650: 15:20:53 [TUniGUISessionManager]:Terminating Session manager.
+Estoque_TI.exe: 00003650: 15:20:53 [TUniGUISessionManager]:Stopping Cache Eraser...
+Estoque_TI.exe: 00003650: 15:20:53 [TUniGUISessionManager]:Cache Eraser Stopped.
+Estoque_TI.exe: 00003650: 15:20:53 [TUniGUISessionManager]:Destroying Worker Threads.
+Estoque_TI.exe: 00003650: 15:20:53 [TUniGUISessionManager]:Session manager terminated.
+Estoque_TI.exe: 00003650: 15:21:00 [TUniServerModule]:Server Shutdown Completed.
+Estoque_TI.exe: 00003650: 15:21:00 []:<-------------------------------------------------------------->
+Estoque_TI.exe: 00003650: 15:21:00 [Terminated]:Exit Code: 0

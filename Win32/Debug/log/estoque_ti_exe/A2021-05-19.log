@@ -1,0 +1,21 @@
+Estoque_TI.exe: 00001320: 14:51:06 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00001320: 14:51:06 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00001320: 14:51:06 [TUniServerModule]:Start Path = D:\Projetos\2020\WebEstoqueTI-8050\Win32\Debug\
+Estoque_TI.exe: 00001320: 14:51:06 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+Estoque_TI.exe: 00001320: 14:51:06 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00001320: 14:51:06 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 00003554: 14:51:08 [127.0.0.1]:EUniSessionException : Sessão inválida ou tempo limite da sessão. (Session not found: dJ5muY21SC10842C904 ) : Addr: $00812DEA
+Estoque_TI.exe: 00001FF8: 14:53:45 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00001FF8: 14:53:45 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00001FF8: 14:53:45 [TUniServerModule]:Start Path = D:\Projetos\2020\WebEstoqueTI-8050\Win32\Debug\
+Estoque_TI.exe: 00001FF8: 14:53:50 [TUniServerModule]:Global Cache Folder Erased. <155> Files deleted.
+Estoque_TI.exe: 00001FF8: 14:53:50 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00001FF8: 14:53:50 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 00003920: 14:53:50 [127.0.0.1]:EUniSessionException : Sessão inválida ou tempo limite da sessão. (Session not found: OMATimcWx410842C91C ) : Addr: $00812DEA
+Estoque_TI.exe: 00000538: 14:57:32 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00000538: 14:57:32 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00000538: 14:57:32 [TUniServerModule]:Start Path = D:\Projetos\2020\WebEstoqueTI-8050\Win32\Debug\
+Estoque_TI.exe: 00000538: 14:57:37 [TUniServerModule]:Global Cache Folder Erased. <160> Files deleted.
+Estoque_TI.exe: 00000538: 14:57:37 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00000538: 14:57:37 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 00003990: 14:57:38 [127.0.0.1]:EUniSessionException : Sessão inválida ou tempo limite da sessão. (Session not found: 2Xe2NiTMO910842C9DA ) : Addr: $00812DEA

@@ -1,0 +1,31 @@
+Estoque_TI.exe: 00003798: 10:55:25 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00003798: 10:55:25 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00003798: 10:55:25 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00003798: 10:55:25 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 0000080C: 10:56:54 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 0000080C: 10:56:54 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 0000080C: 10:56:54 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+Estoque_TI.exe: 0000080C: 10:56:54 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 0000080C: 10:56:54 [InitWebServer]:EIdCouldNotBindSocket : Could not bind socket. : Addr: $00704F03
+Estoque_TI.exe: 0000080C: 10:56:58 [TUniServerModule]:Shutting Down Server.
+Estoque_TI.exe: 0000080C: 10:56:58 [TUniServerModule]:Stopping HTTP Server.
+Estoque_TI.exe: 0000080C: 10:56:59 [TUniServerModule]:HTTP Server Stopped.
+Estoque_TI.exe: 0000080C: 10:56:59 [TUniGUISessionManager]:Terminating Session manager.
+Estoque_TI.exe: 0000080C: 10:56:59 [TUniGUISessionManager]:Stopping Cache Eraser...
+Estoque_TI.exe: 0000080C: 10:56:59 [TUniGUISessionManager]:Cache Eraser Stopped.
+Estoque_TI.exe: 0000080C: 10:56:59 [TUniGUISessionManager]:Destroying Worker Threads.
+Estoque_TI.exe: 0000080C: 10:56:59 [TUniGUISessionManager]:Session manager terminated.
+Estoque_TI.exe: 0000080C: 10:56:59 [TUniServerModule]:Server Shutdown Completed.
+Estoque_TI.exe: 0000080C: 10:56:59 []:<-------------------------------------------------------------->
+Estoque_TI.exe: 0000080C: 10:56:59 [Terminated]:Exit Code: 0
+Estoque_TI.exe: 00003798: 10:57:12 [TUniServerModule]:Shutting Down Server.
+Estoque_TI.exe: 00003798: 10:57:12 [TUniServerModule]:Stopping HTTP Server.
+Estoque_TI.exe: 00003798: 10:57:12 [TUniServerModule]:HTTP Server Stopped.
+Estoque_TI.exe: 00003798: 10:57:12 [TUniGUISessionManager]:Terminating Session manager.
+Estoque_TI.exe: 00003798: 10:57:12 [TUniGUISessionManager]:Stopping Cache Eraser...
+Estoque_TI.exe: 00003798: 10:57:12 [TUniGUISessionManager]:Cache Eraser Stopped.
+Estoque_TI.exe: 00003798: 10:57:12 [TUniGUISessionManager]:Destroying Worker Threads.
+Estoque_TI.exe: 00003798: 10:57:12 [TUniGUISessionManager]:Session manager terminated.
+Estoque_TI.exe: 00003798: 10:57:13 [TUniServerModule]:Server Shutdown Completed.
+Estoque_TI.exe: 00003798: 10:57:13 []:<-------------------------------------------------------------->
+Estoque_TI.exe: 00003798: 10:57:13 [Terminated]:Exit Code: 0

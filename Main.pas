@@ -105,8 +105,6 @@ type
       EventName: string; Params: TUniStrings);
     procedure UniFormShow(Sender: TObject);
     procedure RegistraLog( Tipo : String; Historico: String );
-    procedure UniFileUploadButton1Completed(Sender: TObject;
-      AStream: TFileStream);
     procedure DashBoardClick(Sender: TObject);
     procedure Usuarios1Click(Sender: TObject);
     procedure Log2Click(Sender: TObject);
@@ -338,7 +336,6 @@ begin
       TabSheet.PageControl  := pagePrincipal;
       TabSheet.Caption      := descFormFrame;
       TabSheet.Closable     := Fechar;
-//      TabSheet.ImageIndex   := N.ImageIndex; coloca imagem nos tabs
 
       FCurrentFrame:= TUniFrameClass(nomeFormFrame).Create(Self);
 
@@ -354,26 +351,13 @@ begin
 end;
 procedure TMainForm.Poduto1Click(Sender: TObject);
 begin
-  //  UniTreeMenu1.Micro := True;
-  NovaAba(TFrame(TfrCadastroProduto),'Produtos',True);
-end;
 
-procedure TMainForm.UniFileUploadButton1Completed(Sender: TObject;
-  AStream: TFileStream);
-begin
- //  UniImage1.LoadFromStream(AStream);
+  NovaAba(TFrame(TfrCadastroProduto),'Produtos',True);
 end;
 
 procedure TMainForm.UniFormCreate(Sender: TObject);
 var vTOTAL, vQUANTIDADE : Integer;
 begin
-
- // carrega o HTML da pasa file
- //  UniHTMLFrameUnigui.HTML.LoadFromFile('./files/BotaoFlutuante.html');
-// carrega o HTML da pasa file
-//   UniHTMLFrame1.HTML.LoadFromFile('./files/boodtstrap/index.html');
-
-// Valores de Quantidades de Fornecedores, Clientes, Total de Produtos cadastrado, Total em R$ do Estoque
 
   vQUANTIDADE := dmDados.RDWEstoqueESTOQUE.Value;
   vTOTAL := dmDados.RDWEstoqueESTOQUE.Value + vQUANTIDADE ;
@@ -397,8 +381,6 @@ begin
   dmDados.RDWAuxiliar.SQL.Add('select COUNT( ID ) as TOTAL from FORNEC');
   dmDados.RDWAuxiliar.Open;
   lbFornec.Caption := FormatFloat('#0', dmDados.RDWAuxiliar.FieldByName('TOTAL').AsCurrency );
-
-//  sbFornecedor.BadgeText.Text := FormatFloat('#0', dmDados.RDWAuxiliar.FieldByName('TOTAL').AsCurrency ); // valores em cima do botao
 
   dmDados.RDWAuxiliar.Close;
 

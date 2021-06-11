@@ -1,0 +1,26 @@
+Estoque_TI.exe: 00000F14: 09:47:52 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00000F14: 09:47:52 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00000F14: 09:47:52 [TUniServerModule]:Start Path = D:\Projetos\2020\WebEstoqueTI-8050\Win32\Debug\
+Estoque_TI.exe: 00000F14: 09:47:53 [TUniServerModule]:Global Cache Folder Erased. <147> Files deleted.
+Estoque_TI.exe: 00000F14: 09:47:53 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00000F14: 09:47:53 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 00002A58: 09:47:55 [127.0.0.1]:EUniSessionException : Sessão inválida ou tempo limite da sessão. (Session not found: VTN1eNelUg1084583EE ) : Addr: $00812DEA
+Estoque_TI.exe: 0000083C: 09:47:55 [127.0.0.1]:EUniSessionException : Sessão inválida ou tempo limite da sessão. (Session not found: VTN1eNelUg1084583EE ) : Addr: $00812DEA
+Estoque_TI.exe: 0000083C: 09:47:55 [HandleFileRequest[127.0.0.1]]:File not found: D:\Projetos\2020\WebEstoqueTI-8050\Win32\Debug\favicon.ico
+Estoque_TI.exe: 00002E18: 10:50:32 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00002E18: 10:50:32 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00002E18: 10:50:32 [TUniServerModule]:Start Path = D:\Projetos\2020\WebEstoqueTI-8050\Win32\Debug\
+Estoque_TI.exe: 00002E18: 10:50:33 [TUniServerModule]:Global Cache Folder Erased. <158> Files deleted.
+Estoque_TI.exe: 00002E18: 10:50:33 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00002E18: 10:50:33 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 00002E18: 10:50:35 [TUniServerModule]:Shutting Down Server.
+Estoque_TI.exe: 00002E18: 10:50:35 [TUniServerModule]:Stopping HTTP Server.
+Estoque_TI.exe: 00002E18: 10:50:36 [TUniServerModule]:HTTP Server Stopped.
+Estoque_TI.exe: 00002E18: 10:50:36 [TUniGUISessionManager]:Terminating Session manager.
+Estoque_TI.exe: 00002E18: 10:50:36 [TUniGUISessionManager]:Stopping Cache Eraser...
+Estoque_TI.exe: 00002E18: 10:50:36 [TUniGUISessionManager]:Cache Eraser Stopped.
+Estoque_TI.exe: 00002E18: 10:50:36 [TUniGUISessionManager]:Destroying Worker Threads.
+Estoque_TI.exe: 00002E18: 10:50:36 [TUniGUISessionManager]:Session manager terminated.
+Estoque_TI.exe: 00002E18: 10:50:36 [TUniServerModule]:Server Shutdown Completed.
+Estoque_TI.exe: 00002E18: 10:50:36 []:<-------------------------------------------------------------->
+Estoque_TI.exe: 00002E18: 10:50:36 [Terminated]:Exit Code: 0

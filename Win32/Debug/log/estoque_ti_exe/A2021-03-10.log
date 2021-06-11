@@ -1,0 +1,73 @@
+Estoque_TI.exe: 00000C48: 08:37:18 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00000C48: 08:37:18 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00000C48: 08:37:18 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00000C48: 08:37:18 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 00003504: 08:56:44 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00003504: 08:56:44 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00003504: 08:56:44 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+Estoque_TI.exe: 00003504: 08:56:44 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00003504: 08:56:44 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 00003504: 08:57:01 [TUniServerModule]:Shutting Down Server.
+Estoque_TI.exe: 00003504: 08:57:01 [TUniServerModule]:Stopping HTTP Server.
+Estoque_TI.exe: 00003504: 08:57:01 [TUniServerModule]:HTTP Server Stopped.
+Estoque_TI.exe: 00003504: 08:57:01 [TUniGUISessionManager]:Terminating Session manager.
+Estoque_TI.exe: 00003504: 08:57:01 [TUniGUISessionManager]:Stopping Cache Eraser...
+Estoque_TI.exe: 00003504: 08:57:01 [TUniGUISessionManager]:Cache Eraser Stopped.
+Estoque_TI.exe: 00003504: 08:57:01 [TUniGUISessionManager]:Destroying Worker Threads.
+Estoque_TI.exe: 00003504: 08:57:01 [TUniGUISessionManager]:Session manager terminated.
+Estoque_TI.exe: 00003504: 08:57:01 [TUniServerModule]:Server Shutdown Completed.
+Estoque_TI.exe: 00003504: 08:57:01 []:<-------------------------------------------------------------->
+Estoque_TI.exe: 00003504: 08:57:01 [Terminated]:Exit Code: 0
+Estoque_TI.exe: 00000B7C: 08:57:11 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00000B7C: 08:57:11 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00000B7C: 08:57:11 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00000B7C: 08:57:11 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 00001070: 09:01:34 [127.0.0.1]:EReadError : Error reading RDWConexao.Login: Property Login does not exist : Addr: $0047D710
+Estoque_TI.exe: 00001070: 09:01:35 [HandleFileRequest[127.0.0.1]]:File not found: D:\Projetos\2020\WebEstoqueTI-8050\Win32\Debug\favicon.ico
+Estoque_TI.exe: 00002254: 09:01:42 [127.0.0.1]:EReadError : Error reading RDWConexao.Login: Property Login does not exist : Addr: $0047D710
+Estoque_TI.exe: 00002254: 09:01:43 [127.0.0.1]:EReadError : Error reading RDWConexao.Login: Property Login does not exist : Addr: $0047D710
+Estoque_TI.exe: 00000B7C: 09:01:52 [Exit]:Unexpected attempt to terminate server application with Exit Code: 0
+Estoque_TI.exe: 000035A8: 09:06:42 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 000035A8: 09:06:42 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 000035A8: 09:06:42 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+Estoque_TI.exe: 000035A8: 09:06:42 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 000035A8: 09:06:42 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 000009B0: 09:06:55 [127.0.0.1]:EReadError : Error reading RDWConexao.Login: Property Login does not exist : Addr: $0047D710
+Estoque_TI.exe: 000009B0: 09:06:56 [HandleFileRequest[127.0.0.1]]:File not found: D:\Projetos\2020\WebEstoqueTI-8050\Win32\Debug\favicon.ico
+Estoque_TI.exe: 00003944: 09:07:00 [127.0.0.1]:EReadError : Error reading RDWConexao.Login: Property Login does not exist : Addr: $0047D710
+Estoque_TI.exe: 00003944: 09:07:02 [127.0.0.1]:EReadError : Error reading RDWConexao.Login: Property Login does not exist : Addr: $0047D710
+Estoque_TI.exe: 00003944: 09:07:03 [127.0.0.1]:EReadError : Error reading RDWConexao.Login: Property Login does not exist : Addr: $0047D710
+Estoque_TI.exe: 00003944: 09:07:04 [127.0.0.1]:EReadError : Error reading RDWConexao.Login: Property Login does not exist : Addr: $0047D710
+Estoque_TI.exe: 00003944: 09:07:04 [127.0.0.1]:EReadError : Error reading RDWConexao.Login: Property Login does not exist : Addr: $0047D710
+Estoque_TI.exe: 00003944: 09:07:05 [127.0.0.1]:EReadError : Error reading RDWConexao.Login: Property Login does not exist : Addr: $0047D710
+Estoque_TI.exe: 00003944: 09:07:06 [127.0.0.1]:EReadError : Error reading RDWConexao.Login: Property Login does not exist : Addr: $0047D710
+Estoque_TI.exe: 000035A8: 09:42:23 [TUniServerModule]:Shutting Down Server.
+Estoque_TI.exe: 000035A8: 09:42:23 [TUniServerModule]:Stopping HTTP Server.
+Estoque_TI.exe: 000035A8: 09:42:23 [TUniServerModule]:HTTP Server Stopped.
+Estoque_TI.exe: 000035A8: 09:42:23 [TUniGUISessionManager]:Terminating Session manager.
+Estoque_TI.exe: 000035A8: 09:42:23 [TUniGUISessionManager]:Stopping Cache Eraser...
+Estoque_TI.exe: 000035A8: 09:42:23 [TUniGUISessionManager]:Cache Eraser Stopped.
+Estoque_TI.exe: 000035A8: 09:42:23 [TUniGUISessionManager]:Destroying Worker Threads.
+Estoque_TI.exe: 000035A8: 09:42:23 [TUniGUISessionManager]:Session manager terminated.
+Estoque_TI.exe: 000035A8: 09:42:23 [TUniServerModule]:Server Shutdown Completed.
+Estoque_TI.exe: 000035A8: 09:42:23 []:<-------------------------------------------------------------->
+Estoque_TI.exe: 000035A8: 09:42:23 [Terminated]:Exit Code: 0
+Estoque_TI.exe: 00000C10: 15:55:55 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00000C10: 15:55:55 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00000C10: 15:55:55 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00000C10: 15:55:55 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 00001338: 15:56:21 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 0000308C: 15:56:22 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00002B64: 15:56:30 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00001348: 15:56:31 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.0.0\build\classic\locale\locale-.js
+Estoque_TI.exe: 00000C10: 15:59:06 [TUniServerModule]:Shutting Down Server.
+Estoque_TI.exe: 00000C10: 15:59:06 [TUniServerModule]:Stopping HTTP Server.
+Estoque_TI.exe: 00000C10: 15:59:07 [TUniServerModule]:HTTP Server Stopped.
+Estoque_TI.exe: 00000C10: 15:59:07 [TUniGUISessionManager]:Terminating Session manager.
+Estoque_TI.exe: 00000C10: 15:59:07 [TUniGUISessionManager]:Stopping Cache Eraser...
+Estoque_TI.exe: 00000C10: 15:59:07 [TUniGUISessionManager]:Cache Eraser Stopped.
+Estoque_TI.exe: 00000C10: 15:59:07 [TUniGUISessionManager]:Destroying Worker Threads.
+Estoque_TI.exe: 00000C10: 15:59:07 [TUniGUISessionManager]:Session manager terminated.
+Estoque_TI.exe: 00000C10: 15:59:13 [TUniServerModule]:Server Shutdown Completed.
+Estoque_TI.exe: 00000C10: 15:59:13 []:<-------------------------------------------------------------->
+Estoque_TI.exe: 00000C10: 15:59:13 [Terminated]:Exit Code: 0

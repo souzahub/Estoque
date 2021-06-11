@@ -415,6 +415,8 @@ if xSoAlerta = True then exit;
     dmDados.RDWAuxiliar.ExecSQL( xErro );
     dmDados.RDWEntrada.Close();
     dmDados.RDWEntrada.Open();
+    dmDados.RDWMOVIENTRADA.Close();
+    dmDados.RDWMOVIENTRADA.Open();
 
 
     // atualiza estoque
@@ -448,6 +450,8 @@ if xSoAlerta = True then exit;
 
     dmDados.RDWEntrada.Close();
     dmDados.RDWEntrada.Open();
+    dmDados.RDWMOVIENTRADA.Close();
+    dmDados.RDWMOVIENTRADA.Open();
 
     dmDados.RDWEstoque.Close;
     dmDados.RDWEstoque.SQL.Clear;

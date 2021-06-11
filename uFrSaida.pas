@@ -11,7 +11,7 @@ uses
   uniBasicGrid, uniDBGrid, uniDBNavigator, uniPageControl, Data.DB,
   frxClass, frxDBSet, frxGradient, frxExportBaseDialog, frxExportPDF,
   Vcl.Buttons, UniFSiGrowl, UniFSButton, UniFSToast, uniSyntaxEditorBase,
-  uniSyntaxEditorEx;
+  uniSyntaxEditorEx, uniWidgets, uniMemo, Datasnap.DBClient;
 
 type
   TfraSaida = class(TUniFrame)
@@ -135,7 +135,7 @@ end;
 
 procedure TfraSaida.BtGrvClick(Sender: TObject);
 begin
-  ShowMessage(cbSetor.Text);
+
   EdPesquisar.Visible := True;
   //  usando  SweetAlert1
   if edCodProduto.Text = '' then

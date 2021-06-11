@@ -1,0 +1,16 @@
+Estoque_TI.exe: 00003CFC: 13:52:34 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00003CFC: 13:52:34 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00003CFC: 13:52:34 [TUniServerModule]:Start Path = D:\Projetos\2020\WebEstoqueTI-8050\Win32\Debug\
+Estoque_TI.exe: 00003CFC: 13:52:34 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00003CFC: 13:52:34 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 00003CFC: 14:23:30 [TUniServerModule]:Shutting Down Server.
+Estoque_TI.exe: 00003CFC: 14:23:30 [TUniServerModule]:Stopping HTTP Server.
+Estoque_TI.exe: 00003CFC: 14:23:30 [TUniServerModule]:HTTP Server Stopped.
+Estoque_TI.exe: 00003CFC: 14:23:30 [TUniGUISessionManager]:Terminating Session manager.
+Estoque_TI.exe: 00003CFC: 14:23:30 [TUniGUISessionManager]:Stopping Cache Eraser...
+Estoque_TI.exe: 00003CFC: 14:23:30 [TUniGUISessionManager]:Cache Eraser Stopped.
+Estoque_TI.exe: 00003CFC: 14:23:30 [TUniGUISessionManager]:Destroying Worker Threads.
+Estoque_TI.exe: 00003CFC: 14:23:30 [TUniGUISessionManager]:Session manager terminated.
+Estoque_TI.exe: 00003CFC: 14:23:36 [TUniServerModule]:Server Shutdown Completed.
+Estoque_TI.exe: 00003CFC: 14:23:36 []:<-------------------------------------------------------------->
+Estoque_TI.exe: 00003CFC: 14:23:36 [Terminated]:Exit Code: 0

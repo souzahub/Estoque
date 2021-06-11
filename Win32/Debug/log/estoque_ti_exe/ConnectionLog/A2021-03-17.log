@@ -1,0 +1,15 @@
+Estoque_TI.exe: 00002C2C: 07:46:47 [127.0.0.1]:Sequence Error Timeout : TDiff:13187, Event: activate, Expected: 28, Received: 29, [9RZ3a8rxG3107E23477]
+Estoque_TI.exe: 00002C2C: 07:46:47 [127.0.0.1]:Failed Sequence Reset to: 28
+Estoque_TI.exe: 000039A0: 07:46:47 [127.0.0.1]:Failed Sequence Recovery: SeqId: 29, Event: activate
+Estoque_TI.exe: 00002C2C: 07:47:00 [127.0.0.1]:Sequence Error Timeout : TDiff:13328, Event: move, Expected: 29, Received: 30, [9RZ3a8rxG3107E23477]
+Estoque_TI.exe: 00002C2C: 07:47:00 [127.0.0.1]:Failed Sequence Reset to: 29
+Estoque_TI.exe: 000039A0: 07:47:00 [127.0.0.1]:Processing: Id: 29, Evt: activate
+Estoque_TI.exe: 000039A0: 07:47:00 [127.0.0.1]:Processed: Id: 29, Evt: activate, [9RZ3a8rxG3107E23477]
+Estoque_TI.exe: 00002FB8: 07:47:00 [127.0.0.1]:Sequence Error Timeout : TDiff:12953, Event: resize, Expected: 30, Received: 31, [9RZ3a8rxG3107E23477]
+Estoque_TI.exe: 00002FB8: 07:47:00 [127.0.0.1]:Failed Sequence Reset to: 30
+Estoque_TI.exe: 000021F8: 07:47:00 [127.0.0.1]:Failed Sequence Recovery: SeqId: 30, Event: move
+Estoque_TI.exe: 000021F8: 07:47:00 [127.0.0.1]:Processing: Id: 30, Evt: move
+Estoque_TI.exe: 000021F8: 07:47:00 [127.0.0.1]:Processed: Id: 30, Evt: move, [9RZ3a8rxG3107E23477]
+Estoque_TI.exe: 000021F8: 07:47:01 [127.0.0.1]:Failed Sequence Recovery: SeqId: 31, Event: resize
+Estoque_TI.exe: 000021F8: 07:47:01 [127.0.0.1]:Processing: Id: 31, Evt: resize
+Estoque_TI.exe: 000021F8: 07:47:01 [127.0.0.1]:Processed: Id: 31, Evt: resize, [9RZ3a8rxG3107E23477]

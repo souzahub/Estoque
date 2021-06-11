@@ -1,0 +1,7 @@
+Estoque_TI.exe: 00000964: 16:42:27 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00000964: 16:42:27 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00000964: 16:42:27 [TUniServerModule]:Start Path = D:\Projetos\2020\WebEstoqueTI-8050\Win32\Debug\
+Estoque_TI.exe: 00000964: 16:42:27 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00000964: 16:42:27 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 00000A78: 16:43:17 [127.0.0.1]:Exception : Socket Error # 10060
+Connection timed out. : Addr: $00A1B2B4

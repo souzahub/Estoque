@@ -9,7 +9,7 @@ uses
   uniGUIBaseClasses, uniImageList, uniPanel, uniButton, uniBitBtn,
   uniBasicGrid, uniDBGrid, uniDBNavigator, uniLabel, uniEdit,
   uniPageControl, Data.DB, UniFSButton, uniGridExporters, uniMemo,
-  uniDBMemo, uniMultiItem, uniListBox;
+  uniDBMemo, uniMultiItem, uniListBox, uniDBEdit;
 
 type
   TfrEstoque = class(TUniFrame)
@@ -26,20 +26,39 @@ type
     UniLabel8: TUniLabel;
     sbExportHtml: TUniFSButton;
     sbExportExcel: TUniFSButton;
-    EdPesquisar: TUniEdit;
     dsInfo: TDataSource;
     pnInfo: TUniPanel;
     UniPanel2: TUniPanel;
     UniPanel3: TUniPanel;
     UniListBox1: TUniListBox;
     UniFSButton2: TUniFSButton;
+    TabEntrada: TUniTabSheet;
+    TabSaida: TUniTabSheet;
+    dsMovEntrada: TDataSource;
+    dsMovSaida: TDataSource;
+    UniDBGrid2: TUniDBGrid;
+    UniDBGrid3: TUniDBGrid;
+    btLimpar: TUniFSButton;
+    EdPesquisar: TUniEdit;
+    btPesquisar: TUniFSButton;
+    pnPesquisar: TUniContainerPanel;
     procedure UniFrameCreate(Sender: TObject);
-    procedure EdPesquisarChange(Sender: TObject);
     procedure sbExportHtmlClick(Sender: TObject);
     procedure sbExportExcelClick(Sender: TObject);
     procedure UniDBGrid1CellClick(Column: TUniDBGridColumn);
     procedure UniListBox1Click(Sender: TObject);
     procedure UniFSButton2Click(Sender: TObject);
+    procedure TabEntradaBeforeActivate(Sender: TObject;
+      var AllowActivate: Boolean);
+    procedure TabSaidaBeforeActivate(Sender: TObject;
+      var AllowActivate: Boolean);
+    procedure Tab1BeforeActivate(Sender: TObject;
+      var AllowActivate: Boolean);
+    procedure dsEstoqueDataChange(Sender: TObject; Field: TField);
+    procedure buscadinamica;
+    procedure btLimparClick(Sender: TObject);
+    procedure btPesquisarClick(Sender: TObject);
+    procedure EdPesquisarKeyPress(Sender: TObject; var Key: Char);
   private
     FUrl : string;
     procedure ImagemSeq; // imagem da sequencia
@@ -83,7 +102,47 @@ end;
 
 
 
-procedure TfrEstoque.EdPesquisarChange(Sender: TObject);
+procedure TfrEstoque.EdPesquisarKeyPress(Sender: TObject; var Key: Char);
+begin
+  btPesquisarClick(Sender);
+end;
+
+procedure TfrEstoque.dsEstoqueDataChange(Sender: TObject; Field: TField);
+begin
+  dmDados.RDWMOVIENTRADA.Close;
+  dmDados.RDWMOVIENTRADA.SQL.Clear;
+  dmDados.RDWMOVIENTRADA.SQL.Add('select ENTRADA, FORNECEDOR, TOTALITENS, VALORTOTAL, ID, NPRODUTO, TIPO, CUSTO, CPRODUTO, LOCALPRODUTO, PATRIMONIO ');
+  dmDados.RDWMOVIENTRADA.SQL.Add('from entrada where CPRODUTO=:vCPRODUTO order by ID desc');
+  dmDados.RDWMOVIENTRADA.Params[0].DataType := ftString;
+  dmDados.RDWMOVIENTRADA.Params[0].Value := dmDados.RDWEstoqueID.Value;
+  dmDados.RDWMOVIENTRADA.Open;
+
+
+  dmDados.RDWMOVISAIDA.Close;
+  dmDados.RDWMOVISAIDA.SQL.Clear;
+  dmDados.RDWMOVISAIDA.SQL.Add('select SAIDA, CPRODUTO, QUANTIDADE, VPRODUTO, SETOR, NPRODUTO, PATRIMONIO, ID, USUARIO ');
+  dmDados.RDWMOVISAIDA.SQL.Add('from saida where CPRODUTO=:vCPRODUTO order by ID desc');
+  dmDados.RDWMOVISAIDA.Params[0].DataType := ftString;
+  dmDados.RDWMOVISAIDA.Params[0].Value := dmDados.RDWEstoqueID.Value;
+  dmDados.RDWMOVISAIDA.Open;
+
+end;
+
+procedure TfrEstoque.btLimparClick(Sender: TObject);
+begin
+
+  EdPesquisar.Clear;
+  buscadinamica;
+  EdPesquisar.SetFocus;
+
+end;
+
+procedure TfrEstoque.btPesquisarClick(Sender: TObject);
+begin
+  buscadinamica;
+end;
+
+procedure TfrEstoque.buscadinamica;  // procedure de busca
 begin
 
   dmDados.RDWEstoque.SQL.Clear;
@@ -104,6 +163,7 @@ begin
      ImagemSeq;
 
   end;
+
 end;
 
 procedure TfrEstoque.UniFrameCreate(Sender: TObject);
@@ -144,6 +204,31 @@ begin
 
   UniDBGrid1.Exporter.Exporter := UniGridHTMLExporter1;
   UniDBGrid1.Exporter.ExportGrid;
+
+end;
+
+procedure TfrEstoque.Tab1BeforeActivate(Sender: TObject;
+  var AllowActivate: Boolean);
+begin
+  pnPesquisar.Visible := True;
+  btLimpar.Visible := True;
+
+end;
+
+procedure TfrEstoque.TabEntradaBeforeActivate(Sender: TObject;
+  var AllowActivate: Boolean);
+begin
+
+  pnPesquisar.Visible := False;
+
+
+end;
+
+procedure TfrEstoque.TabSaidaBeforeActivate(Sender: TObject;
+  var AllowActivate: Boolean);
+begin
+
+  pnPesquisar.Visible := False;
 
 end;
 

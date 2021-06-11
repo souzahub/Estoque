@@ -55,6 +55,7 @@ type
     procedure BtExcClick(Sender: TObject);
     procedure BtGrvClick(Sender: TObject);
     procedure BtCanClick(Sender: TObject);
+    procedure UniComboBox1Change(Sender: TObject);
   private
      xIncluindo, xDeletando, xEditando, xSoAlerta : Boolean;
   public
@@ -232,6 +233,11 @@ procedure TfrCadastroUsuario.sbAdminClick(Sender: TObject);
 begin
   formAutentificacao.ShowModal;
   exit;
+end;
+
+procedure TfrCadastroUsuario.UniComboBox1Change(Sender: TObject);
+begin
+  showMessage(UniComboBox1.text);
 end;
 
 procedure TfrCadastroUsuario.UniFrameCreate(Sender: TObject);

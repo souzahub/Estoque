@@ -1,0 +1,47 @@
+Estoque_TI.exe: 000035EC: 08:38:41 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 000035EC: 08:38:41 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 000035EC: 08:38:41 [TUniServerModule]:Start Path = D:\Projetos\2020\WebEstoqueTI-8050\Win32\Debug\
+Estoque_TI.exe: 000035EC: 08:38:41 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 000035EC: 08:38:41 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 000025A8: 08:38:46 [127.0.0.1]:EUniSessionException : Sessão inválida ou tempo limite da sessão. (Session not found: 561e3oqXzx10840DC2F ) : Addr: $00812DEA
+Estoque_TI.exe: 000035B8: 08:38:46 [127.0.0.1]:EUniSessionException : Sessão inválida ou tempo limite da sessão. (Session not found: 561e3oqXzx10840DC2F ) : Addr: $00812DEA
+Estoque_TI.exe: 000035B8: 08:38:46 [HandleFileRequest[127.0.0.1]]:File not found: D:\Projetos\2020\WebEstoqueTI-8050\Win32\Debug\favicon.ico
+Estoque_TI.exe: 000035EC: 08:39:18 [TUniServerModule]:Shutting Down Server.
+Estoque_TI.exe: 000035EC: 08:39:18 [TUniServerModule]:Stopping HTTP Server.
+Estoque_TI.exe: 000035EC: 08:39:19 [TUniServerModule]:HTTP Server Stopped.
+Estoque_TI.exe: 000035EC: 08:39:19 [TUniGUISessionManager]:Terminating Session manager.
+Estoque_TI.exe: 000035EC: 08:39:19 [TUniGUISessionManager]:Stopping Cache Eraser...
+Estoque_TI.exe: 000035EC: 08:39:19 [TUniGUISessionManager]:Cache Eraser Stopped.
+Estoque_TI.exe: 000035EC: 08:39:19 [TUniGUISessionManager]:Destroying Worker Threads.
+Estoque_TI.exe: 000035EC: 08:39:19 [TUniGUISessionManager]:Session manager terminated.
+Estoque_TI.exe: 000035EC: 08:39:25 [TUniServerModule]:Server Shutdown Completed.
+Estoque_TI.exe: 000035EC: 08:39:25 []:<-------------------------------------------------------------->
+Estoque_TI.exe: 000035EC: 08:39:25 [Terminated]:Exit Code: 0
+Estoque_TI.exe: 00004058: 08:42:02 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00004058: 08:42:02 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00004058: 08:42:02 [TUniServerModule]:Start Path = D:\Projetos\2020\WebEstoqueTI-8050\Win32\Debug\
+Estoque_TI.exe: 00004058: 08:42:02 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00004058: 08:42:02 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 000029CC: 08:42:13 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 000029CC: 08:42:13 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 000029CC: 08:42:13 [TUniServerModule]:Start Path = D:\Projetos\2020\WebEstoqueTI-8050\Win32\Debug\
+Estoque_TI.exe: 000029CC: 08:42:13 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+Estoque_TI.exe: 000029CC: 08:42:13 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 000029CC: 08:42:13 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 000014F0: 08:42:21 [127.0.0.1]:EUniSessionException : Sessão inválida ou tempo limite da sessão. (Session not found: cc7yJnpjqI10840DDB0 ) : Addr: $00812DEA
+Estoque_TI.exe: 000029CC: 08:45:25 [TUniServerModule]:Shutting Down Server.
+Estoque_TI.exe: 000029CC: 08:45:25 [TUniServerModule]:Stopping HTTP Server.
+Estoque_TI.exe: 000029CC: 08:45:26 [TUniServerModule]:HTTP Server Stopped.
+Estoque_TI.exe: 000029CC: 08:45:26 [TUniGUISessionManager]:Terminating Session manager.
+Estoque_TI.exe: 000029CC: 08:45:26 [TUniGUISessionManager]:Stopping Cache Eraser...
+Estoque_TI.exe: 000029CC: 08:45:26 [TUniGUISessionManager]:Cache Eraser Stopped.
+Estoque_TI.exe: 000029CC: 08:45:26 [TUniGUISessionManager]:Destroying Worker Threads.
+Estoque_TI.exe: 000029CC: 08:45:26 [TUniGUISessionManager]:Session manager terminated.
+Estoque_TI.exe: 000029CC: 08:45:32 [TUniServerModule]:Server Shutdown Completed.
+Estoque_TI.exe: 000029CC: 08:45:32 []:<-------------------------------------------------------------->
+Estoque_TI.exe: 000029CC: 08:45:32 [Terminated]:Exit Code: 0
+Estoque_TI.exe: 00001FD8: 10:01:27 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00001FD8: 10:01:27 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00001FD8: 10:01:27 [TUniServerModule]:Start Path = D:\Projetos\2020\WebEstoqueTI-8050\Win32\Debug\
+Estoque_TI.exe: 00001FD8: 10:01:27 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00001FD8: 10:01:27 [TUniServerModule]:HTTP Server Started on Port: 8050

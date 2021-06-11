@@ -571,6 +571,9 @@ if xSoAlerta = True then exit;
     dmDados.RDWEstoque.Close();
     dmDados.RDWEstoque.Open();
 
+    dmDados.RDWMOVIENTRADA.Close();
+    dmDados.RDWMOVIENTRADA.Open();
+
     xEditando := False;
 
     dmDados.RDWGrupos.Close;
@@ -596,6 +599,10 @@ if xSoAlerta = True then exit;
 
      dmDados.RDWEstoque.Close();
      dmDados.RDWEstoque.Open();
+
+     dmDados.RDWMOVIENTRADA.Close();
+     dmDados.RDWMOVIENTRADA.Open();
+
      xDeletando := False;
 
 //     MainForm.RegistraLog('EXCLUSÃO', 'EXCLUÍDO DO USUÁRIO: '+vexUsuario);   log

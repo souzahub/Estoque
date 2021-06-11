@@ -20,7 +20,7 @@ object frEntrada: TfrEntrada
       Width = 1074
       Height = 586
       Hint = ''
-      ActivePage = Tab1
+      ActivePage = Tab2
       Align = alClient
       TabOrder = 1
       object Tab1: TUniTabSheet
@@ -52,7 +52,6 @@ object frEntrada: TfrEntrada
               FieldName = 'CPRODUTO'
               Title.Caption = 'C'#211'D'
               Width = 58
-              Alignment = taLeftJustify
             end
             item
               FieldName = 'ENTRADA'
@@ -79,7 +78,6 @@ object frEntrada: TfrEntrada
               FieldName = 'TIPO'
               Title.Caption = 'TIPO'
               Width = 52
-              Alignment = taLeftJustify
             end
             item
               FieldName = 'CUSTO'
@@ -128,7 +126,7 @@ object frEntrada: TfrEntrada
             Align = alClient
             TabOrder = 0
             Caption = ''
-            Color = clNone
+            Color = clGradientInactiveCaption
             LayoutConfig.Cls = 'cor1'
             ScrollHeight = 582
             ScrollWidth = 1058
