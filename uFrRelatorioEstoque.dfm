@@ -14,9 +14,5 @@ object frRelatorioEstoque: TfrRelatorioEstoque
     TabOrder = 0
     ParentColor = False
     Color = clBtnFace
-    ExplicitLeft = 48
-    ExplicitTop = 176
-    ExplicitWidth = 944
-    ExplicitHeight = 603
   end
 end

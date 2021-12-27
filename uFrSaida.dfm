@@ -20,7 +20,7 @@ object fraSaida: TfraSaida
       Width = 1073
       Height = 586
       Hint = ''
-      ActivePage = Tab1
+      ActivePage = Tab2
       Images = UniNativeImageList1
       Align = alClient
       TabOrder = 1
@@ -692,7 +692,7 @@ object fraSaida: TfraSaida
       'NPRODUTO=NPRODUTO'
       'PATRIMONIO=PATRIMONIO'
       'USUARIO=USUARIO')
-    DataSet = dmDados.relatSaida
+    DataSet = dmDados.RDWSaida
     BCDToCurrency = False
     Left = 997
     Top = 427

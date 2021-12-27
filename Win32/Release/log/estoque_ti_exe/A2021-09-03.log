@@ -1,0 +1,21 @@
+Estoque_TI.exe: 00001998: 16:10:52 []:>--------------------------------------------------------------<
+Estoque_TI.exe: 00001998: 16:10:52 [TUniServerModule]:Server First Init.
+Estoque_TI.exe: 00001998: 16:10:52 [TUniServerModule]:Start Path = D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\
+Estoque_TI.exe: 00001998: 16:10:52 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+Estoque_TI.exe: 00001998: 16:10:52 [TUniServerModule]:Starting HTTP Server on Port: 8050...
+Estoque_TI.exe: 00001998: 16:10:52 [TUniServerModule]:HTTP Server Started on Port: 8050
+Estoque_TI.exe: 00000C64: 16:16:56 [Socket Error # 10060
+Connection timed out.-127.0.0.1]:Exception : Socket Error # 10060
+Connection timed out. : Addr: $00A0D262
+Estoque_TI.exe: 00000C64: 16:27:57 [127.0.0.1]:EAccessViolation : Access violation at address 00BEB388 in module 'Estoque_TI.exe'. Read of address 000003BC : Addr: $00BEB388
+Estoque_TI.exe: 00001998: 16:47:18 [TUniServerModule]:Shutting Down Server.
+Estoque_TI.exe: 00001998: 16:47:18 [TUniServerModule]:Stopping HTTP Server.
+Estoque_TI.exe: 00001998: 16:47:19 [TUniServerModule]:HTTP Server Stopped.
+Estoque_TI.exe: 00001998: 16:47:19 [TUniGUISessionManager]:Terminating Session manager.
+Estoque_TI.exe: 00001998: 16:47:19 [TUniGUISessionManager]:Stopping Cache Eraser...
+Estoque_TI.exe: 00001998: 16:47:19 [TUniGUISessionManager]:Cache Eraser Stopped.
+Estoque_TI.exe: 00001998: 16:47:19 [TUniGUISessionManager]:Destroying Worker Threads.
+Estoque_TI.exe: 00001998: 16:47:19 [TUniGUISessionManager]:Session manager terminated.
+Estoque_TI.exe: 00001998: 16:47:25 [TUniServerModule]:Server Shutdown Completed.
+Estoque_TI.exe: 00001998: 16:47:25 []:<-------------------------------------------------------------->
+Estoque_TI.exe: 00001998: 16:47:25 [Terminated]:Exit Code: 0

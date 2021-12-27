@@ -13,7 +13,7 @@ uses
   uniHTMLFrame, uniURLFrame, uniMemo, uniHTMLMemo, uniGroupBox,
   uniFileUpload, uniButton, uniBitBtn, UniFSButton, unimURLFrame,
   UniFSPopup, uniCalendarPanel, uniCalendar, uniSpeedButton, uniTimer,
-  uniMenuButton, UniFSMenuButton;
+  uniMenuButton, UniFSMenuButton, uFrBalanco;
 
 type
   TMainForm = class(TUniForm)
@@ -90,6 +90,10 @@ type
     lbOla: TUniLabel;
     UniURLFrame1: TUniURLFrame;
     Poduto1: TUniMenuItem;
+    N1: TUniMenuItem;
+    Balano1: TUniMenuItem;
+    relatrio1: TUniMenuItem;
+    frxdbBalanco: TfrxDBDataset;
     procedure mnuUsuarioClick(Sender: TObject);
     procedure xUniLblButtoDrowerClick(Sender: TObject);
     procedure UniFormScreenResize(Sender: TObject; AWidth,
@@ -109,7 +113,9 @@ type
     procedure Usuarios1Click(Sender: TObject);
     procedure Log2Click(Sender: TObject);
     procedure Sair1Click(Sender: TObject);
-    procedure Poduto1Click(Sender: TObject); // ( função Log )
+    procedure Poduto1Click(Sender: TObject);
+    procedure Balano1Click(Sender: TObject);
+    procedure relatrio1Click(Sender: TObject); // ( função Log )
   private
     procedure NovaAba(nomeFormFrame: TFrame; descFormFrame: string; Fechar: Boolean);   // frame lateral
   public
@@ -172,6 +178,52 @@ begin
       dmDados.RDWLOGSYS.Open;
 end;
 
+procedure TMainForm.relatrio1Click(Sender: TObject);
+var
+  FName, PDF, ArqPDF:String;
+begin
+  dmdados.RDWrelatBalanco.Open;
+//  UniTreeMenu1.Micro := True;
+  NovaAba(TFrame(TfrRelatorioEstoque),'Relatório Estoque',True);
+
+//  FName := ExtractFileDir(Application.ExeName)+'\reports\relconslivros.fr3';
+//  PDF := ExtractFileDir(Application.ExeName)+'\reports\relconslivros.pdf';
+
+  frxReport1.LoadFromFile(UniServerModule.FilesFolderPath+'relatorio\balanco.fr3'); // seleciona o Caminho desejado para a impressao
+
+  frxReport1.PrepareReport(True);
+  ArqPDF := 'report_'+FormatDateTime('hhmmss.zzz',Now)+'.pdf'; // salva o arquivo com a hora do computador
+  frxPDFExport1.FileName := ArqPDF;
+  frxPDFExport1.DefaultPath := UniServerModule.LocalCachePath;
+  try
+    frxPDFExport1.ShowDialog := false;
+    frxPDFExport1.ShowProgress := False;
+    frxReport1.Export(Self.frxPDFExport1);
+    frxReport1.PreviewPages.SaveToFile(ArqPDF);
+//    linha abaixo é para abrir o relatorio em formulario
+//    FReport.UniURLFrame1.URL := UniServerModule.LocalCacheURL+ArqPDF;
+//    FReport.ShowModal;
+//    aqui é associado o FastRaport do arquivo .FR3 especifico para dentro do URL Frame que esta dentro de uma ABA no page control
+    TfrRelatorioEstoque(MainForm.FindComponent('frRelatorioEstoque')).URLRelatorios.URL := UniServerModule.LocalCacheURL+ArqPDF;
+//    try
+//      UniSession.BrowserWindow(UniServerModule.LocalCacheURL+ArqPDF,0,0,''); // abre a imagem na outra aba do navegador
+//    except
+//
+//    end;
+  //      TfrRelatorioTotal(MainForm.FindComponent('frRelatorioTotal')).URLRelatorios.URL := UniServerModule.LocalCacheURL + ArqPDF; para Frame
+  Except
+    ShowMessage('ERRO DURANTE A IMPRESSAO.');
+  end;
+
+  try
+     DeleteFile( ArqPDF );
+  except
+
+  end;
+
+//     UniURLFrame1.Visible := False;
+end;
+
 procedure TMainForm.Sair1Click(Sender: TObject);
 begin
   Close;
@@ -184,6 +236,12 @@ begin
                    quotedstr(Mensagem)+');');
 end;
 // frame lateral
+procedure TMainForm.Balano1Click(Sender: TObject);
+begin
+
+  NovaAba(TFrame(TfrBalanco),'Balanço',True);
+end;
+
 procedure TMainForm.Clientes2Click(Sender: TObject);
 var
   FName, PDF, ArqPDF:String;

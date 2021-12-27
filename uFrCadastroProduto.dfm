@@ -87,7 +87,7 @@ object frCadastroProduto: TfrCadastroProduto
           ScrollWidth = 1034
           object UniContainerPanel1: TUniContainerPanel
             Left = 34
-            Top = 23
+            Top = 46
             Width = 919
             Height = 512
             Hint = ''
@@ -136,7 +136,7 @@ object frCadastroProduto: TfrCadastroProduto
               Width = 384
               Hint = ''
               CharCase = ecUpperCase
-              MaxLength = 60
+              MaxLength = 50
               Text = 'UNINOME'
               TabOrder = 4
             end
@@ -210,21 +210,19 @@ object frCadastroProduto: TfrCadastroProduto
               OnClick = sbAnexarClick
             end
             object UniContainerPanel2: TUniContainerPanel
-              Left = 663
-              Top = 0
+              Left = 655
+              Top = 24
               Width = 256
               Height = 512
               Hint = ''
               ParentColor = False
-              Align = alRight
               TabOrder = 9
               object UniListBox1: TUniListBox
-                Left = 0
-                Top = 0
+                Left = 3
+                Top = 3
                 Width = 256
                 Height = 512
                 Hint = ''
-                Align = alClient
                 TabOrder = 1
                 LayoutConfig.Cls = 'color1'
               end
@@ -573,7 +571,7 @@ object frCadastroProduto: TfrCadastroProduto
     ImageIndex = 13
     EraseCacheAfterCompleted = True
     OnCompleted = UniFileUploadEditarCompleted
-    Left = 294
+    Left = 310
     Top = 64
   end
 end

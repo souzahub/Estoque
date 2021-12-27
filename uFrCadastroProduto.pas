@@ -522,23 +522,15 @@ if xSoAlerta = True then exit;
   begin
     dmDados.RDWAuxiliar.Close;
     dmDados.RDWAuxiliar.SQL.Clear;
-    dmDados.RDWAuxiliar.SQL.Add('insert into ESTOQUE  values ( NULL, :vPRODUTO, NULL, NULL, NULL, NULL, NULL, NULL, NULL, :vGRUPO, NULL )');
-
-    // ID - NULL
+    dmDados.RDWAuxiliar.SQL.Add('insert into ESTOQUE (PRODUTO, GRUPO )');
+    dmDados.RDWAuxiliar.SQL.Add('values(:vPRODUTO, :vGRUPO)');
 
     dmDados.RDWAuxiliar.Params[0].DataType := ftString; // Nome
     dmDados.RDWAuxiliar.Params[0].Value := edNome.Text ;
-   // NULL
-   // NULL
-   // NULL
-   // NULL
-   // NULL
-   // NULL
-   // NULL
+
     dmDados.RDWAuxiliar.Params[1].DataType := ftString; // Grupo
     dmDados.RDWAuxiliar.Params[1].Value := dbCbGrupos.Text ;
-   // NULL
-
+  
     dmDados.RDWAuxiliar.ExecSQL( xErro );
     dmDados.RDWCAD_PRODUTO.Close();
     dmDados.RDWCAD_PRODUTO.Open();

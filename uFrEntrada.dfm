@@ -20,7 +20,7 @@ object frEntrada: TfrEntrada
       Width = 1074
       Height = 586
       Hint = ''
-      ActivePage = Tab2
+      ActivePage = Tab1
       Align = alClient
       TabOrder = 1
       object Tab1: TUniTabSheet
@@ -40,13 +40,14 @@ object frEntrada: TfrEntrada
           BodyRTL = False
           DataSource = dsEntrada
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgTitleClick, dgFilterClearButton, dgAutoRefreshRow]
-          LoadMask.Message = 'Loading data...'
+          LoadMask.Message = 'Carregando...'
           ForceFit = True
           BorderStyle = ubsNone
           Align = alClient
           TabOrder = 0
           ParentColor = False
           Color = clWindow
+          OnDblClick = UniDBGrid1DblClick
           Columns = <
             item
               FieldName = 'CPRODUTO'
@@ -493,6 +494,8 @@ object frEntrada: TfrEntrada
     BorderStyle = ubsNone
     Caption = 'Entrada do Produto'
     Color = clNone
+    ExplicitLeft = -1
+    ExplicitTop = -5
     object UniLabel8: TUniLabel
       Left = 784
       Top = 24
@@ -721,5 +724,22 @@ object frEntrada: TfrEntrada
     ButtonTextNo = 'Cancela'
     Left = 520
     Top = 11
+  end
+  object SweetCancel: TUniSweetAlert
+    Title = 'Title'
+    Text = '0'
+    ConfirmButtonText = 'OK'
+    CancelButtonText = 'Sair'
+    AlertType = atQuestion
+    InputType = ItText
+    Width = 500
+    Padding = 20
+    ShowCancelButton = True
+    FocusCancel = True
+    ShowLoaderOnConfirm = True
+    OnDismiss = SweetCancelDismiss
+    OnConfirm = SweetCancelConfirm
+    Left = 80
+    Top = 120
   end
 end

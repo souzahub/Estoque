@@ -199,8 +199,8 @@ $(PreBuildEvent)]]></PreBuildEvent>
             <DesignClass>TUniFrame</DesignClass>
         </DCCReference>
         <DCCReference Include="uFuncoes.pas"/>
-        <DCCReference Include="uFrEstoque.pas">
-            <Form>frEstoque</Form>
+        <DCCReference Include="uFrBalanco.pas">
+            <Form>frBalanco</Form>
             <FormType>dfm</FormType>
             <DesignClass>TUniFrame</DesignClass>
         </DCCReference>
@@ -256,6 +256,11 @@ $(PreBuildEvent)]]></PreBuildEvent>
         </DCCReference>
         <DCCReference Include="uFrLogSys.pas">
             <Form>frLogSys</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TUniFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="uFrEstoque.pas">
+            <Form>frEstoque</Form>
             <FormType>dfm</FormType>
             <DesignClass>TUniFrame</DesignClass>
         </DCCReference>

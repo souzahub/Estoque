@@ -153,6 +153,22 @@ type
     IntegerField12: TIntegerField;
     StringField10: TStringField;
     StringField11: TStringField;
+    RDWEstoqueBALANCAO: TIntegerField;
+    RDWEstoqueDTBALANCAO: TSQLTimeStampField;
+    RDWBalanco: TRESTDWClientSQL;
+    RDWBalancoID: TIntegerField;
+    RDWBalancoPRODUTO: TStringField;
+    RDWBalancoBALANCAO: TIntegerField;
+    RDWBalancoDTBALANCAO: TSQLTimeStampField;
+    RDWBalancoINFO: TStringField;
+    RDWBalancoGRUPO: TStringField;
+    RDWrelatBalanco: TRESTDWClientSQL;
+    RDWrelatBalancoID: TIntegerField;
+    RDWrelatBalancoPRODUTO: TStringField;
+    RDWrelatBalancoESTOQUE: TIntegerField;
+    RDWrelatBalancoBALANCAO: TIntegerField;
+    RDWrelatBalancoDTBALANCAO: TSQLTimeStampField;
+    RDWrelatBalancoGRUPO: TStringField;
     procedure RDWEntradaTIPOGetText(Sender: TField; var Text: string;
       DisplayText: Boolean);
     procedure RDWEstoquePRECOGetText(Sender: TField; var Text: string;
@@ -160,6 +176,8 @@ type
     procedure RDWSaidaIDGetText(Sender: TField; var Text: string;
       DisplayText: Boolean);
     procedure RDWEstoqueVISUALIZARGetText(Sender: TField; var Text: string;
+      DisplayText: Boolean);
+    procedure RDWBalancoINFOGetText(Sender: TField; var Text: string;
       DisplayText: Boolean);
   private
     { Private declarations }
@@ -179,6 +197,13 @@ uses
 function dmDados: TdmDados;
 begin
   Result := TdmDados(UniMainModule.GetModuleInstance(TdmDados));
+end;
+
+procedure TdmDados.RDWBalancoINFOGetText(Sender: TField; var Text: string;
+  DisplayText: Boolean);
+begin
+  if DisplayText then
+  Text := '<i title="Informações" class="x-fa fa-2x fa fa-info-circle"; style="color:#9e0808;cursor:pointer;font-style: normal;">&nbsp</i>';
 end;
 
 procedure TdmDados.RDWEntradaTIPOGetText(Sender: TField; var Text: string;

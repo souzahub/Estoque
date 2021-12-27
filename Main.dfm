@@ -1400,7 +1400,7 @@ object MainForm: TMainForm
     UseFileCache = True
     ShowProgress = True
     OverwritePrompt = False
-    CreationTime = 43879.423307939820000000
+    CreationTime = 44554.422463993050000000
     DataOnly = False
     OpenAfterExport = False
     PrintOptimized = False
@@ -1464,6 +1464,19 @@ object MainForm: TMainForm
         Caption = 'Sa'#237'da'
         ImageIndex = 30
         OnClick = Vendas1Click
+      end
+      object N1: TUniMenuItem
+        Caption = '-'
+      end
+      object Balano1: TUniMenuItem
+        Caption = 'Balan'#231'o'
+        ImageIndex = 11
+        OnClick = Balano1Click
+      end
+      object relatrio1: TUniMenuItem
+        Caption = 'relat'#243'rio'
+        ImageIndex = 27
+        OnClick = relatrio1Click
       end
     end
     object Relatrios1: TUniMenuItem
@@ -1550,7 +1563,7 @@ object MainForm: TMainForm
     PrintOptions.Printer = 'Padr'#227'o'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 43949.673707465300000000
-    ReportOptions.LastChange = 44047.610090613420000000
+    ReportOptions.LastChange = 44554.428808414400000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'procedure MasterData1OnBeforePrint(Sender: TfrxComponent);'
@@ -1582,8 +1595,8 @@ object MainForm: TMainForm
     Top = 280
     Datasets = <
       item
-        DataSet = frxDBRelatorio
-        DataSetName = 'frxDBDatasetEstoque'
+        DataSet = frxdbBalanco
+        DataSetName = 'frxDBDatasetBalanco'
       end>
     Variables = <>
     Style = <>
@@ -1593,8 +1606,8 @@ object MainForm: TMainForm
     end
     object Page1: TfrxReportPage
       PaperWidth = 210.000000000000000000
-      PaperHeight = 297.000000000000000000
-      PaperSize = 9
+      PaperHeight = 287.000000000000000000
+      PaperSize = 256
       LeftMargin = 10.000000000000000000
       RightMargin = 10.000000000000000000
       TopMargin = 10.000000000000000000
@@ -1607,97 +1620,76 @@ object MainForm: TMainForm
       object MasterData1: TfrxMasterData
         FillType = ftBrush
         Frame.Typ = []
-        Height = 19.275602760000000000
+        Height = 21.438393460000000000
         Top = 154.960730000000000000
         Width = 718.110700000000000000
         OnBeforePrint = 'MasterData1OnBeforePrint'
-        DataSet = frxDBRelatorio
-        DataSetName = 'frxDBDatasetEstoque'
+        DataSet = frxdbBalanco
+        DataSetName = 'frxDBDatasetBalanco'
         RowCount = 0
         object Memo1: TfrxMemoView
           AllowVectorExport = True
           Left = 13.000000000000000000
-          Top = 0.377952755905512000
+          Top = 1.000000000000000000
           Width = 58.953366280000000000
           Height = 18.897650000000000000
           DataField = 'ID'
-          DataSet = frxDBRelatorio
-          DataSetName = 'frxDBDatasetEstoque'
+          DataSet = frxdbBalanco
+          DataSetName = 'frxDBDatasetBalanco'
           Frame.Typ = []
           Memo.UTF8W = (
-            '[frxDBDatasetEstoque."ID"]')
+            '[frxDBDatasetBalanco."ID"]')
         end
         object Memo6: TfrxMemoView
           AllowVectorExport = True
           Left = 72.000000000000000000
-          Top = 0.377952760000000000
-          Width = 422.651040700000000000
+          Top = 1.000000000000000000
+          Width = 389.209180230000000000
           Height = 18.897637800000000000
           DataField = 'PRODUTO'
-          DataSet = frxDBRelatorio
-          DataSetName = 'frxDBDatasetEstoque'
+          DataSet = frxdbBalanco
+          DataSetName = 'frxDBDatasetBalanco'
           Frame.Typ = []
           Memo.UTF8W = (
-            '[frxDBDatasetEstoque."PRODUTO"]')
+            '[frxDBDatasetBalanco."PRODUTO"]')
         end
         object Memo7: TfrxMemoView
           AllowVectorExport = True
-          Left = 494.000000000000000000
-          Top = 0.377952760000000000
-          Width = 46.720808140000000000
+          Left = 460.000000000000000000
+          Top = 1.000000000000000000
+          Width = 103.674296510000000000
           Height = 18.897650000000000000
-          DataField = 'ESTOQUE'
-          DataSet = frxDBRelatorio
-          DataSetName = 'frxDBDatasetEstoque'
+          DataSet = frxdbBalanco
+          DataSetName = 'frxDBDatasetBalanco'
           Frame.Typ = []
           Memo.UTF8W = (
-            '[frxDBDatasetEstoque."ESTOQUE"]')
+            '[frxDBDatasetBalanco."ESTOQUE"]')
         end
         object Memo13: TfrxMemoView
-          Align = baRight
           AllowVectorExport = True
-          Left = 540.134200000000000000
-          Top = 0.377952755905512000
-          Width = 81.488250000000000000
+          Left = 562.000000000000000000
+          Top = 1.000000000000000000
+          Width = 95.092901160000000000
           Height = 18.897650000000000000
-          DataSet = frxDBRelatorio
-          DataSetName = 'frxDBDatasetEstoque'
-          DisplayFormat.FormatStr = '%2.2m'
-          DisplayFormat.Kind = fkNumeric
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = []
+          DataField = 'BALANCAO'
+          DataSet = frxdbBalanco
+          DataSetName = 'frxDBDatasetBalanco'
           Frame.Typ = []
-          HAlign = haRight
           Memo.UTF8W = (
-            '[frxDBDatasetEstoque."PRECO"]')
-          ParentFont = False
+            '[frxDBDatasetBalanco."BALANCAO"]')
         end
         object Memo14: TfrxMemoView
-          Align = baRight
           AllowVectorExport = True
-          Left = 621.622450000000000000
-          Top = 0.377952755905512000
-          Width = 96.488250000000000000
+          Left = 656.000000000000000000
+          Width = 62.488250000000000000
           Height = 18.897650000000000000
           DataSet = frxDBRelatorio
           DataSetName = 'frxDBDatasetEstoque'
-          DisplayFormat.FormatStr = '%2.2m'
-          DisplayFormat.Kind = fkNumeric
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = []
           Frame.Typ = []
-          HAlign = haRight
           Memo.UTF8W = (
             
-              '[(<frxDBDatasetEstoque."ESTOQUE">*<frxDBDatasetEstoque."PRECO">)' +
-              ']')
-          ParentFont = False
+              '[(<frxDBDatasetBalanco."BALANCAO">-<frxDBDatasetBalanco."ESTOQUE' +
+              '">)]')
         end
       end
       object Header1: TfrxHeader
@@ -1733,7 +1725,7 @@ object MainForm: TMainForm
           Frame.Typ = []
           HAlign = haCenter
           Memo.UTF8W = (
-            'Relat'#243'rio Custo - TI')
+            'Relat'#243'rio Estoque - TI ( BALAN'#199'O)')
           ParentFont = False
         end
         object Memo11: TfrxMemoView
@@ -1758,7 +1750,6 @@ object MainForm: TMainForm
         end
         object Shape1: TfrxShapeView
           AllowVectorExport = True
-          Left = 0.418604650000000000
           Top = 80.653370000000000000
           Width = 718.110236220000000000
           Height = 29.000000000000000000
@@ -1767,7 +1758,7 @@ object MainForm: TMainForm
         object Memo8: TfrxMemoView
           AllowVectorExport = True
           Left = 5.000000000000000000
-          Top = 84.653370000000000000
+          Top = 84.661417322834600000
           Width = 42.488250000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -1784,7 +1775,7 @@ object MainForm: TMainForm
         object Memo9: TfrxMemoView
           AllowVectorExport = True
           Left = 63.519790000000000000
-          Top = 84.653370000000000000
+          Top = 84.661417322834600000
           Width = 94.488250000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -1800,9 +1791,9 @@ object MainForm: TMainForm
         end
         object Memo10: TfrxMemoView
           AllowVectorExport = True
-          Left = 432.808862790000000000
-          Top = 84.653370000000000000
-          Width = 113.488250000000000000
+          Left = 421.157700000000000000
+          Top = 84.661417322834600000
+          Width = 100.488250000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -1812,14 +1803,14 @@ object MainForm: TMainForm
           Frame.Typ = []
           HAlign = haCenter
           Memo.UTF8W = (
-            'Estoque Atual')
+            'Saldo Sistema')
           ParentFont = False
         end
         object Memo15: TfrxMemoView
           AllowVectorExport = True
-          Left = 573.134200000000000000
-          Top = 84.527571260000000000
-          Width = 44.488250000000000000
+          Left = 523.000000000000000000
+          Top = 84.661417322834600000
+          Width = 106.488250000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -1829,15 +1820,14 @@ object MainForm: TMainForm
           Frame.Typ = []
           HAlign = haCenter
           Memo.UTF8W = (
-            'Custo')
+            'Saldo Balan'#231'o')
           ParentFont = False
         end
         object Memo16: TfrxMemoView
-          Align = baRight
           AllowVectorExport = True
-          Left = 640.622450000000000000
-          Top = 84.527571260000000000
-          Width = 77.488250000000000000
+          Left = 632.000000000000000000
+          Top = 84.661417322834600000
+          Width = 78.488250000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -1847,7 +1837,7 @@ object MainForm: TMainForm
           Frame.Typ = []
           HAlign = haCenter
           Memo.UTF8W = (
-            'Valor Total')
+            'Sobra/Falta')
           ParentFont = False
         end
         object Memo17: TfrxMemoView
@@ -2600,15 +2590,14 @@ object MainForm: TMainForm
       object ReportSummary1: TfrxReportSummary
         FillType = ftBrush
         Frame.Typ = []
-        Height = 111.000000000000000000
-        Top = 234.330860000000000000
+        Height = 59.889610000000000000
+        Top = 238.110390000000000000
         Width = 718.110700000000000000
         object SysMemo2: TfrxSysMemoView
-          Align = baRight
           AllowVectorExport = True
-          Left = 588.413147670000000000
-          Top = 7.559055120000000000
-          Width = 129.697552330000000000
+          Left = 461.279069770000000000
+          Top = 9.448818900000000000
+          Width = 55.558017440000000000
           Height = 19.897650000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -2616,18 +2605,16 @@ object MainForm: TMainForm
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           Frame.Typ = []
-          Fill.BackColor = clBtnFace
-          HAlign = haRight
           Memo.UTF8W = (
-            '[SUM(<frxDBDatasetEstoque."ESTOQUE">,MasterData1,3)]')
+            '[SUM(<frxDBDatasetBalanco."BALANCAO">)]')
           ParentFont = False
         end
         object Memo18: TfrxMemoView
           AllowVectorExport = True
-          Left = 464.503937007874000000
-          Top = 38.929133860000000000
-          Width = 86.488250000000000000
-          Height = 18.897650000000000000
+          Left = 5.232558140000000000
+          Top = 10.448818900000000000
+          Width = 48.488250000000000000
+          Height = 1889.763779530000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -13
@@ -2636,37 +2623,30 @@ object MainForm: TMainForm
           Frame.Typ = []
           HAlign = haCenter
           Memo.UTF8W = (
-            'Total Custo:')
+            'Total:')
           ParentFont = False
         end
-        object Memo19: TfrxMemoView
-          Align = baRight
+        object SysMemo3: TfrxSysMemoView
           AllowVectorExport = True
-          Left = 589.622450000000000000
-          Top = 39.510529210000000000
-          Width = 128.488250000000000000
+          Left = 552.604651170000000000
+          Top = 10.448818900000000000
+          Width = 51.395226740000000000
           Height = 18.897650000000000000
-          DataSet = frxDBRelatorio
-          DataSetName = 'frxDBDatasetEstoque'
-          DisplayFormat.FormatStr = '%2.2m'
-          DisplayFormat.Kind = fkNumeric
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -13
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           Frame.Typ = []
-          Fill.BackColor = clBtnFace
-          HAlign = haRight
           Memo.UTF8W = (
-            '[SUM(<frxDBDatasetEstoque."PRECO">,MasterData1)]')
+            '[SUM(<frxDBDatasetBalanco."ESTOQUE">)]')
           ParentFont = False
         end
-        object Memo20: TfrxMemoView
+        object SysMemo4: TfrxSysMemoView
           AllowVectorExport = True
-          Left = 464.320668200000000000
-          Top = 7.559055120000000000
-          Width = 123.488250000000000000
+          Left = 654.348837220000000000
+          Top = 10.448818900000000000
+          Width = 62.558017440000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -2674,72 +2654,25 @@ object MainForm: TMainForm
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           Frame.Typ = []
-          HAlign = haCenter
-          Memo.UTF8W = (
-            'Total de Produtos:')
-          ParentFont = False
-        end
-        object Memo21: TfrxMemoView
-          AllowVectorExport = True
-          Left = 464.503937007874000000
-          Top = 71.433070870000000000
-          Width = 79.488250000000000000
-          Height = 18.897650000000000000
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          Frame.Typ = []
-          HAlign = haCenter
-          Memo.UTF8W = (
-            'Valor Total:')
-          ParentFont = False
-        end
-        object Memo22: TfrxMemoView
-          Align = baRight
-          AllowVectorExport = True
-          Left = 589.622450000000000000
-          Top = 71.433070870000000000
-          Width = 128.488250000000000000
-          Height = 18.897650000000000000
-          DataSet = frxDBRelatorio
-          DataSetName = 'frxDBDatasetEstoque'
-          DisplayFormat.FormatStr = '%2.2m'
-          DisplayFormat.Kind = fkNumeric
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          Frame.Typ = []
-          Fill.BackColor = clBtnFace
-          HAlign = haRight
           Memo.UTF8W = (
             
-              '[SUM(<frxDBDatasetEstoque."ESTOQUE">*<frxDBDatasetEstoque."PRECO' +
-              '">)]')
+              '[SUM(<frxDBDatasetBalanco."BALANCAO">-<frxDBDatasetBalanco."ESTO' +
+              'QUE">)]')
           ParentFont = False
         end
-        object Line1: TfrxLineView
+        object Shape2: TfrxShapeView
           AllowVectorExport = True
-          Top = -0.110390000000000000
-          Width = 719.000000000000000000
-          Color = clBlack
-          Frame.Typ = [ftTop]
-        end
-        object Line2: TfrxLineView
-          AllowVectorExport = True
-          Top = 96.889610000000000000
-          Width = 719.000000000000000000
-          Color = clBlack
-          Frame.Typ = [ftTop]
+          Left = 1.000000000000000000
+          Top = 6.669291340000000000
+          Width = 718.110236220000000000
+          Height = 29.000000000000000000
+          Frame.Typ = []
         end
       end
     end
   end
   object UniNativeImageList2: TUniNativeImageList
-    Left = 72
+    Left = 112
     Top = 440
     Images = {0100000000000000061000000066696C652D696D6167652D6F3B66613B}
   end
@@ -2813,5 +2746,20 @@ object MainForm: TMainForm
       ImageIndex = 22
       OnClick = Sair1Click
     end
+  end
+  object frxdbBalanco: TfrxDBDataset
+    UserName = 'frxDBDatasetBalanco'
+    CloseDataSource = False
+    FieldAliases.Strings = (
+      'ID=ID'
+      'PRODUTO=PRODUTO'
+      'ESTOQUE=ESTOQUE'
+      'BALANCAO=BALANCAO'
+      'DTBALANCAO=DTBALANCAO'
+      'GRUPO=GRUPO')
+    DataSet = dmDados.RDWrelatBalanco
+    BCDToCurrency = False
+    Left = 16
+    Top = 496
   end
 end

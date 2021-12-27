@@ -61,6 +61,7 @@ type
     Toast: TUniFSToast;
     UniLabel1: TUniLabel;
     uniRGTipo: TUniRadioGroup;
+    SweetCancel: TUniSweetAlert;
     function CalculaTotal: Real;
     procedure UniFrameCreate(Sender: TObject);
     procedure UniSweetAlert1Confirm(Sender: TObject);
@@ -76,11 +77,16 @@ type
     procedure BtAltClick(Sender: TObject);
     procedure BtCanClick(Sender: TObject);
     procedure BtGrvClick(Sender: TObject);
-    procedure ConsultaDados;  // função de pesquisa
+    procedure ConsultaDados;
+    procedure UniDBGrid1DblClick(Sender: TObject);
+    procedure SweetCancelConfirm(Sender: TObject);
+    procedure SweetCancelDismiss(Sender: TObject;
+      const Reason: TDismissType);  // função de pesquisa
   private
-     xIncluindo, xDeletando, xEditando, xSoAlerta, xGrupo : Boolean;
+     xIncluindo, xDeletando, xEditando, xSoAlerta, xGrupo, xAlterar : Boolean;
   public
     { Public declarations }
+    xUltimoId : Integer;
   end;
 
 implementation
@@ -323,6 +329,79 @@ end;
 procedure TfrEntrada.seQuantidadeChange(Sender: TObject);
 begin
  edValorTotal.Value := CalculaTotal;
+end;
+
+procedure TfrEntrada.SweetCancelConfirm(Sender: TObject);
+var
+xErro, xMotivo :string;
+
+begin
+  if  xAlterar = True then
+  begin
+    if SweetCancel.InputResult ='' then
+    begin
+      xSoAlerta := True;
+      SweetCancel.Title := ('Atenção!');
+      SweetCancel.AlertType := atInfo;
+      SweetCancel.InputType := ItNone;
+      SweetCancel.ShowCancelButton := True;
+      SweetCancel.ShowConfirmButton := False;
+      SweetCancel.CancelButtonText := 'Ok';
+      SweetCancel.Show('Local Obrigatório');
+      exit;
+    end;
+    xMotivo := SweetCancel.InputResult;
+
+    dmDados.RDWAuxiliar.Close;
+    dmDados.RDWAuxiliar.SQL.Clear;
+    dmDados.RDWAuxiliar.SQL.Add('update ENTRADA set LOCALPRODUTO=:vLOCALPRODUTO  where CPRODUTO=:vCPRODUTO');
+
+    dmDados.RDWAuxiliar.Params[0].DataType := ftString;
+    dmDados.RDWAuxiliar.Params[0].Value := xMotivo;
+
+    dmDados.RDWAuxiliar.Params[1].DataType := ftInteger;
+    dmDados.RDWAuxiliar.Params[1].Value := dmDados.RDWEntradaCPRODUTO.Value;
+
+    dmDados.RDWAuxiliar.ExecSQL( xErro );
+
+    dmDados.RDWEntrada.Close;
+    dmDados.RDWEntrada.Open;
+
+    dmDados.RDWEntrada.Locate('CPRODUTO', xUltimoId, []);// volta para o ultimo Id
+
+    xAlterar := False;
+    exit;
+   end;
+end;
+
+procedure TfrEntrada.SweetCancelDismiss(Sender: TObject;
+  const Reason: TDismissType);
+begin
+  xAlterar := False;
+  xSoAlerta := False;
+end;
+
+procedure TfrEntrada.UniDBGrid1DblClick(Sender: TObject);
+begin
+Exit;
+//    xUltimoId :=  dmDados.RDWEntradaCPRODUTO.Value;
+//
+//    xAlterar := True;
+//    xSoAlerta := False;
+//    xIncluindo := False;
+//    xEditando := False;
+//    xDeletando := False;
+//
+//    xSoAlerta := False;
+//    SweetCancel.Title := 'Informe o local do produto:';
+//    SweetCancel.AlertType := atQuestion;
+//    SweetCancel.InputType := ItText;
+//    SweetCancel.ShowConfirmButton := True;
+//    SweetCancel.ConfirmButtonText := 'Sim';
+//    SweetCancel.ShowCancelButton := True;
+//    SweetCancel.CancelButtonText := 'Não';
+//    SweetCancel.Show(dmDados.RDWEntradaNPRODUTO.value);
+
 end;
 
 procedure TfrEntrada.UniFrameCreate(Sender: TObject);

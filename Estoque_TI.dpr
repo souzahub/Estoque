@@ -10,7 +10,7 @@ uses
   uFrCadastroFornec in 'uFrCadastroFornec.pas' {frCadastroFornec: TUniFrame},
   uFrCadastroProduto in 'uFrCadastroProduto.pas' {frCadastroProduto: TUniFrame},
   uFuncoes in 'uFuncoes.pas',
-  uFrEstoque in 'uFrEstoque.pas' {frEstoque: TUniFrame},
+  uFrBalanco in 'uFrBalanco.pas' {frBalanco: TUniFrame},
   uFrEntrada in 'uFrEntrada.pas' {frEntrada: TUniFrame},
   uFrSaida in 'uFrSaida.pas' {fraSaida: TUniFrame},
   uFormBuscaFornec in 'uFormBuscaFornec.pas' {formBuscaFornec: TUniForm},
@@ -21,7 +21,8 @@ uses
   uFormLogin in 'uFormLogin.pas' {formLogin: TUniLoginForm},
   uFrRelatorioEstoque in 'uFrRelatorioEstoque.pas' {frRelatorioEstoque: TUniFrame},
   relatFornec in 'relatFornec.pas' {formRelatFornec: TUniForm},
-  uFrLogSys in 'uFrLogSys.pas' {frLogSys: TUniFrame};
+  uFrLogSys in 'uFrLogSys.pas' {frLogSys: TUniFrame},
+  uFrEstoque in 'uFrEstoque.pas' {frEstoque: TUniFrame};
 
 {$R *.res}
 
