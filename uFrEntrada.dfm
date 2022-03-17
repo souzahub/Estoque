@@ -139,6 +139,7 @@ object frEntrada: TfrEntrada
               DateTime = 43854.000000000000000000
               DateFormat = 'dd/MM/yyyy'
               TimeFormat = 'HH:mm:ss'
+              ReadOnly = True
               TabOrder = 1
               Color = 12189695
             end
@@ -494,8 +495,6 @@ object frEntrada: TfrEntrada
     BorderStyle = ubsNone
     Caption = 'Entrada do Produto'
     Color = clNone
-    ExplicitLeft = -1
-    ExplicitTop = -5
     object UniLabel8: TUniLabel
       Left = 784
       Top = 24

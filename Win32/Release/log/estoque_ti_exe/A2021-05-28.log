@@ -1,6 +1,0 @@
-Estoque_TI.exe: 000019FC: 09:21:00 []:>--------------------------------------------------------------<
-Estoque_TI.exe: 000019FC: 09:21:00 [TUniServerModule]:Server First Init.
-Estoque_TI.exe: 000019FC: 09:21:00 [TUniServerModule]:Start Path = D:\Projetos\2020\WebEstoqueTI-8050\Win32\Release\
-Estoque_TI.exe: 000019FC: 09:21:00 [TUniServerModule]:Starting HTTP Server on Port: 8050...
-Estoque_TI.exe: 000019FC: 09:21:00 [TUniServerModule]:HTTP Server Started on Port: 8050
-Estoque_TI.exe: 000019FC: 16:57:12 [Exit]:Unexpected attempt to terminate server application with Exit Code: 0

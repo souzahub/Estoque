@@ -7,7 +7,7 @@ object dmDados: TdmDados
     Compression = True
     CriptOptions.Use = False
     CriptOptions.Key = 'RDWBASEKEY256'
-    MyIP = '177.223.6.13'
+    MyIP = '177.223.7.131'
     Login = 'admin'
     Password = 'tifri2020'
     Proxy = False
@@ -413,11 +413,16 @@ object dmDados: TdmDados
     end
     object RDWSaidaID: TIntegerField
       FieldName = 'ID'
-      OnGetText = RDWSaidaIDGetText
     end
     object RDWSaidaUSUARIO: TStringField
       FieldName = 'USUARIO'
       Size = 40
+    end
+    object RDWSaidaPRINT: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'PRINT'
+      OnGetText = RDWSaidaPRINTGetText
+      Calculated = True
     end
   end
   object RDWAuxiliar: TRESTDWClientSQL
@@ -486,65 +491,9 @@ object dmDados: TdmDados
     end
   end
   object RDWEstoqueRelat: TRESTDWClientSQL
-    Active = True
+    Active = False
     Filtered = False
-    FieldDefs = <
-      item
-        Name = 'CODIGO'
-        DataType = ftInteger
-      end
-      item
-        Name = 'PRODUTO'
-        DataType = ftString
-        Size = 50
-      end
-      item
-        Name = 'ESTOQUE'
-        DataType = ftInteger
-      end
-      item
-        Name = 'PRECO'
-        DataType = ftFloat
-        Precision = 16
-      end
-      item
-        Name = 'DTSAIDA'
-        DataType = ftTimeStamp
-      end
-      item
-        Name = 'DTENTRADA'
-        DataType = ftTimeStamp
-      end
-      item
-        Name = 'FORNEC'
-        DataType = ftString
-        Size = 80
-      end
-      item
-        Name = 'ESTOQUE_USADO'
-        DataType = ftInteger
-      end
-      item
-        Name = 'ESTOQUE_NOVO'
-        DataType = ftInteger
-      end
-      item
-        Name = 'GRUPO'
-        DataType = ftString
-        Size = 30
-      end
-      item
-        Name = 'ID'
-        DataType = ftInteger
-      end
-      item
-        Name = 'BALANCAO'
-        DataType = ftInteger
-      end
-      item
-        Name = 'DTBALANCAO'
-        DataType = ftTimeStamp
-      end>
+    FieldDefs = <>
     IndexDefs = <>
     FetchOptions.AssignedValues = [evMode]
     FetchOptions.Mode = fmAll
@@ -613,60 +562,11 @@ object dmDados: TdmDados
   object RelatFornec: TRESTDWClientSQL
     Active = False
     Filtered = False
-    FieldDefs = <
-      item
-        Name = 'ENDERECO'
-        DataType = ftString
-        Size = 40
-      end
-      item
-        Name = 'BAIRRO'
-        DataType = ftString
-        Size = 30
-      end
-      item
-        Name = 'CIDADE'
-        DataType = ftString
-        Size = 30
-      end
-      item
-        Name = 'UF'
-        DataType = ftString
-        Size = 2
-      end
-      item
-        Name = 'CEP'
-        DataType = ftString
-        Size = 8
-      end
-      item
-        Name = 'FONE'
-        DataType = ftString
-        Size = 35
-      end
-      item
-        Name = 'EMAIL'
-        DataType = ftString
-        Size = 30
-      end
-      item
-        Name = 'NOME'
-        DataType = ftString
-        Size = 40
-      end
-      item
-        Name = 'CNPJ'
-        DataType = ftString
-        Size = 14
-      end
-      item
-        Name = 'ID'
-        DataType = ftInteger
-      end>
+    FieldDefs = <>
     IndexDefs = <>
     FetchOptions.AssignedValues = [evMode]
     FetchOptions.Mode = fmAll
-    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.AssignedValues = [rvStoreItems, rvSilentMode]
     ResourceOptions.SilentMode = True
     UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
     UpdateOptions.CheckRequired = False
@@ -1098,7 +998,6 @@ object dmDados: TdmDados
     end
     object IntegerField8: TIntegerField
       FieldName = 'ID'
-      OnGetText = RDWSaidaIDGetText
     end
     object StringField7: TStringField
       FieldName = 'USUARIO'
@@ -1280,6 +1179,58 @@ object dmDados: TdmDados
       FieldName = 'DTBALANCAO'
     end
     object RDWrelatBalancoGRUPO: TStringField
+      FieldName = 'GRUPO'
+      Size = 30
+    end
+  end
+  object RDWAtualizaBalanco: TRESTDWClientSQL
+    Active = False
+    Filtered = False
+    FieldDefs = <>
+    IndexDefs = <>
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvStoreItems, rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.AutoCommitUpdates = True
+    StoreDefs = True
+    MasterCascadeDelete = True
+    BinaryRequest = True
+    Datapacks = -1
+    DataCache = False
+    Params = <>
+    DataBase = RDWConexao
+    SQL.Strings = (
+      
+        'select ID, PRODUTO, BALANCAO, ESTOQUE, DTBALANCAO, GRUPO  from E' +
+        'STOQUE  order by PRODUTO ')
+    CacheUpdateRecords = True
+    AutoCommitData = False
+    AutoRefreshAfterCommit = False
+    RaiseErrors = True
+    ActionCursor = crSQLWait
+    ReflectChanges = False
+    Left = 240
+    Top = 256
+    object RDWAtualizaBalancoID: TIntegerField
+      FieldName = 'ID'
+    end
+    object RDWAtualizaBalancoPRODUTO: TStringField
+      FieldName = 'PRODUTO'
+      Size = 50
+    end
+    object RDWAtualizaBalancoBALANCAO: TIntegerField
+      FieldName = 'BALANCAO'
+    end
+    object RDWAtualizaBalancoESTOQUE: TIntegerField
+      FieldName = 'ESTOQUE'
+    end
+    object RDWAtualizaBalancoDTBALANCAO: TSQLTimeStampField
+      FieldName = 'DTBALANCAO'
+    end
+    object RDWAtualizaBalancoGRUPO: TStringField
       FieldName = 'GRUPO'
       Size = 30
     end

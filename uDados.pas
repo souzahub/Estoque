@@ -169,15 +169,23 @@ type
     RDWrelatBalancoBALANCAO: TIntegerField;
     RDWrelatBalancoDTBALANCAO: TSQLTimeStampField;
     RDWrelatBalancoGRUPO: TStringField;
+    RDWAtualizaBalanco: TRESTDWClientSQL;
+    RDWAtualizaBalancoID: TIntegerField;
+    RDWAtualizaBalancoPRODUTO: TStringField;
+    RDWAtualizaBalancoBALANCAO: TIntegerField;
+    RDWAtualizaBalancoESTOQUE: TIntegerField;
+    RDWAtualizaBalancoDTBALANCAO: TSQLTimeStampField;
+    RDWAtualizaBalancoGRUPO: TStringField;
+    RDWSaidaPRINT: TStringField;
     procedure RDWEntradaTIPOGetText(Sender: TField; var Text: string;
       DisplayText: Boolean);
     procedure RDWEstoquePRECOGetText(Sender: TField; var Text: string;
       DisplayText: Boolean);
-    procedure RDWSaidaIDGetText(Sender: TField; var Text: string;
-      DisplayText: Boolean);
     procedure RDWEstoqueVISUALIZARGetText(Sender: TField; var Text: string;
       DisplayText: Boolean);
     procedure RDWBalancoINFOGetText(Sender: TField; var Text: string;
+      DisplayText: Boolean);
+    procedure RDWSaidaPRINTGetText(Sender: TField; var Text: string;
       DisplayText: Boolean);
   private
     { Private declarations }
@@ -229,10 +237,10 @@ begin
   Text := '<i title="Imagem" class="x-fa fa-lg fa fa-info-circle"; style="color:#3442a8;cursor:pointer;font-style: normal;">&nbsp</i>';
 end;
 
-procedure TdmDados.RDWSaidaIDGetText(Sender: TField; var Text: string;
+procedure TdmDados.RDWSaidaPRINTGetText(Sender: TField; var Text: string;
   DisplayText: Boolean);
 begin
- // chama o botao do boodstrap
+   // chama o botao do boodstrap
  if DisplayText then
   Text := '<i title="Ativo" class="x-fa fa-lg fa-print"; style="color:#3442a8;cursor:pointer;font-style: normal;">&nbsp</i>';
 end;

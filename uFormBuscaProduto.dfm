@@ -133,12 +133,9 @@ object formBuscaProduto: TformBuscaProduto
       TabOrder = 2
       EmptyText = 'PESQUISAR'
       ClearButton = True
-      FieldLabel = '<i class="fas fa-search"></i>'
-      FieldLabelWidth = 20
       FieldLabelSeparator = ' '
       FieldLabelFont.Height = -19
       FieldLabelFont.Style = [fsBold]
-      OnChange = EdPesquisarChange
     end
     object ubtSair: TUniFSButton
       AlignWithMargins = True
@@ -199,6 +196,37 @@ object formBuscaProduto: TformBuscaProduto
       Images = UniNativeImageList1
       ImageIndex = 26
       OnClick = btCancelarClick
+    end
+    object btPesquisar: TUniFSButton
+      AlignWithMargins = True
+      Left = 175
+      Top = 6
+      Width = 30
+      Height = 30
+      Hint = ''
+      Margins.Top = 6
+      Margins.Bottom = 6
+      StyleButton = Transparent
+      CaptionIconFont = '<i class="fas fa-search"></i>'
+      BadgeText.Text = '0'
+      BadgeText.TextColor = '#FFFFFF'
+      BadgeText.TextSize = 10
+      BadgeText.TextStyle = 'bold'
+      BadgeText.BackgroundColor = '#D50000'
+      Caption = ''
+      Align = alLeft
+      ParentFont = False
+      Font.Color = clBlack
+      Font.Height = -20
+      Font.Style = [fsBold]
+      TabOrder = 5
+      ClientEvents.ExtEvents.Strings = (
+        
+          'afterrender=function afterrender(sender, eOpts)'#13#10'{'#13#10'  Ext.create' +
+          '('#39'Ext.tip.ToolTip'#39', {'#13#10'   target: sender.getEl(),'#13#10'   showDelay:' +
+          '50,'#13#10'   hideDelay: 50,'#13#10'   html: "Busca dinamica &nbsp"'#13#10'  });'#13#10 +
+          '}')
+      OnClick = btPesquisarClick
     end
   end
   object DsConsProduto: TDataSource

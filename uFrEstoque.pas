@@ -19,7 +19,6 @@ type
     Tab1: TUniTabSheet;
     UniDBGrid1: TUniDBGrid;
     UniNativeImageList1: TUniNativeImageList;
-    UniSweetAlert1: TUniSweetAlert;
     UniGridHTMLExporter1: TUniGridHTMLExporter;
     UniGridExcelExporter1: TUniGridExcelExporter;
     UniPanel1: TUniPanel;
@@ -42,6 +41,25 @@ type
     EdPesquisar: TUniEdit;
     btPesquisar: TUniFSButton;
     pnPesquisar: TUniContainerPanel;
+    cpEstoque: TUniContainerPanel;
+    pn1: TUniPanel;
+    edAtualEsto: TUniEdit;
+    UniLabel31: TUniLabel;
+    pn3: TUniContainerPanel;
+    BtGrv: TUniFSButton;
+    UniFSButton1: TUniFSButton;
+    lbProdu: TUniLabel;
+    UniLabel1: TUniLabel;
+    UniContainerPanel1: TUniContainerPanel;
+    edNovo: TUniEdit;
+    UniLabel4: TUniLabel;
+    edUsado: TUniEdit;
+    UniLabel5: TUniLabel;
+    UniPanel22: TUniPanel;
+    UniLabel2: TUniLabel;
+    UniSimplePanel1: TUniSimplePanel;
+    UniLabel3: TUniLabel;
+    lbCod: TUniLabel;
     procedure UniFrameCreate(Sender: TObject);
     procedure sbExportHtmlClick(Sender: TObject);
     procedure sbExportExcelClick(Sender: TObject);
@@ -59,11 +77,16 @@ type
     procedure btLimparClick(Sender: TObject);
     procedure btPesquisarClick(Sender: TObject);
     procedure EdPesquisarKeyPress(Sender: TObject; var Key: Char);
+    procedure UniFSButton1Click(Sender: TObject);
+    procedure UniDBGrid1DblClick(Sender: TObject);
+    procedure BtGrvClick(Sender: TObject);
   private
     FUrl : string;
     procedure ImagemSeq; // imagem da sequencia
   public
     { Public declarations }
+     xUltimoId : Integer;// ultimo Id
+
   end;
 
 implementation
@@ -128,6 +151,34 @@ begin
 
 end;
 
+procedure TfrEstoque.BtGrvClick(Sender: TObject);
+var
+xErro : string;
+begin
+       dmDados.RDWAuxiliar.Close;
+       dmDados.RDWAuxiliar.SQL.Clear;
+       dmDados.RDWAuxiliar.SQL.Add('update ESTOQUE set ESTOQUE_USADO=:vESTOQUE_USADO, ESTOQUE_NOVO=:vESTOQUE_NOVO where ID=:vID');
+
+       dmDados.RDWAuxiliar.Params[0].DataType := ftInteger;
+       dmDados.RDWAuxiliar.Params[0].Value := edUsado.Text;
+
+       dmDados.RDWAuxiliar.Params[1].DataType := ftInteger;
+       dmDados.RDWAuxiliar.Params[1].Value := edNovo.Text;
+
+       dmDados.RDWAuxiliar.Params[2].DataType := ftInteger;
+       dmDados.RDWAuxiliar.Params[2].Value := dmDados.RDWEstoqueID.Value;
+
+       dmDados.RDWAuxiliar.ExecSQL( xErro );
+
+       dmDados.RDWEstoque.Close;
+       dmDados.RDWEstoque.Open;
+
+       dmDados.RDWEstoque.Locate('ID', xUltimoId, []);// volta para o ultimo Id
+       cpEstoque.Visible := False;
+       exit;
+
+end;
+
 procedure TfrEstoque.btLimparClick(Sender: TObject);
 begin
 
@@ -166,6 +217,21 @@ begin
 
 end;
 
+procedure TfrEstoque.UniDBGrid1DblClick(Sender: TObject);
+begin
+//  xUltimoId := dmDados.RDWEstoqueID.Value ;
+//
+//  edUsado.SetFocus;
+//  cpEstoque.Visible := True;
+//
+//  lbCod.Caption := IntToStr(dmDados.RDWEstoqueID.Value);
+//  edAtualEsto.Text := IntToStr(dmDados.RDWESTOQUEESTOQUE.Value);
+//  lbProdu.Caption := dmDados.RDWEstoquePRODUTO.Value;
+//
+//  edNovo.Text := '';
+//  edUsado.Text := '';
+end;
+
 procedure TfrEstoque.UniFrameCreate(Sender: TObject);
 begin
   dmDados.RDWEstoque.Open;
@@ -179,6 +245,13 @@ begin
 //      sbExportHtml.Visible := True;
       exit;
     end
+
+end;
+
+procedure TfrEstoque.UniFSButton1Click(Sender: TObject);
+begin
+   cpEstoque.Visible := False;
+   dmDados.RDWEstoque.Cancel;
 
 end;
 

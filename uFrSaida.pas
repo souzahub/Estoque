@@ -341,7 +341,7 @@ procedure TfraSaida.UniDBGrid1CellClick(Column: TUniDBGridColumn);
 var
   FName, PDF, ArqPDF:String;
 begin
-   if Column.Field = dmDados.RDWSaidaID then
+   if Column.Field = dmDados.RDWSaidaPRINT then
      begin
       frxReport1.LoadFromFile(UniServerModule.FilesFolderPath+'relatorio\recibo.fr3'); // seleciona o Caminho desejado para a impressao
     // Direciona para cada Fornecedor específico
@@ -362,9 +362,12 @@ begin
         frxPDFExport1.ShowProgress := False;
         frxReport1.Export(Self.frxPDFExport1);
         frxReport1.PreviewPages.SaveToFile(ArqPDF);
+
+        UniSession.BrowserWindow(UniServerModule.LocalCacheURL+ArqPDF,0,0,''); // abre a imagem na outra aba do navegador
+
     //    linha abaixo é para abrir o relatorio em formulario
-        formRelatFornec.URLRelatorios.URL := UniServerModule.LocalCacheURL+ArqPDF;
-        formRelatFornec.ShowModal;
+//        formRelatFornec.URLRelatorios.URL := UniServerModule.LocalCacheURL+ArqPDF;
+//        formRelatFornec.ShowModal;
     //    aqui é associado o FastRaport do arquivo .FR3 especifico para dentro do URL Frame que esta dentro de uma ABA no page control
     //    TfrRelatorioEstoque(MainForm.FindComponent('frRelatorioEstoque')).URLRelatorios.URL := UniServerModule.LocalCacheURL+ArqPDF;
       Except

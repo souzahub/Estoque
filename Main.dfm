@@ -1467,16 +1467,14 @@ object MainForm: TMainForm
       end
       object N1: TUniMenuItem
         Caption = '-'
+        Visible = False
       end
       object Balano1: TUniMenuItem
         Caption = 'Balan'#231'o'
+        Enabled = False
         ImageIndex = 11
+        Visible = False
         OnClick = Balano1Click
-      end
-      object relatrio1: TUniMenuItem
-        Caption = 'relat'#243'rio'
-        ImageIndex = 27
-        OnClick = relatrio1Click
       end
     end
     object Relatrios1: TUniMenuItem
@@ -1491,6 +1489,11 @@ object MainForm: TMainForm
         Caption = 'Estoque Custo'
         ImageIndex = 35
         OnClick = EstoqueCusto1Click
+      end
+      object relatrio1: TUniMenuItem
+        Caption = 'relat'#243'rio ( Balan'#231'o )'
+        ImageIndex = 27
+        OnClick = relatrio1Click
       end
     end
   end
@@ -2761,5 +2764,19 @@ object MainForm: TMainForm
     BCDToCurrency = False
     Left = 16
     Top = 496
+  end
+  object SweetCancel: TUniSweetAlert
+    AllowOutsideClick = False
+    Title = 'Title'
+    Text = '0'
+    ConfirmButtonText = 'OK'
+    CancelButtonText = 'Sair'
+    AlertType = atQuestion
+    InputType = ItText
+    Padding = 20
+    ShowCancelButton = True
+    ShowLoaderOnConfirm = True
+    Left = 120
+    Top = 232
   end
 end

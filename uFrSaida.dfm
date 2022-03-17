@@ -20,7 +20,7 @@ object fraSaida: TfraSaida
       Width = 1073
       Height = 586
       Hint = ''
-      ActivePage = Tab2
+      ActivePage = Tab1
       Images = UniNativeImageList1
       Align = alClient
       TabOrder = 1
@@ -88,7 +88,7 @@ object fraSaida: TfraSaida
               Width = 86
             end
             item
-              FieldName = 'ID'
+              FieldName = 'PRINT'
               Title.Alignment = taCenter
               Title.Caption = 'Print'
               Width = 38
@@ -131,6 +131,7 @@ object fraSaida: TfraSaida
               DateTime = 43854.000000000000000000
               DateFormat = 'dd/MM/yyyy'
               TimeFormat = 'HH:mm:ss'
+              ReadOnly = True
               TabOrder = 1
               Color = 12189695
             end
@@ -692,7 +693,7 @@ object fraSaida: TfraSaida
       'NPRODUTO=NPRODUTO'
       'PATRIMONIO=PATRIMONIO'
       'USUARIO=USUARIO')
-    DataSet = dmDados.RDWSaida
+    DataSet = dmDados.relatSaida
     BCDToCurrency = False
     Left = 997
     Top = 427

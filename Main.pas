@@ -94,6 +94,7 @@ type
     Balano1: TUniMenuItem;
     relatrio1: TUniMenuItem;
     frxdbBalanco: TfrxDBDataset;
+    SweetCancel: TUniSweetAlert;
     procedure mnuUsuarioClick(Sender: TObject);
     procedure xUniLblButtoDrowerClick(Sender: TObject);
     procedure UniFormScreenResize(Sender: TObject; AWidth,
@@ -117,7 +118,9 @@ type
     procedure Balano1Click(Sender: TObject);
     procedure relatrio1Click(Sender: TObject); // ( função Log )
   private
+    xAtualizar, xSoAlerta : Boolean;
     procedure NovaAba(nomeFormFrame: TFrame; descFormFrame: string; Fechar: Boolean);   // frame lateral
+
   public
     vCodigo_do_Produto : Integer;
     vNome_do_Forneceor : Char;
@@ -129,8 +132,7 @@ type
      // 1 = id Produto
      vADMIN, vUSUARIO : Boolean;  // Administrador
      xUsuario : string; // variavel para chamr o nome do usuario logado
-
-      procedure ExtAlerta(Titulo, Mensagem: string);  // procedure alerta (notificação)
+     procedure ExtAlerta(Titulo, Mensagem: string);  // procedure alerta (notificação)
 
   end;
 
@@ -182,6 +184,7 @@ procedure TMainForm.relatrio1Click(Sender: TObject);
 var
   FName, PDF, ArqPDF:String;
 begin
+  if (not MainForm.vADMIN) then exit;
   dmdados.RDWrelatBalanco.Open;
 //  UniTreeMenu1.Micro := True;
   NovaAba(TFrame(TfrRelatorioEstoque),'Relatório Estoque',True);
@@ -200,11 +203,12 @@ begin
     frxPDFExport1.ShowProgress := False;
     frxReport1.Export(Self.frxPDFExport1);
     frxReport1.PreviewPages.SaveToFile(ArqPDF);
+    UniSession.BrowserWindow(UniServerModule.LocalCacheURL+ArqPDF,0,0,''); // abre a imagem na outra aba do navegador
 //    linha abaixo é para abrir o relatorio em formulario
 //    FReport.UniURLFrame1.URL := UniServerModule.LocalCacheURL+ArqPDF;
 //    FReport.ShowModal;
 //    aqui é associado o FastRaport do arquivo .FR3 especifico para dentro do URL Frame que esta dentro de uma ABA no page control
-    TfrRelatorioEstoque(MainForm.FindComponent('frRelatorioEstoque')).URLRelatorios.URL := UniServerModule.LocalCacheURL+ArqPDF;
+    //TfrRelatorioEstoque(MainForm.FindComponent('frRelatorioEstoque')).URLRelatorios.URL := UniServerModule.LocalCacheURL+ArqPDF;
 //    try
 //      UniSession.BrowserWindow(UniServerModule.LocalCacheURL+ArqPDF,0,0,''); // abre a imagem na outra aba do navegador
 //    except
@@ -238,7 +242,7 @@ end;
 // frame lateral
 procedure TMainForm.Balano1Click(Sender: TObject);
 begin
-
+  if (not MainForm.vADMIN) then exit;
   NovaAba(TFrame(TfrBalanco),'Balanço',True);
 end;
 
@@ -265,11 +269,12 @@ begin
     frxPDFExport1.ShowProgress := False;
     frxReport1.Export(Self.frxPDFExport1);
     frxReport1.PreviewPages.SaveToFile(ArqPDF);
+    UniSession.BrowserWindow(UniServerModule.LocalCacheURL+ArqPDF,0,0,''); // abre a imagem na outra aba do navegador
 //    linha abaixo é para abrir o relatorio em formulario
 //    FReport.UniURLFrame1.URL := UniServerModule.LocalCacheURL+ArqPDF;
 //    FReport.ShowModal;
 //    aqui é associado o FastRaport do arquivo .FR3 especifico para dentro do URL Frame que esta dentro de uma ABA no page control
-    TfrRelatorioEstoque(MainForm.FindComponent('frRelatorioEstoque')).URLRelatorios.URL := UniServerModule.LocalCacheURL+ArqPDF;
+    //TfrRelatorioEstoque(MainForm.FindComponent('frRelatorioEstoque')).URLRelatorios.URL := UniServerModule.LocalCacheURL+ArqPDF;
   Except
     ShowMessage('ERRO DURANTE A IMPRESSAO.');
   end;
@@ -327,11 +332,12 @@ begin
           frxPDFExport1.ShowProgress := False;
           frxReport1.Export(Self.frxPDFExport1);
           frxReport1.PreviewPages.SaveToFile(ArqPDF);
+          UniSession.BrowserWindow(UniServerModule.LocalCacheURL+ArqPDF,0,0,''); // abre a imagem na outra aba do navegador
           //    linha abaixo é para abrir o relatorio em formulario
           //    FReport.UniURLFrame1.URL := UniServerModule.LocalCacheURL+ArqPDF;
           //    FReport.ShowModal;
           //    aqui é associado o FastRaport do arquivo .FR3 especifico para dentro do URL Frame que esta dentro de uma ABA no page control
-          TfrRelatorioEstoque(MainForm.FindComponent('frRelatorioEstoque')).URLRelatorios.URL := UniServerModule.LocalCacheURL+ArqPDF;
+         // TfrRelatorioEstoque(MainForm.FindComponent('frRelatorioEstoque')).URLRelatorios.URL := UniServerModule.LocalCacheURL+ArqPDF;
           Except
             ShowMessage('ERRO DURANTE A IMPRESSAO.');
           end;

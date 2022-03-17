@@ -383,24 +383,25 @@ end;
 
 procedure TfrEntrada.UniDBGrid1DblClick(Sender: TObject);
 begin
-Exit;
-//    xUltimoId :=  dmDados.RDWEntradaCPRODUTO.Value;
-//
-//    xAlterar := True;
-//    xSoAlerta := False;
-//    xIncluindo := False;
-//    xEditando := False;
-//    xDeletando := False;
-//
-//    xSoAlerta := False;
-//    SweetCancel.Title := 'Informe o local do produto:';
-//    SweetCancel.AlertType := atQuestion;
-//    SweetCancel.InputType := ItText;
-//    SweetCancel.ShowConfirmButton := True;
-//    SweetCancel.ConfirmButtonText := 'Sim';
-//    SweetCancel.ShowCancelButton := True;
-//    SweetCancel.CancelButtonText := 'Não';
-//    SweetCancel.Show(dmDados.RDWEntradaNPRODUTO.value);
+   // é habilitado para o balanço ( altera o local )
+    if (not MainForm.vADMIN) then exit;
+    xUltimoId :=  dmDados.RDWEntradaCPRODUTO.Value;
+
+    xAlterar := True;
+    xSoAlerta := False;
+    xIncluindo := False;
+    xEditando := False;
+    xDeletando := False;
+
+    xSoAlerta := False;
+    SweetCancel.Title := 'Informe o local do produto:';
+    SweetCancel.AlertType := atQuestion;
+    SweetCancel.InputType := ItText;
+    SweetCancel.ShowConfirmButton := True;
+    SweetCancel.ConfirmButtonText := 'Sim';
+    SweetCancel.ShowCancelButton := True;
+    SweetCancel.CancelButtonText := 'Não';
+    SweetCancel.Show(dmDados.RDWEntradaNPRODUTO.value);
 
 end;
 

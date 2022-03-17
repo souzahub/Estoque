@@ -20,11 +20,12 @@ type
     EdPesquisar: TUniEdit;
     ubtSair: TUniFSButton;
     btCancelar: TUniFSButton;
+    btPesquisar: TUniFSButton;
     procedure UniFormCreate(Sender: TObject);
     procedure UniDBGrid1DblClick(Sender: TObject);
-    procedure EdPesquisarChange(Sender: TObject);
     procedure ubtSairClick(Sender: TObject);
     procedure btCancelarClick(Sender: TObject);
+    procedure btPesquisarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -80,7 +81,7 @@ begin
 
 end;
 
-procedure TformBuscaProduto.EdPesquisarChange(Sender: TObject);
+procedure TformBuscaProduto.btPesquisarClick(Sender: TObject);
 begin
 
   // pesquisa dinamica na tabela Usuario
@@ -90,7 +91,6 @@ begin
   dmDados.RDWEstoque.SQL.Add('or ID LIKE  '+QuotedStr('%'+EdPesquisar.Text+'%') );
   dmDados.RDWEstoque.SQL.Add(')order by PRODUTO ');
   dmDados.RDWEstoque.Open;
-
 end;
 
 procedure TformBuscaProduto.ubtSairClick(Sender: TObject);
