@@ -20,7 +20,7 @@ object frCadastroProduto: TfrCadastroProduto
       Width = 1048
       Height = 595
       Hint = ''
-      ActivePage = Tab2
+      ActivePage = Tab1
       Align = alClient
       TabOrder = 1
       object Tab1: TUniTabSheet
@@ -83,11 +83,12 @@ object frCadastroProduto: TfrCadastroProduto
           Caption = ''
           Color = cl3DLight
           LayoutConfig.Cls = 'cor1'
+          ExplicitLeft = -13
           ScrollHeight = 561
           ScrollWidth = 1034
           object UniContainerPanel1: TUniContainerPanel
-            Left = 34
-            Top = 46
+            Left = 18
+            Top = 14
             Width = 919
             Height = 512
             Hint = ''
@@ -210,21 +211,28 @@ object frCadastroProduto: TfrCadastroProduto
               OnClick = sbAnexarClick
             end
             object UniContainerPanel2: TUniContainerPanel
-              Left = 655
-              Top = 24
+              Left = 663
+              Top = 0
               Width = 256
               Height = 512
               Hint = ''
               ParentColor = False
+              Align = alRight
               TabOrder = 9
+              ExplicitLeft = 648
+              ExplicitTop = 3
               object UniListBox1: TUniListBox
-                Left = 3
-                Top = 3
+                Left = 0
+                Top = 0
                 Width = 256
                 Height = 512
                 Hint = ''
+                Align = alClient
                 TabOrder = 1
                 LayoutConfig.Cls = 'color1'
+                ExplicitLeft = -7
+                ExplicitTop = 15
+                ExplicitHeight = 494
               end
             end
             object UniLabel2: TUniLabel

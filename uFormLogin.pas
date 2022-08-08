@@ -119,14 +119,14 @@ begin
       end;
 
       ModalResult := mrOk;
-      Toast.Success('Sucesso','Usuário autorizado ', topCenter);
+//      Toast.Success('Sucesso','Usuário autorizado ', topCenter);
 
       MainForm.xUsuario := edUsuario.Text; // o edit usuario sempre sera o usuario global
       MainForm.lbOla.Caption := 'Olá, '+dmDados.RDWUsuarioNOME.Value;
       MainForm.lbNomeUsuario.Caption := dmDados.RDWUsuarioNOME.Value;
 
       // registra o log de entrada
-      MainForm.RegistraLog('LOGIN', 'LOGOU NO SISTEMA');
+//      MainForm.RegistraLog('LOGIN', 'LOGOU NO SISTEMA');
 
       MainForm.vADMIN := False;
       if dmDados.rdwUsuarioPERFIL.Value = 'ADMINISTRADOR' then

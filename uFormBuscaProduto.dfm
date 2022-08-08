@@ -1,13 +1,14 @@
 object formBuscaProduto: TformBuscaProduto
   Left = 200
   Top = 208
-  ClientHeight = 502
-  ClientWidth = 867
+  ClientHeight = 529
+  ClientWidth = 909
   Caption = ''
   Color = clNone
-  BorderStyle = bsNone
+  OnShow = UniFormShow
+  BorderStyle = bsSizeToolWin
   OldCreateOrder = False
-  BorderIcons = []
+  BorderIcons = [biSystemMenu]
   MonitoredKeys.Keys = <>
   OnCreate = UniFormCreate
   PixelsPerInch = 96
@@ -16,8 +17,8 @@ object formBuscaProduto: TformBuscaProduto
     AlignWithMargins = True
     Left = 5
     Top = 87
-    Width = 857
-    Height = 412
+    Width = 899
+    Height = 439
     Hint = ''
     Margins.Left = 5
     Margins.Right = 5
@@ -30,6 +31,7 @@ object formBuscaProduto: TformBuscaProduto
     TabOrder = 0
     ParentColor = False
     Color = clWindow
+    OnCellClick = UniDBGrid1CellClick
     OnDblClick = UniDBGrid1DblClick
     Columns = <
       item
@@ -42,13 +44,7 @@ object formBuscaProduto: TformBuscaProduto
         FieldName = 'PRODUTO'
         Title.Alignment = taCenter
         Title.Caption = 'Produto'
-        Width = 402
-      end
-      item
-        FieldName = 'GRUPO'
-        Title.Alignment = taCenter
-        Title.Caption = 'Grupo'
-        Width = 119
+        Width = 297
       end
       item
         FieldName = 'ESTOQUE'
@@ -75,7 +71,7 @@ object formBuscaProduto: TformBuscaProduto
   object UniPanel1: TUniPanel
     Left = 0
     Top = 0
-    Width = 867
+    Width = 909
     Height = 36
     Hint = ''
     Align = alTop
@@ -88,7 +84,7 @@ object formBuscaProduto: TformBuscaProduto
     AlignWithMargins = True
     Left = 5
     Top = 39
-    Width = 857
+    Width = 899
     Height = 42
     Hint = ''
     Margins.Left = 5
@@ -96,7 +92,6 @@ object formBuscaProduto: TformBuscaProduto
     Align = alTop
     ParentFont = False
     Font.Color = clBlack
-    Font.Height = -20
     Font.Style = [fsBold]
     TabOrder = 2
     BorderStyle = ubsNone
@@ -105,8 +100,8 @@ object formBuscaProduto: TformBuscaProduto
     object UniLabel8: TUniLabel
       Left = 784
       Top = 24
-      Width = 6
-      Height = 24
+      Width = 3
+      Height = 13
       Hint = ''
       Visible = False
       Caption = '.'
@@ -125,6 +120,7 @@ object formBuscaProduto: TformBuscaProduto
       ParentShowHint = False
       CharCase = ecUpperCase
       MaxLength = 40
+      CharEOL = #13
       Text = ''
       ParentFont = False
       Font.Color = clBlack
@@ -136,66 +132,7 @@ object formBuscaProduto: TformBuscaProduto
       FieldLabelSeparator = ' '
       FieldLabelFont.Height = -19
       FieldLabelFont.Style = [fsBold]
-    end
-    object ubtSair: TUniFSButton
-      AlignWithMargins = True
-      Left = 785
-      Top = 6
-      Width = 30
-      Height = 30
-      Hint = ''
-      Margins.Left = 4
-      Margins.Top = 6
-      Margins.Right = 4
-      Margins.Bottom = 6
-      StyleButton = GoogleBlue3Round
-      BadgeText.Text = '0'
-      BadgeText.TextColor = '#FFFFFF'
-      BadgeText.TextSize = 10
-      BadgeText.TextStyle = 'bold'
-      BadgeText.BackgroundColor = '#D50000'
-      Caption = ''
-      Align = alRight
-      ParentFont = False
-      Font.Color = clBlack
-      Font.Height = -13
-      Font.Name = 'Roboto'
-      Font.Style = [fsBold]
-      TabOrder = 3
-      ClientEvents.Enabled = False
-      Images = UniNativeImageList1
-      ImageIndex = 25
-      OnClick = ubtSairClick
-    end
-    object btCancelar: TUniFSButton
-      AlignWithMargins = True
-      Left = 823
-      Top = 6
-      Width = 30
-      Height = 30
-      Hint = ''
-      Margins.Left = 4
-      Margins.Top = 6
-      Margins.Right = 4
-      Margins.Bottom = 6
-      StyleButton = GoogleBlue3Round
-      BadgeText.Text = '0'
-      BadgeText.TextColor = '#FFFFFF'
-      BadgeText.TextSize = 10
-      BadgeText.TextStyle = 'bold'
-      BadgeText.BackgroundColor = '#D50000'
-      Caption = ''
-      Align = alRight
-      ParentFont = False
-      Font.Color = clBlack
-      Font.Height = -13
-      Font.Name = 'Roboto'
-      Font.Style = [fsBold]
-      TabOrder = 4
-      ClientEvents.Enabled = False
-      Images = UniNativeImageList1
-      ImageIndex = 26
-      OnClick = btCancelarClick
+      OnKeyPress = EdPesquisarKeyPress
     end
     object btPesquisar: TUniFSButton
       AlignWithMargins = True
@@ -219,7 +156,7 @@ object formBuscaProduto: TformBuscaProduto
       Font.Color = clBlack
       Font.Height = -20
       Font.Style = [fsBold]
-      TabOrder = 5
+      TabOrder = 3
       ClientEvents.ExtEvents.Strings = (
         
           'afterrender=function afterrender(sender, eOpts)'#13#10'{'#13#10'  Ext.create' +
@@ -228,14 +165,80 @@ object formBuscaProduto: TformBuscaProduto
           '}')
       OnClick = btPesquisarClick
     end
+    object pnBt: TUniContainerPanel
+      Left = 696
+      Top = 0
+      Width = 203
+      Height = 42
+      Hint = ''
+      ParentColor = False
+      Align = alRight
+      TabOrder = 4
+      object ubtSair: TUniFSButton
+        AlignWithMargins = True
+        Left = 34
+        Top = 6
+        Width = 88
+        Height = 30
+        Hint = ''
+        Margins.Left = 4
+        Margins.Top = 6
+        Margins.Right = 4
+        Margins.Bottom = 6
+        StyleButton = Primary
+        BadgeText.Text = '0'
+        BadgeText.TextColor = '#FFFFFF'
+        BadgeText.TextSize = 10
+        BadgeText.TextStyle = 'bold'
+        BadgeText.BackgroundColor = '#D50000'
+        Caption = 'Adicionar'
+        Align = alRight
+        ParentFont = False
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Roboto'
+        Font.Style = [fsBold]
+        TabOrder = 1
+        ClientEvents.Enabled = False
+        OnClick = ubtSairClick
+      end
+      object btCancelar: TUniFSButton
+        AlignWithMargins = True
+        Left = 130
+        Top = 6
+        Width = 69
+        Height = 30
+        Hint = ''
+        Margins.Left = 4
+        Margins.Top = 6
+        Margins.Right = 4
+        Margins.Bottom = 6
+        StyleButton = Danger
+        BadgeText.Text = '0'
+        BadgeText.TextColor = '#FFFFFF'
+        BadgeText.TextSize = 10
+        BadgeText.TextStyle = 'bold'
+        BadgeText.BackgroundColor = '#D50000'
+        Caption = 'Cancelar'
+        Align = alRight
+        ParentFont = False
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Roboto'
+        Font.Style = [fsBold]
+        TabOrder = 2
+        ClientEvents.Enabled = False
+        OnClick = btCancelarClick
+      end
+    end
   end
   object DsConsProduto: TDataSource
     DataSet = dmDados.RDWEstoque
-    Left = 120
-    Top = 400
+    Left = 136
+    Top = 392
   end
   object UniNativeImageList1: TUniNativeImageList
-    Left = 24
+    Left = 40
     Top = 392
     Images = {
       1B00000000000000060B0000006E617669636F6E3B66613B00000000060B0000

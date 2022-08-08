@@ -91,7 +91,6 @@ object frCadastroUsuario: TfrCadastroUsuario
           Caption = ''
           Color = clNone
           LayoutConfig.Cls = 'cor1'
-          ExplicitLeft = 151
           ScrollHeight = 522
           ScrollWidth = 1034
           object UniLabel2: TUniLabel
@@ -293,7 +292,6 @@ object frCadastroUsuario: TfrCadastroUsuario
       Text = ''
       ParentFont = False
       Font.Color = clBlack
-      Font.Height = -20
       Font.Style = [fsBold]
       Align = alRight
       TabOrder = 2

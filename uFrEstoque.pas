@@ -9,7 +9,8 @@ uses
   uniGUIBaseClasses, uniImageList, uniPanel, uniButton, uniBitBtn,
   uniBasicGrid, uniDBGrid, uniDBNavigator, uniLabel, uniEdit,
   uniPageControl, Data.DB, UniFSButton, uniGridExporters, uniMemo,
-  uniDBMemo, uniMultiItem, uniListBox, uniDBEdit;
+  uniDBMemo, uniMultiItem, uniListBox, uniDBEdit, uniDBText,
+  uFormTranferencia;
 
 type
   TfrEstoque = class(TUniFrame)
@@ -60,6 +61,24 @@ type
     UniSimplePanel1: TUniSimplePanel;
     UniLabel3: TUniLabel;
     lbCod: TUniLabel;
+    pnTranf: TUniContainerPanel;
+    UniPanel4: TUniPanel;
+    UniContainerPanel3: TUniContainerPanel;
+    UniFSButton3: TUniFSButton;
+    UniFSButton4: TUniFSButton;
+    UniLabel9: TUniLabel;
+    UniContainerPanel4: TUniContainerPanel;
+    UniPanel5: TUniPanel;
+    UniLabel12: TUniLabel;
+    UniSimplePanel2: TUniSimplePanel;
+    UniLabel13: TUniLabel;
+    UniLabel6: TUniLabel;
+    UniDBText1: TUniDBText;
+    UniLabel7: TUniLabel;
+    dbEditLocalAntigo: TUniDBEdit;
+    UniSweetAlert1: TUniSweetAlert;
+    edLocal: TUniEdit;
+    edCod: TUniDBText;
     procedure UniFrameCreate(Sender: TObject);
     procedure sbExportHtmlClick(Sender: TObject);
     procedure sbExportExcelClick(Sender: TObject);
@@ -72,7 +91,6 @@ type
       var AllowActivate: Boolean);
     procedure Tab1BeforeActivate(Sender: TObject;
       var AllowActivate: Boolean);
-    procedure dsEstoqueDataChange(Sender: TObject; Field: TField);
     procedure buscadinamica;
     procedure btLimparClick(Sender: TObject);
     procedure btPesquisarClick(Sender: TObject);
@@ -80,12 +98,19 @@ type
     procedure UniFSButton1Click(Sender: TObject);
     procedure UniDBGrid1DblClick(Sender: TObject);
     procedure BtGrvClick(Sender: TObject);
+    procedure UniSweetAlert1Confirm(Sender: TObject);
+    procedure UniSweetAlert1Dismiss(Sender: TObject;
+      const Reason: TDismissType);
+    procedure UniDBGrid2DblClick(Sender: TObject);
+    procedure Tab1AjaxEvent(Sender: TComponent; EventName: string;
+      Params: TUniStrings);
   private
     FUrl : string;
     procedure ImagemSeq; // imagem da sequencia
   public
     { Public declarations }
      xUltimoId : Integer;// ultimo Id
+     xIncluindo, xDeletando, xEditando, xSoAlerta: Boolean;
 
   end;
 
@@ -93,7 +118,8 @@ implementation
 
 {$R *.dfm}
 
-uses uDados, Main, uFormInfo, ServerModule;
+uses uDados, Main, uFormInfo, ServerModule, uFormInfoEstoque,
+  uFormInfoEntrada;
 
 procedure TfrEstoque.ImagemSeq; // atualiza Lista e cria imagem em tempo de execução  e direciona para as imagens relacionadas de acordo com o numero de processo
 var
@@ -130,52 +156,29 @@ begin
   btPesquisarClick(Sender);
 end;
 
-procedure TfrEstoque.dsEstoqueDataChange(Sender: TObject; Field: TField);
-begin
-  dmDados.RDWMOVIENTRADA.Close;
-  dmDados.RDWMOVIENTRADA.SQL.Clear;
-  dmDados.RDWMOVIENTRADA.SQL.Add('select ENTRADA, FORNECEDOR, TOTALITENS, VALORTOTAL, ID, NPRODUTO, TIPO, CUSTO, CPRODUTO, LOCALPRODUTO, PATRIMONIO ');
-  dmDados.RDWMOVIENTRADA.SQL.Add('from entrada where CPRODUTO=:vCPRODUTO order by ID desc');
-  dmDados.RDWMOVIENTRADA.Params[0].DataType := ftString;
-  dmDados.RDWMOVIENTRADA.Params[0].Value := dmDados.RDWEstoqueID.Value;
-  dmDados.RDWMOVIENTRADA.Open;
-
-
-  dmDados.RDWMOVISAIDA.Close;
-  dmDados.RDWMOVISAIDA.SQL.Clear;
-  dmDados.RDWMOVISAIDA.SQL.Add('select SAIDA, CPRODUTO, QUANTIDADE, VPRODUTO, SETOR, NPRODUTO, PATRIMONIO, ID, USUARIO ');
-  dmDados.RDWMOVISAIDA.SQL.Add('from saida where CPRODUTO=:vCPRODUTO order by ID desc');
-  dmDados.RDWMOVISAIDA.Params[0].DataType := ftString;
-  dmDados.RDWMOVISAIDA.Params[0].Value := dmDados.RDWEstoqueID.Value;
-  dmDados.RDWMOVISAIDA.Open;
-
-end;
-
 procedure TfrEstoque.BtGrvClick(Sender: TObject);
-var
-xErro : string;
 begin
-       dmDados.RDWAuxiliar.Close;
-       dmDados.RDWAuxiliar.SQL.Clear;
-       dmDados.RDWAuxiliar.SQL.Add('update ESTOQUE set ESTOQUE_USADO=:vESTOQUE_USADO, ESTOQUE_NOVO=:vESTOQUE_NOVO where ID=:vID');
+ if  edLocal.Text = '' then
+    begin
+      xSoAlerta := True;   // bloqueia alerta
+      UniSweetAlert1.Title := ('Campo Obrigatório!');
+      UniSweetAlert1.AlertType := atInfo;
+      UniSweetAlert1.ShowConfirmButton := True;
+      UniSweetAlert1.ShowCancelButton := False;
+      UniSweetAlert1.ConfirmButtonText := 'Ok';
+      UniSweetAlert1.Show('Informe o Novo Local');
+      exit;
+    end;
 
-       dmDados.RDWAuxiliar.Params[0].DataType := ftInteger;
-       dmDados.RDWAuxiliar.Params[0].Value := edUsado.Text;
-
-       dmDados.RDWAuxiliar.Params[1].DataType := ftInteger;
-       dmDados.RDWAuxiliar.Params[1].Value := edNovo.Text;
-
-       dmDados.RDWAuxiliar.Params[2].DataType := ftInteger;
-       dmDados.RDWAuxiliar.Params[2].Value := dmDados.RDWEstoqueID.Value;
-
-       dmDados.RDWAuxiliar.ExecSQL( xErro );
-
-       dmDados.RDWEstoque.Close;
-       dmDados.RDWEstoque.Open;
-
-       dmDados.RDWEstoque.Locate('ID', xUltimoId, []);// volta para o ultimo Id
-       cpEstoque.Visible := False;
-       exit;
+     //  Salvando com SweetAlert1
+    xSoAlerta := False;
+    UniSweetAlert1.Title := 'Confirmar';
+    UniSweetAlert1.AlertType := atQuestion;
+    UniSweetAlert1.ShowConfirmButton := True;
+    UniSweetAlert1.ConfirmButtonText := 'Sim';
+    UniSweetAlert1.ShowCancelButton := True;
+    UniSweetAlert1.CancelButtonText := 'Não';
+    UniSweetAlert1.Show ('Nova Localidade ?');
 
 end;
 
@@ -198,8 +201,9 @@ begin
 
   dmDados.RDWEstoque.SQL.Clear;
   dmDados.RDWEstoque.SQL.Add('select * from ESTOQUE  where ');
-  dmDados.RDWEstoque.SQL.Add('( ID LIKE  '+QuotedStr('%'+EdPesquisar.Text+'%') );
-  dmDados.RDWEstoque.SQL.Add('or PRODUTO LIKE  '+QuotedStr('%'+EdPesquisar.Text+'%') );
+  dmDados.RDWEstoque.SQL.Add('( ID LIKE  '+QuotedStr('%'+EdPesquisar.Text+'%') );           // busca por codigo
+  dmDados.RDWEstoque.SQL.Add('or PRODUTO LIKE  '+QuotedStr('%'+EdPesquisar.Text+'%') );     // busca por nome
+  dmDados.RDWEstoque.SQL.Add('or LOCALPRODUTO LIKE  '+QuotedStr('%'+EdPesquisar.Text+'%') ); // busca por localidade
   dmDados.RDWEstoque.SQL.Add(') order by PRODUTO');
   dmDados.RDWEstoque.Open;
 
@@ -207,20 +211,37 @@ end;
 
 procedure TfrEstoque.UniDBGrid1CellClick(Column: TUniDBGridColumn);
 begin
-  // abre o form de  detalhes
-  if Column.Field = dmDados.RDWEstoqueVISUALIZAR then
-  begin
-     pnInfo.Visible := True;
-     ImagemSeq;
 
+  if Column.Field = dmDados.RDWEstoqueTRANSF then
+  begin
+    dmDados.RDWMOVIENTRADA.Close;
+    dmDados.RDWMOVIENTRADA.SQL.Clear;
+    dmDados.RDWMOVIENTRADA.SQL.Add('select ENTRADA, FORNECEDOR, TOTALITENS, VALORTOTAL, ID, NPRODUTO, TIPO, CUSTO, CPRODUTO, LOCALPRODUTO, PATRIMONIO, OBS ');
+    dmDados.RDWMOVIENTRADA.SQL.Add('from entrada where CPRODUTO=:vCPRODUTO order by ID desc');
+    dmDados.RDWMOVIENTRADA.Params[0].DataType := ftString;
+    dmDados.RDWMOVIENTRADA.Params[0].Value := dmDados.RDWEstoqueID.Value;
+    dmDados.RDWMOVIENTRADA.Open;
+
+    pnTranf.Visible := True;
+    edLocal.Text := '';
+    edLocal.SetFocus;
+    xUltimoId := dmDados.RDWEstoqueID.Value ;
+    exit;
+
+
+//     formTranferencia.showModalN;
+//     formTranferencia.lbProduto.Text :=  dmDados.RDWEstoquePRODUTO.Value;
+//     formTranferencia.dbEditLocalAntigo.Text := dmDados.RDWMOVIENTRADALOCALPRODUTO.Value;
+//     formTranferencia.edCod.Text := IntToStr( dmDados.RDWEstoqueID.Value );
   end;
 
 end;
 
 procedure TfrEstoque.UniDBGrid1DblClick(Sender: TObject);
 begin
+//exit;
 //  xUltimoId := dmDados.RDWEstoqueID.Value ;
-//
+////
 //  edUsado.SetFocus;
 //  cpEstoque.Visible := True;
 //
@@ -232,10 +253,16 @@ begin
 //  edUsado.Text := '';
 end;
 
+procedure TfrEstoque.UniDBGrid2DblClick(Sender: TObject);
+begin
+  formInfoEntrada.ShowModalN;
+  exit;
+end;
+
 procedure TfrEstoque.UniFrameCreate(Sender: TObject);
 begin
-  dmDados.RDWEstoque.Open;
-
+  btPesquisarClick(Sender);
+  pnTranf.Visible := False;
   UniDBGrid1.Exporter.Enabled := True;
 
  // acesso apenas para administrador
@@ -244,14 +271,15 @@ begin
 //      sbExportExcel.Visible := True;
 //      sbExportHtml.Visible := True;
       exit;
-    end
+    end;
 
 end;
 
 procedure TfrEstoque.UniFSButton1Click(Sender: TObject);
 begin
-   cpEstoque.Visible := False;
+   pnTranf.Visible := False;
    dmDados.RDWEstoque.Cancel;
+   Exit;
 
 end;
 
@@ -272,6 +300,41 @@ begin
   end;
 end;
 
+procedure TfrEstoque.UniSweetAlert1Confirm(Sender: TObject);
+var
+xErro : string;
+
+begin
+  if xSoAlerta = True then exit;
+  dmDados.RDWAuxiliar.Close;
+  dmDados.RDWAuxiliar.SQL.Clear;
+  dmDados.RDWAuxiliar.SQL.Add('update ESTOQUE set LOCALPRODUTO=:vLOCALPRODUTO where ID=:vID');
+
+  dmDados.RDWAuxiliar.Params[0].DataType := ftString;
+  dmDados.RDWAuxiliar.Params[0].Value := edLocal.Text;
+
+  dmDados.RDWAuxiliar.Params[1].DataType := ftInteger;
+  dmDados.RDWAuxiliar.Params[1].Value := dmDados.RDWEstoqueID.Value;
+
+  dmDados.RDWAuxiliar.ExecSQL( xErro );
+
+  dmDados.RDWEstoque.Close;
+  dmDados.RDWEstoque.Open;
+
+  dmDados.RDWEstoque.Locate('ID', xUltimoId, []);// volta para o ultimo Id
+  pnTranf.Visible := False;
+  MainForm.RegistraLog('SAIDA', 'ANTIGO LOCAL: '+dbEditLocalAntigo.Text );  // Registra log
+  MainForm.RegistraLog('ENTRADA', 'NOVO LOCAL : '+edLocal.Text );  // Registra log
+  exit;
+
+end;
+
+procedure TfrEstoque.UniSweetAlert1Dismiss(Sender: TObject;
+  const Reason: TDismissType);
+begin
+  Exit;
+end;
+
 procedure TfrEstoque.sbExportHtmlClick(Sender: TObject);
 begin
 
@@ -280,28 +343,51 @@ begin
 
 end;
 
+procedure TfrEstoque.Tab1AjaxEvent(Sender: TComponent; EventName: string;
+  Params: TUniStrings);
+begin
+  dmDados.RDWEstoque.Locate('ID', xUltimoId, []);// volta para o ultimo Id
+end;
+
 procedure TfrEstoque.Tab1BeforeActivate(Sender: TObject;
   var AllowActivate: Boolean);
 begin
   pnPesquisar.Visible := True;
   btLimpar.Visible := True;
+//  dmDados.RDWEstoque.Close;
+//  dmDados.RDWEstoque.Open;
+  exit;
 
 end;
 
 procedure TfrEstoque.TabEntradaBeforeActivate(Sender: TObject;
   var AllowActivate: Boolean);
 begin
-
-  pnPesquisar.Visible := False;
-
-
+    pnPesquisar.Visible := False;
+    dmDados.RDWMOVIENTRADA.Close;
+    dmDados.RDWMOVIENTRADA.SQL.Clear;
+    dmDados.RDWMOVIENTRADA.SQL.Add('select ENTRADA, FORNECEDOR, TOTALITENS, VALORTOTAL, ID, NPRODUTO, TIPO, CUSTO, CPRODUTO, LOCALPRODUTO, PATRIMONIO, OBS ');
+    dmDados.RDWMOVIENTRADA.SQL.Add('from entrada where CPRODUTO=:vCPRODUTO order by ID desc');
+    dmDados.RDWMOVIENTRADA.Params[0].DataType := ftString;
+    dmDados.RDWMOVIENTRADA.Params[0].Value := dmDados.RDWEstoqueID.Value;
+    dmDados.RDWMOVIENTRADA.Open;
+    Exit;
 end;
 
 procedure TfrEstoque.TabSaidaBeforeActivate(Sender: TObject;
   var AllowActivate: Boolean);
 begin
 
+  dmDados.RDWMOVISAIDA.Close;
+  dmDados.RDWMOVISAIDA.SQL.Clear;
+  dmDados.RDWMOVISAIDA.SQL.Add('select SAIDA, CPRODUTO, QUANTIDADE, VPRODUTO, SETOR, NPRODUTO, PATRIMONIO, ID, USUARIO ');
+  dmDados.RDWMOVISAIDA.SQL.Add('from saida where CPRODUTO=:vCPRODUTO order by ID desc');
+  dmDados.RDWMOVISAIDA.Params[0].DataType := ftString;
+  dmDados.RDWMOVISAIDA.Params[0].Value := dmDados.RDWEstoqueID.Value;
+  dmDados.RDWMOVISAIDA.Open;
   pnPesquisar.Visible := False;
+  Exit;
+
 
 end;
 

@@ -7,7 +7,7 @@ object dmDados: TdmDados
     Compression = True
     CriptOptions.Use = False
     CriptOptions.Key = 'RDWBASEKEY256'
-    MyIP = '177.223.7.131'
+    MyIP = '177.223.6.12'
     Login = 'admin'
     Password = 'tifri2020'
     Proxy = False
@@ -86,58 +86,7 @@ object dmDados: TdmDados
   object RDWEntrada: TRESTDWClientSQL
     Active = False
     Filtered = False
-    FieldDefs = <
-      item
-        Name = 'ENTRADA'
-        DataType = ftTimeStamp
-      end
-      item
-        Name = 'FORNECEDOR'
-        DataType = ftString
-        Size = 50
-      end
-      item
-        Name = 'TOTALITENS'
-        DataType = ftFloat
-        Precision = 16
-      end
-      item
-        Name = 'VALORTOTAL'
-        DataType = ftFloat
-        Precision = 16
-      end
-      item
-        Name = 'ID'
-        DataType = ftInteger
-      end
-      item
-        Name = 'NPRODUTO'
-        DataType = ftString
-        Size = 40
-      end
-      item
-        Name = 'TIPO'
-        DataType = ftInteger
-      end
-      item
-        Name = 'CUSTO'
-        DataType = ftFloat
-        Precision = 16
-      end
-      item
-        Name = 'CPRODUTO'
-        DataType = ftInteger
-      end
-      item
-        Name = 'LOCALPRODUTO'
-        DataType = ftString
-        Size = 80
-      end
-      item
-        Name = 'PATRIMONIO'
-        DataType = ftString
-        Size = 10
-      end>
+    FieldDefs = <>
     IndexDefs = <>
     FetchOptions.AssignedValues = [evMode]
     FetchOptions.Mode = fmAll
@@ -204,6 +153,10 @@ object dmDados: TdmDados
     object RDWEntradaPATRIMONIO: TStringField
       FieldName = 'PATRIMONIO'
       Size = 10
+    end
+    object RDWEntradaOBS: TMemoField
+      FieldName = 'OBS'
+      BlobType = ftMemo
     end
   end
   object RDWEstoque: TRESTDWClientSQL
@@ -285,6 +238,26 @@ object dmDados: TdmDados
     end
     object RDWEstoqueDTBALANCAO: TSQLTimeStampField
       FieldName = 'DTBALANCAO'
+    end
+    object RDWEstoqueTRANSF: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'TRANSF'
+      OnGetText = RDWEstoqueTRANSFGetText
+      Calculated = True
+    end
+    object RDWEstoqueLOCALPRODUTO: TStringField
+      FieldName = 'LOCALPRODUTO'
+      Size = 80
+    end
+    object RDWEstoqueOBS: TMemoField
+      FieldName = 'OBS'
+      BlobType = ftMemo
+    end
+    object RDWEstoqueI_SAIDA: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'I_SAIDA'
+      OnGetText = RDWEstoqueI_SAIDAGetText
+      Calculated = True
     end
   end
   object RDWFornec: TRESTDWClientSQL
@@ -439,7 +412,7 @@ object dmDados: TdmDados
     UpdateOptions.AutoCommitUpdates = True
     StoreDefs = True
     MasterCascadeDelete = True
-    BinaryRequest = False
+    BinaryRequest = True
     Datapacks = -1
     DataCache = False
     Params = <>
@@ -557,6 +530,16 @@ object dmDados: TdmDados
     end
     object IntegerField5: TIntegerField
       FieldName = 'ID'
+    end
+    object RDWEstoqueRelatBALANCAO: TIntegerField
+      FieldName = 'BALANCAO'
+    end
+    object RDWEstoqueRelatDTBALANCAO: TSQLTimeStampField
+      FieldName = 'DTBALANCAO'
+    end
+    object RDWEstoqueRelatLOCALPRODUTO: TStringField
+      FieldName = 'LOCALPRODUTO'
+      Size = 80
     end
   end
   object RelatFornec: TRESTDWClientSQL
@@ -1031,7 +1014,7 @@ object dmDados: TdmDados
     RaiseErrors = True
     ActionCursor = crSQLWait
     ReflectChanges = False
-    Left = 128
+    Left = 136
     Top = 176
     object SQLTimeStampField4: TSQLTimeStampField
       FieldName = 'ENTRADA'
@@ -1059,19 +1042,21 @@ object dmDados: TdmDados
       FieldName = 'TIPO'
       OnGetText = RDWEntradaTIPOGetText
     end
-    object FloatField5: TFloatField
-      FieldName = 'CUSTO'
-      DisplayFormat = '#,##0.00'
-      EditFormat = '#,##0.00'
+    object RDWMOVIENTRADAOBS: TMemoField
+      FieldName = 'OBS'
+      BlobType = ftMemo
     end
-    object IntegerField12: TIntegerField
+    object RDWMOVIENTRADACUSTO: TFloatField
+      FieldName = 'CUSTO'
+    end
+    object RDWMOVIENTRADACPRODUTO: TIntegerField
       FieldName = 'CPRODUTO'
     end
-    object StringField10: TStringField
+    object RDWMOVIENTRADALOCALPRODUTO: TStringField
       FieldName = 'LOCALPRODUTO'
       Size = 80
     end
-    object StringField11: TStringField
+    object RDWMOVIENTRADAPATRIMONIO: TStringField
       FieldName = 'PATRIMONIO'
       Size = 10
     end
@@ -1134,7 +1119,33 @@ object dmDados: TdmDados
   object RDWrelatBalanco: TRESTDWClientSQL
     Active = False
     Filtered = False
-    FieldDefs = <>
+    FieldDefs = <
+      item
+        Name = 'ID'
+        DataType = ftInteger
+      end
+      item
+        Name = 'PRODUTO'
+        DataType = ftString
+        Size = 50
+      end
+      item
+        Name = 'ESTOQUE'
+        DataType = ftInteger
+      end
+      item
+        Name = 'BALANCAO'
+        DataType = ftInteger
+      end
+      item
+        Name = 'DTBALANCAO'
+        DataType = ftTimeStamp
+      end
+      item
+        Name = 'GRUPO'
+        DataType = ftString
+        Size = 30
+      end>
     IndexDefs = <>
     FetchOptions.AssignedValues = [evMode]
     FetchOptions.Mode = fmAll

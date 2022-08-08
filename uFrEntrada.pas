@@ -10,7 +10,7 @@ uses
   uniDateTimePicker, uniSpinEdit, uniRadioGroup, uniDBText, uniSweetAlert,
   uniBasicGrid, uniDBGrid, uniDBNavigator, uniPageControl, UniFSiGrowl,
   UniFSEdit, UniFSButton, UniFSToast, uniMultiItem, uniListBox,
-  uniFileUpload;
+  uniFileUpload, uniMemo;
 
 type
   TfrEntrada = class(TUniFrame)
@@ -25,8 +25,6 @@ type
     Tab2: TUniTabSheet;
     UniScrollBox2: TUniScrollBox;
     UniPanel3: TUniPanel;
-    edDataEntrada: TUniDateTimePicker;
-    lbEmissao: TUniLabel;
     uPn1: TUniPanel;
     edCodProduto: TUniEdit;
     lbCodProduto: TUniLabel;
@@ -55,13 +53,17 @@ type
     UniLabel8: TUniLabel;
     EdPesquisar: TUniEdit;
     BtCan: TUniFSButton;
-    BtGrv: TUniFSButton;
     BtAlt: TUniFSButton;
     BtInc: TUniFSButton;
     Toast: TUniFSToast;
     UniLabel1: TUniLabel;
     uniRGTipo: TUniRadioGroup;
     SweetCancel: TUniSweetAlert;
+    edDataEntrada: TUniDateTimePicker;
+    lbEmissao: TUniLabel;
+    memoObs: TUniMemo;
+    lbObs: TUniLabel;
+    BtGrv: TUniFSButton;
     function CalculaTotal: Real;
     procedure UniFrameCreate(Sender: TObject);
     procedure UniSweetAlert1Confirm(Sender: TObject);
@@ -81,7 +83,8 @@ type
     procedure UniDBGrid1DblClick(Sender: TObject);
     procedure SweetCancelConfirm(Sender: TObject);
     procedure SweetCancelDismiss(Sender: TObject;
-      const Reason: TDismissType);  // função de pesquisa
+      const Reason: TDismissType);
+    procedure dsEntradaDataChange(Sender: TObject; Field: TField);  // função de pesquisa
   private
      xIncluindo, xDeletando, xEditando, xSoAlerta, xGrupo, xAlterar : Boolean;
   public
@@ -104,6 +107,11 @@ begin
   dmDados.RDWEntrada.SQL.Add('or CPRODUTO LIKE  '+QuotedStr('%'+EdPesquisar.Text+'%') );
   dmDados.RDWEntrada.SQL.Add(')order by ID desc ');
   dmDados.RDWEntrada.Open;
+
+end;
+
+procedure TfrEntrada.dsEntradaDataChange(Sender: TObject; Field: TField);
+begin
 
 end;
 
@@ -323,6 +331,7 @@ begin
   edCodProduto.Text :='';
   edLocal.Text := '';
   edPatrimonio.Text := '';
+  memoObs.Lines.Text := '';
 
 end;
 
@@ -333,10 +342,10 @@ end;
 
 procedure TfrEntrada.SweetCancelConfirm(Sender: TObject);
 var
-xErro, xMotivo :string;
+xErro, xMotivo, xObs :string;
 
 begin
-  if  xAlterar = True then
+ { if  xAlterar = True then
   begin
     if SweetCancel.InputResult ='' then
     begin
@@ -354,13 +363,13 @@ begin
 
     dmDados.RDWAuxiliar.Close;
     dmDados.RDWAuxiliar.SQL.Clear;
-    dmDados.RDWAuxiliar.SQL.Add('update ENTRADA set LOCALPRODUTO=:vLOCALPRODUTO  where CPRODUTO=:vCPRODUTO');
+    dmDados.RDWAuxiliar.SQL.Add('update ENTRADA set LOCALPRODUTO=:vLOCALPRODUTO  where ID=:vID');
 
     dmDados.RDWAuxiliar.Params[0].DataType := ftString;
     dmDados.RDWAuxiliar.Params[0].Value := xMotivo;
 
     dmDados.RDWAuxiliar.Params[1].DataType := ftInteger;
-    dmDados.RDWAuxiliar.Params[1].Value := dmDados.RDWEntradaCPRODUTO.Value;
+    dmDados.RDWAuxiliar.Params[1].Value := dmDados.RDWEntradaID.Value;
 
     dmDados.RDWAuxiliar.ExecSQL( xErro );
 
@@ -371,6 +380,35 @@ begin
 
     xAlterar := False;
     exit;
+
+   end;  }
+
+
+  if  xEditando = True then  // edita a Observação
+  begin
+
+    xObs := SweetCancel.InputResult;
+
+    dmDados.RDWAuxiliar.Close;
+    dmDados.RDWAuxiliar.SQL.Clear;
+    dmDados.RDWAuxiliar.SQL.Add('update ENTRADA set OBS=:vOBS  where ID=:vID');
+
+    dmDados.RDWAuxiliar.Params[0].DataType := ftString;
+    dmDados.RDWAuxiliar.Params[0].Value := xObs;
+
+    dmDados.RDWAuxiliar.Params[1].DataType := ftInteger;
+    dmDados.RDWAuxiliar.Params[1].Value := dmDados.RDWEntradaid.Value;
+
+    dmDados.RDWAuxiliar.ExecSQL( xErro );
+
+    dmDados.RDWEntrada.Close;
+    dmDados.RDWEntrada.Open;
+
+    dmDados.RDWEntrada.Locate('CPRODUTO', xUltimoId, []);// volta para o ultimo Id
+
+    xEditando := False;
+    exit;
+
    end;
 end;
 
@@ -382,12 +420,18 @@ begin
 end;
 
 procedure TfrEntrada.UniDBGrid1DblClick(Sender: TObject);
-begin
-   // é habilitado para o balanço ( altera o local )
-    if (not MainForm.vADMIN) then exit;
-    xUltimoId :=  dmDados.RDWEntradaCPRODUTO.Value;
+var
+xErro : string;
 
-    xAlterar := True;
+begin
+// COMENTE UM PARA USAR O OUOTRO NA HORA DE SALVAR (  SweetCancel )
+
+// é habilitado para o balanço ( altera o local )
+//    Exit;
+//    if (not MainForm.vADMIN) then exit;
+//    xUltimoId :=  dmDados.RDWEntradaCPRODUTO.Value;
+// -----Altera Loca-------------------------------------
+ {   xAlterar := True;
     xSoAlerta := False;
     xIncluindo := False;
     xEditando := False;
@@ -401,7 +445,28 @@ begin
     SweetCancel.ConfirmButtonText := 'Sim';
     SweetCancel.ShowCancelButton := True;
     SweetCancel.CancelButtonText := 'Não';
-    SweetCancel.Show(dmDados.RDWEntradaNPRODUTO.value);
+    SweetCancel.Show(dmDados.RDWEntradaNPRODUTO.value); }
+
+// -----Altera Loca-------------------------------------
+
+//
+// para Editar OBS comentario
+
+    xAlterar := False;
+    xSoAlerta := False;
+    xIncluindo := False;
+    xEditando := True;
+    xDeletando := False;
+
+    xSoAlerta := False;
+    SweetCancel.Title := 'Salvar';
+    SweetCancel.AlertType := atQuestion;
+    SweetCancel.InputType := ItText;
+    SweetCancel.ShowConfirmButton := True;
+    SweetCancel.ConfirmButtonText := 'Sim';
+    SweetCancel.ShowCancelButton := True;
+    SweetCancel.CancelButtonText := 'Não';
+    SweetCancel.Show('Observação ?');
 
 end;
 
@@ -422,36 +487,42 @@ procedure TfrEntrada.UniSweetAlert1Confirm(Sender: TObject);
 var xErro : String;
     vESTOQUENOVO, vESTOQUEUSADO, vSALDO, vTOTAL, vQUANTIDADE : Real;
 begin
-  vQUANTIDADE := StrToInt( TiraStr( seQuantidade.Text, '.'));
-  vTOTAL := vQUANTIDADE * StrToFloat( TiraStr( edPreco.Text, '.'));
-
-  dmDados.RDWAuxiliar.Close;
-  dmDados.RDWAuxiliar.SQL.Clear;
-  dmDados.RDWAuxiliar.SQL.Add('select ESTOQUE, ESTOQUE_NOVO, ESTOQUE_USADO from ESTOQUE where ID=:vID');
-  dmDados.RDWAuxiliar.Params[0].DataType := ftInteger;
-  dmDados.RDWAuxiliar.Params[0].Value := edCodProduto.Text ;
-  dmDados.RDWAuxiliar.Open;
-
-  vSALDO := dmDados.RDWAuxiliar.FieldByName('ESTOQUE').AsInteger + vQUANTIDADE; // soma o estoque atual mas o que entra
-
-  vESTOQUENOVO := dmDados.RDWAuxiliar.FieldByName('ESTOQUE_NOVO').AsInteger;
-  vESTOQUEUSADO := dmDados.RDWAuxiliar.FieldByName('ESTOQUE_USADO').AsInteger;
-
-  if uniRGTipo.ItemIndex = 0 then
-     vESTOQUENOVO := vESTOQUENOVO + vQUANTIDADE;   // adiciona o valor que entra em (Novos)  + a quantidade que ja tem salvo como novos
-  if uniRGTipo.ItemIndex = 1 then
-     vESTOQUEUSADO := vESTOQUEUSADO + vQUANTIDADE; // adiciona o valor que entra em (Usados) + a quantidade que ja tem salvo como Usados
-
-  if uniRGTipo.ItemIndex = 0 then  // Entra no laço do Tipo = se for (Novo) faça isso ou se nao entra no (Usado)
 
 
-if xSoAlerta = True then exit;
+
+  if xSoAlerta = True then exit;
 
   if xIncluindo then
   begin
+    // retorna o valor do estou atual ---------------------------------------------------------------------------------------------
+    vQUANTIDADE := StrToInt( TiraStr( seQuantidade.Text, '.'));
+    vTOTAL := vQUANTIDADE * StrToFloat( TiraStr( edPreco.Text, '.'));
+
     dmDados.RDWAuxiliar.Close;
     dmDados.RDWAuxiliar.SQL.Clear;
-    dmDados.RDWAuxiliar.SQL.Add('insert into ENTRADA  values (:vENTRADA, :vFORNECEDOR, :vTOTALITENS, :vVALORTOTAL, NULL, :vNPRODUTO, :vTIPO, :vCUSTO, :vCPRODUTO, :vLOCALPRODUTO, :vPATRIMONIO )');
+    dmDados.RDWAuxiliar.SQL.Add('select ESTOQUE, ESTOQUE_NOVO, ESTOQUE_USADO from ESTOQUE where ID=:vID');
+    dmDados.RDWAuxiliar.Params[0].DataType := ftInteger;
+    dmDados.RDWAuxiliar.Params[0].Value := edCodProduto.Text ;
+    dmDados.RDWAuxiliar.Open;
+
+    vSALDO := dmDados.RDWAuxiliar.FieldByName('ESTOQUE').AsInteger + vQUANTIDADE; // soma o estoque atual mas o que entra
+
+    vESTOQUENOVO := dmDados.RDWAuxiliar.FieldByName('ESTOQUE_NOVO').AsInteger;
+    vESTOQUEUSADO := dmDados.RDWAuxiliar.FieldByName('ESTOQUE_USADO').AsInteger;
+
+    if uniRGTipo.ItemIndex = 0 then
+       vESTOQUENOVO := vESTOQUENOVO + vQUANTIDADE;   // adiciona o valor que entra em (Novos)  + a quantidade que ja tem salvo como novos
+    if uniRGTipo.ItemIndex = 1 then
+       vESTOQUEUSADO := vESTOQUEUSADO + vQUANTIDADE; // adiciona o valor que entra em (Usados) + a quantidade que ja tem salvo como Usados
+
+    if uniRGTipo.ItemIndex = 0 then  // Entra no laço do Tipo = se for (Novo) faça isso ou se nao entra no (Usado)
+
+    // --------------------------------------------------------------------------------------------------------------------------
+
+
+    dmDados.RDWAuxiliar.Close;
+    dmDados.RDWAuxiliar.SQL.Clear;
+    dmDados.RDWAuxiliar.SQL.Add('insert into ENTRADA  values (:vENTRADA, :vFORNECEDOR, :vTOTALITENS, :vVALORTOTAL, NULL, :vNPRODUTO, :vTIPO, :vCUSTO, :vCPRODUTO, :vLOCALPRODUTO, :vPATRIMONIO, :vOBS )');
 
     dmDados.RDWAuxiliar.Params[0].DataType := ftDateTime; // Data entrada
     dmDados.RDWAuxiliar.Params[0].Value := edDataEntrada.Text ;
@@ -492,6 +563,9 @@ if xSoAlerta = True then exit;
     dmDados.RDWAuxiliar.Params[9].DataType := ftString; // Local do Patrimonio
     dmDados.RDWAuxiliar.Params[9].Value := edPatrimonio.Text;
 
+    dmDados.RDWAuxiliar.Params[10].DataType := ftString; // OBS
+    dmDados.RDWAuxiliar.Params[10].Value := memoObs.Lines.Text;
+
     dmDados.RDWAuxiliar.ExecSQL( xErro );
     dmDados.RDWEntrada.Close();
     dmDados.RDWEntrada.Open();
@@ -503,7 +577,7 @@ if xSoAlerta = True then exit;
     dmDados.RDWAuxiliar.Close;
     dmDados.RDWAuxiliar.SQL.Clear;
     dmDados.RDWAuxiliar.SQL.Add('update ESTOQUE set ESTOQUE=:vSALDO, ESTOQUE_NOVO=:vNOVO, ESTOQUE_USADO=:vUSADO, PRECO=:vPRECO, DTENTRADA=:vENTRADA, '+
-    'FORNEC=:vFORNECEDOR  where ID=:vID');
+    'FORNEC=:vFORNECEDOR, LOCALPRODUTO=:vLOCALPRODUTO where ID=:vID');
     // ESTOQUE TOTAL
     dmDados.RDWAuxiliar.Params[0].DataType := ftInteger;
     dmDados.RDWAuxiliar.Params[0].Value := vSALDO;
@@ -523,8 +597,11 @@ if xSoAlerta = True then exit;
     dmDados.RDWAuxiliar.Params[5].DataType := ftString; // Fornecedor
     dmDados.RDWAuxiliar.Params[5].Value := lbFornec.Text ;
 
-    dmDados.RDWAuxiliar.Params[6].DataType := ftInteger;
-    dmDados.RDWAuxiliar.Params[6].Value := edCodProduto.Text ;
+    dmDados.RDWAuxiliar.Params[6].DataType := ftString;
+    dmDados.RDWAuxiliar.Params[6].Value := edLocal.Text;
+
+    dmDados.RDWAuxiliar.Params[7].DataType := ftInteger;
+    dmDados.RDWAuxiliar.Params[7].Value := edCodProduto.Text ;
 
     dmDados.RDWAuxiliar.ExecSQL( xErro );
 
@@ -539,7 +616,7 @@ if xSoAlerta = True then exit;
     dmDados.RDWEstoque.Open;
 
        // mensagem de entrada em balao
-    Toast.Success('Parabéns!','Entrada confirmada do produto ', topCenter);
+//    Toast.Success('Parabéns!','Entrada confirmada do produto ', topCenter);
     MainForm.RegistraLog('ENTRADA', 'ENTRADA DO PRODUTO: '+lbProduto.Text );  // Registra log
 
   end;

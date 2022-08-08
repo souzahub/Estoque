@@ -1,6 +1,7 @@
 object UniServerModule: TUniServerModule
   OldCreateOrder = False
   TempFolder = 'temp\'
+  SessionTimeout = 1200000
   Port = 8050
   Title = 'Estoque TI'
   Favicon.Data = {

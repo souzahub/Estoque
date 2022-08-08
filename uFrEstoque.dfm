@@ -26,6 +26,7 @@ object frEstoque: TfrEstoque
       object Tab1: TUniTabSheet
         Hint = ''
         Caption = 'Consulta'
+        OnAjaxEvent = Tab1AjaxEvent
         OnBeforeActivate = Tab1BeforeActivate
         DesignSize = (
           1482
@@ -61,14 +62,9 @@ object frEstoque: TfrEstoque
               Width = 46
             end
             item
-              FieldName = 'VISUALIZAR'
-              Title.Caption = 'INF'
-              Width = 36
-            end
-            item
               FieldName = 'PRODUTO'
               Title.Caption = 'PRODUTO'
-              Width = 393
+              Width = 423
             end
             item
               FieldName = 'ESTOQUE'
@@ -83,22 +79,17 @@ object frEstoque: TfrEstoque
             item
               FieldName = 'PRECO'
               Title.Caption = 'ULTIMO PRE'#199'O'
-              Width = 96
+              Width = 88
             end
             item
               FieldName = 'DTSAIDA'
               Title.Caption = 'ULTIMA SAIDA'
-              Width = 88
+              Width = 92
             end
             item
               FieldName = 'DTENTRADA'
               Title.Caption = 'ULTIMA ENTRADA'
-              Width = 108
-            end
-            item
-              FieldName = 'FORNEC'
-              Title.Caption = 'ULTIMO FORNECEDOR'
-              Width = 318
+              Width = 113
             end
             item
               FieldName = 'ESTOQUE_USADO'
@@ -114,9 +105,26 @@ object frEstoque: TfrEstoque
               Alignment = taCenter
             end
             item
+              FieldName = 'FORNEC'
+              Title.Caption = 'Ultimo Fornecedor'
+              Width = 439
+            end
+            item
               FieldName = 'GRUPO'
               Title.Caption = 'GRUPO'
-              Width = 151
+              Width = 127
+            end
+            item
+              FieldName = 'LOCALPRODUTO'
+              Title.Caption = 'Local Atual'
+              Width = 305
+            end
+            item
+              FieldName = 'TRANSF'
+              Title.Alignment = taCenter
+              Title.Caption = '-'
+              Width = 91
+              Alignment = taCenter
             end>
         end
         object pnInfo: TUniPanel
@@ -215,8 +223,6 @@ object frEstoque: TfrEstoque
             Alignment = taLeftJustify
             Caption = ''
             Color = clWindow
-            ExplicitLeft = -19
-            ExplicitWidth = 665
             object edAtualEsto: TUniEdit
               Left = 16
               Top = 29
@@ -253,9 +259,6 @@ object frEstoque: TfrEstoque
               ParentColor = False
               Align = alBottom
               TabOrder = 5
-              ExplicitLeft = -69
-              ExplicitTop = 160
-              ExplicitWidth = 663
               object BtGrv: TUniFSButton
                 AlignWithMargins = True
                 Left = 502
@@ -285,7 +288,6 @@ object frEstoque: TfrEstoque
                 Images = UniNativeImageList1
                 ImageIndex = 18
                 OnClick = BtGrvClick
-                ExplicitLeft = 491
               end
               object UniFSButton1: TUniFSButton
                 AlignWithMargins = True
@@ -316,7 +318,6 @@ object frEstoque: TfrEstoque
                 Images = UniNativeImageList1
                 ImageIndex = 18
                 OnClick = UniFSButton1Click
-                ExplicitLeft = 332
               end
             end
             object lbProdu: TUniLabel
@@ -358,7 +359,6 @@ object frEstoque: TfrEstoque
               ParentColor = False
               Align = alBottom
               TabOrder = 8
-              ExplicitWidth = 602
             end
             object edNovo: TUniEdit
               Left = 560
@@ -427,8 +427,6 @@ object frEstoque: TfrEstoque
             BorderStyle = ubsNone
             Caption = ''
             Color = clHighlight
-            ExplicitLeft = -13
-            ExplicitWidth = 665
             object UniLabel2: TUniLabel
               AlignWithMargins = True
               Left = 10
@@ -456,7 +454,6 @@ object frEstoque: TfrEstoque
               Color = clHighlight
               Align = alRight
               TabOrder = 2
-              ExplicitLeft = 368
               object UniLabel3: TUniLabel
                 AlignWithMargins = True
                 Left = -6
@@ -501,6 +498,269 @@ object frEstoque: TfrEstoque
             end
           end
         end
+        object pnTranf: TUniContainerPanel
+          AlignWithMargins = True
+          Left = 331
+          Top = 82
+          Width = 670
+          Height = 359
+          Hint = ''
+          Visible = False
+          ParentColor = False
+          Color = clBackground
+          Anchors = [akTop]
+          TabOrder = 3
+          object UniPanel4: TUniPanel
+            AlignWithMargins = True
+            Left = 5
+            Top = 53
+            Width = 660
+            Height = 260
+            Hint = ''
+            Margins.Left = 5
+            Margins.Right = 5
+            Align = alTop
+            TabOrder = 1
+            Alignment = taLeftJustify
+            Caption = ''
+            Color = clWindow
+            object UniContainerPanel3: TUniContainerPanel
+              Left = 1
+              Top = 202
+              Width = 658
+              Height = 39
+              Hint = ''
+              ParentColor = False
+              Align = alBottom
+              TabOrder = 1
+              object UniFSButton3: TUniFSButton
+                AlignWithMargins = True
+                Left = 502
+                Top = 5
+                Width = 151
+                Height = 29
+                Hint = ''
+                Margins.Top = 5
+                Margins.Right = 5
+                Margins.Bottom = 5
+                StyleButton = Success
+                BadgeText.Text = '0'
+                BadgeText.TextColor = '#FFFFFF'
+                BadgeText.TextSize = 10
+                BadgeText.TextStyle = 'bold'
+                BadgeText.BackgroundColor = '#D50000'
+                Caption = 'GRAVAR'
+                Align = alRight
+                ParentFont = False
+                Font.Color = clWhite
+                Font.Height = -13
+                Font.Name = 'Roboto'
+                Font.Style = [fsBold]
+                TabOrder = 1
+                ScreenMask.Message = 'Carregando dados...'
+                Images = UniNativeImageList1
+                ImageIndex = 18
+                OnClick = BtGrvClick
+              end
+              object UniFSButton4: TUniFSButton
+                AlignWithMargins = True
+                Left = 343
+                Top = 5
+                Width = 151
+                Height = 29
+                Hint = ''
+                Margins.Top = 5
+                Margins.Right = 5
+                Margins.Bottom = 5
+                StyleButton = Danger
+                BadgeText.Text = '0'
+                BadgeText.TextColor = '#FFFFFF'
+                BadgeText.TextSize = 10
+                BadgeText.TextStyle = 'bold'
+                BadgeText.BackgroundColor = '#D50000'
+                Caption = 'Cancelar'
+                Align = alRight
+                ParentFont = False
+                Font.Color = clWhite
+                Font.Height = -13
+                Font.Name = 'Roboto'
+                Font.Style = [fsBold]
+                TabOrder = 2
+                ScreenMask.Message = 'Carregando dados...'
+                Images = UniNativeImageList1
+                ImageIndex = 18
+                OnClick = UniFSButton1Click
+              end
+            end
+            object UniLabel9: TUniLabel
+              Left = 21
+              Top = 137
+              Width = 60
+              Height = 13
+              Hint = ''
+              Caption = 'Novo Local'
+              ParentFont = False
+              Font.Style = [fsBold]
+              TabOrder = 2
+            end
+            object UniContainerPanel4: TUniContainerPanel
+              Left = 1
+              Top = 241
+              Width = 658
+              Height = 18
+              Hint = ''
+              ParentColor = False
+              Align = alBottom
+              TabOrder = 3
+            end
+            object UniLabel6: TUniLabel
+              Left = 21
+              Top = 21
+              Width = 45
+              Height = 13
+              Hint = ''
+              Caption = 'Produto'
+              ParentFont = False
+              Font.Style = [fsBold]
+              TabOrder = 4
+            end
+            object UniDBText1: TUniDBText
+              Left = 21
+              Top = 40
+              Width = 98
+              Height = 19
+              Hint = ''
+              DataField = 'PRODUTO'
+              DataSource = dsEstoque
+              ParentFont = False
+              Font.Height = -16
+              Font.Style = [fsBold]
+            end
+            object UniLabel7: TUniLabel
+              Left = 21
+              Top = 73
+              Width = 62
+              Height = 13
+              Hint = ''
+              Caption = 'Local Atual'
+              ParentFont = False
+              Font.Style = [fsBold]
+              TabOrder = 6
+            end
+            object dbEditLocalAntigo: TUniDBEdit
+              Left = 21
+              Top = 97
+              Width = 620
+              Height = 22
+              Hint = ''
+              DataField = 'LOCALPRODUTO'
+              DataSource = dsMovEntrada
+              ParentFont = False
+              Font.Color = clMaroon
+              Font.Style = [fsBold]
+              TabOrder = 7
+              ReadOnly = True
+            end
+            object edLocal: TUniEdit
+              Left = 21
+              Top = 156
+              Width = 620
+              Hint = ''
+              CharCase = ecUpperCase
+              Text = 'UNIEDIT1'
+              ParentFont = False
+              Font.Color = clGreen
+              Font.Style = [fsBold]
+              TabOrder = 8
+            end
+          end
+          object UniPanel5: TUniPanel
+            AlignWithMargins = True
+            Left = 5
+            Top = 3
+            Width = 660
+            Height = 44
+            Hint = ''
+            Margins.Left = 5
+            Margins.Right = 5
+            Align = alTop
+            TabOrder = 2
+            BorderStyle = ubsNone
+            Caption = ''
+            Color = clHighlight
+            object UniLabel12: TUniLabel
+              AlignWithMargins = True
+              Left = 10
+              Top = 10
+              Width = 344
+              Height = 24
+              Hint = ''
+              Margins.Left = 10
+              Margins.Top = 10
+              Caption = 'Transferencia de Local ( Estoque )'
+              Align = alLeft
+              ParentFont = False
+              Font.Height = -20
+              Font.Style = [fsBold]
+              ParentColor = False
+              Color = clHighlight
+              TabOrder = 1
+            end
+            object UniSimplePanel2: TUniSimplePanel
+              AlignWithMargins = True
+              Left = 384
+              Top = 3
+              Width = 273
+              Height = 38
+              Hint = ''
+              ParentColor = False
+              Color = clHighlight
+              Align = alRight
+              TabOrder = 2
+              object UniLabel13: TUniLabel
+                AlignWithMargins = True
+                Left = 19
+                Top = 10
+                Width = 187
+                Height = 25
+                Hint = ''
+                Margins.Top = 10
+                Margins.Right = 5
+                Alignment = taRightJustify
+                AutoSize = False
+                Caption = 'C'#243'd do Produto:'
+                Align = alRight
+                ParentFont = False
+                Font.Color = clWhite
+                Font.Height = -16
+                Font.Style = [fsBold]
+                ParentColor = False
+                Color = clHotLight
+                TabOrder = 1
+              end
+              object edCod: TUniDBText
+                AlignWithMargins = True
+                Left = 214
+                Top = 10
+                Width = 54
+                Height = 25
+                Hint = ''
+                Margins.Top = 10
+                Margins.Right = 5
+                DataField = 'ID'
+                DataSource = dsEstoque
+                Alignment = taRightJustify
+                AutoSize = False
+                Align = alRight
+                ParentFont = False
+                Font.Height = -16
+                Font.Style = [fsBold]
+                ParentColor = False
+                Color = clHighlight
+              end
+            end
+          end
+        end
       end
       object TabEntrada: TUniTabSheet
         Hint = ''
@@ -518,8 +778,15 @@ object frEstoque: TfrEstoque
           Margins.Right = 5
           Margins.Bottom = 5
           BodyRTL = False
+          ClientEvents.ExtEvents.Strings = (
+            
+              'afterrender=function afterrender(sender, eOpts)'#13#10'{'#13#10'  Ext.create' +
+              '('#39'Ext.tip.ToolTip'#39', {'#13#10'   target: sender.getEl(),'#13#10'   showDelay:' +
+              '50,'#13#10'   hideDelay:50,'#13#10'   html: "Duplo Clique para ver os Detalh' +
+              'es"'#13#10'  });'#13#10'}')
           DataSource = dsMovEntrada
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgTitleClick, dgFilterClearButton, dgAutoRefreshRow]
+          LoadMask.Enabled = False
           LoadMask.Message = 'Loading data...'
           ForceFit = True
           BorderStyle = ubsNone
@@ -527,6 +794,7 @@ object frEstoque: TfrEstoque
           TabOrder = 0
           ParentColor = False
           Color = clWindow
+          OnDblClick = UniDBGrid2DblClick
           Columns = <
             item
               FieldName = 'CPRODUTO'
@@ -601,6 +869,7 @@ object frEstoque: TfrEstoque
           BodyRTL = False
           DataSource = dsMovSaida
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgTitleClick, dgFilterClearButton, dgAutoRefreshRow]
+          LoadMask.Enabled = False
           LoadMask.Message = 'Loading data...'
           ForceFit = True
           BorderStyle = ubsNone
@@ -752,16 +1021,16 @@ object frEstoque: TfrEstoque
       TabOrder = 4
       object btLimpar: TUniFSButton
         AlignWithMargins = True
-        Left = 360
+        Left = 361
         Top = 5
-        Width = 31
+        Width = 30
         Height = 26
         Hint = ''
         Margins.Left = 0
         Margins.Top = 5
         Margins.Right = 10
         Margins.Bottom = 5
-        StyleButton = Primary
+        StyleButton = Danger
         BadgeText.Text = '0'
         BadgeText.TextColor = '#FFFFFF'
         BadgeText.TextSize = 10
@@ -780,7 +1049,6 @@ object frEstoque: TfrEstoque
             'afterrender=function afterrender(sender, eOpts)'#13#10'{'#13#10'   Ext.creat' +
             'e('#39'Ext.tip.ToolTip'#39', {'#13#10'   target: sender.getEl(),'#13#10'   showDelay' +
             ':50,'#13#10'   hideDelay: 50,'#13#10'   html: "Limpar"'#13#10'  });'#13#10'}')
-        ScreenMask.Enabled = True
         ScreenMask.Message = 'Carregando...'
         Images = UniNativeImageList1
         ImageIndex = 23
@@ -788,7 +1056,7 @@ object frEstoque: TfrEstoque
       end
       object EdPesquisar: TUniEdit
         AlignWithMargins = True
-        Left = 11
+        Left = 12
         Top = 0
         Width = 299
         Height = 36
@@ -815,7 +1083,7 @@ object frEstoque: TfrEstoque
       end
       object btPesquisar: TUniFSButton
         AlignWithMargins = True
-        Left = 320
+        Left = 321
         Top = 5
         Width = 30
         Height = 26
@@ -844,14 +1112,15 @@ object frEstoque: TfrEstoque
             '('#39'Ext.tip.ToolTip'#39', {'#13#10'   target: sender.getEl(),'#13#10'   showDelay:' +
             '50,'#13#10'   hideDelay: 50,'#13#10'   html: "Busca dinamica &nbsp"'#13#10'  });'#13#10 +
             '}')
+        ScreenMask.Enabled = True
+        ScreenMask.Message = 'Carregando...'
         OnClick = btPesquisarClick
       end
     end
   end
   object dsEstoque: TDataSource
     DataSet = dmDados.RDWEstoque
-    OnDataChange = dsEstoqueDataChange
-    Left = 1164
+    Left = 1396
     Top = 186
   end
   object UniNativeImageList1: TUniNativeImageList
@@ -907,17 +1176,32 @@ object frEstoque: TfrEstoque
   end
   object dsInfo: TDataSource
     DataSet = dmDados.RDWEstoque
-    Left = 1174
-    Top = 106
+    Left = 1390
+    Top = 122
   end
   object dsMovEntrada: TDataSource
+    AutoEdit = False
     DataSet = dmDados.RDWMOVIENTRADA
-    Left = 1148
-    Top = 282
+    Left = 1396
+    Top = 266
   end
   object dsMovSaida: TDataSource
     DataSet = dmDados.RDWMOVISAIDA
-    Left = 1156
-    Top = 362
+    Left = 1396
+    Top = 330
+  end
+  object UniSweetAlert1: TUniSweetAlert
+    Title = 'Title'
+    ConfirmButtonText = 'Sim'
+    CancelButtonText = 'N'#227'o'
+    ConfirmButtonColor = 10526880
+    CancelButtonColor = clMaroon
+    Width = 520
+    Padding = 20
+    ShowLoaderOnConfirm = True
+    OnDismiss = UniSweetAlert1Dismiss
+    OnConfirm = UniSweetAlert1Confirm
+    Left = 1404
+    Top = 394
   end
 end

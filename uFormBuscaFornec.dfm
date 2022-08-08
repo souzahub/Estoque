@@ -71,8 +71,7 @@ object formBuscaFornec: TformBuscaFornec
     BorderStyle = ubsNone
     Caption = ''
     Color = clNone
-    ExplicitLeft = 10
-    ExplicitTop = 42
+    ExplicitLeft = 0
     object UniLabel8: TUniLabel
       Left = 784
       Top = 24
@@ -140,7 +139,6 @@ object formBuscaFornec: TformBuscaFornec
       Images = UniNativeImageList1
       ImageIndex = 25
       OnClick = ubtSairClick
-      ExplicitLeft = 639
     end
     object btCancelar: TUniFSButton
       AlignWithMargins = True
@@ -171,7 +169,6 @@ object formBuscaFornec: TformBuscaFornec
       Images = UniNativeImageList1
       ImageIndex = 26
       OnClick = btCancelarClick
-      ExplicitLeft = 677
     end
   end
   object UniPanel3: TUniPanel
@@ -185,8 +182,6 @@ object formBuscaFornec: TformBuscaFornec
     Font.Height = -20
     TabOrder = 2
     Caption = 'Fornecedores'
-    ExplicitLeft = -140
-    ExplicitWidth = 851
   end
   object DsConsFornec: TDataSource
     DataSet = dmDados.RDWFornec

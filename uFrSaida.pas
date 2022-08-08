@@ -32,7 +32,6 @@ type
     UniPanel5: TUniPanel;
     EdPesquisar: TUniEdit;
     BtCan: TUniFSButton;
-    BtGrv: TUniFSButton;
     BtInc: TUniFSButton;
     Toast: TUniFSToast;
     UniPanel3: TUniPanel;
@@ -65,6 +64,10 @@ type
     lbEstoqueUsado: TUniLabel;
     UniLabel8: TUniLabel;
     UniLabel1: TUniLabel;
+    UniPanel6: TUniPanel;
+    UniLabel9: TUniLabel;
+    edPatrimonio: TUniEdit;
+    BtGrv: TUniFSButton;
     procedure btClienteClick(Sender: TObject);
     procedure UniFrameCreate(Sender: TObject);
     procedure UniSweetAlert1Confirm(Sender: TObject);
@@ -229,6 +232,21 @@ begin
      end;
    end;
 
+    if cbSetor.ItemIndex < 0 then
+    begin
+      xSoAlerta := True;   // bloqueia alerta
+      UniSweetAlert1.Title := ('Atenção!');
+      UniSweetAlert1.AlertType := atInfo;
+      UniSweetAlert1.ShowCancelButton := True;
+      UniSweetAlert1.ShowConfirmButton := False;
+      UniSweetAlert1.CancelButtonColor := clMaroon;
+      UniSweetAlert1.CancelButtonText := 'OK';
+      UniSweetAlert1.Show('Informe o Setor');
+      exit;
+    end;
+
+
+
   //  Salvando com SweetAlert1
   xIncluindo := True;
   xSoAlerta := False;
@@ -278,6 +296,8 @@ begin
   cbSetor.ItemIndex := 0;
   uniRGTipo.ItemIndex := 0;
   edNome.Text := '';
+  edPatrimonio.Text := '';
+  cbSetor.ItemIndex := -1;
 
 end;
 

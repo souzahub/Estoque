@@ -20,7 +20,7 @@ object fraSaida: TfraSaida
       Width = 1073
       Height = 586
       Hint = ''
-      ActivePage = Tab1
+      ActivePage = Tab2
       Images = UniNativeImageList1
       Align = alClient
       TabOrder = 1
@@ -125,7 +125,7 @@ object fraSaida: TfraSaida
             ScrollWidth = 1057
             object edDataSaida: TUniDateTimePicker
               Left = 32
-              Top = 39
+              Top = 44
               Width = 120
               Hint = ''
               DateTime = 43854.000000000000000000
@@ -136,8 +136,8 @@ object fraSaida: TfraSaida
               Color = 12189695
             end
             object lbSaida: TUniLabel
-              Left = 32
-              Top = 20
+              Left = 33
+              Top = 25
               Width = 78
               Height = 13
               Hint = ''
@@ -147,10 +147,10 @@ object fraSaida: TfraSaida
               TabOrder = 2
             end
             object uPn1: TUniPanel
-              Left = 32
+              Left = 33
               Top = 83
-              Width = 649
-              Height = 430
+              Width = 755
+              Height = 334
               Hint = ''
               AutoScroll = True
               TabOrder = 3
@@ -158,8 +158,8 @@ object fraSaida: TfraSaida
               Caption = ''
               Color = clWhite
               LayoutConfig.Cls = 'borda'
-              ScrollHeight = 430
-              ScrollWidth = 649
+              ScrollHeight = 334
+              ScrollWidth = 755
               object edCodProduto: TUniEdit
                 Left = 16
                 Top = 44
@@ -195,7 +195,7 @@ object fraSaida: TfraSaida
               object edProd: TUniEdit
                 Left = 81
                 Top = 44
-                Width = 432
+                Width = 592
                 Hint = ''
                 BorderStyle = ubsNone
                 Text = ''
@@ -204,7 +204,7 @@ object fraSaida: TfraSaida
                 ReadOnly = True
               end
               object btCliente: TUniBitBtn
-                Left = 519
+                Left = 695
                 Top = 44
                 Width = 26
                 Height = 26
@@ -230,7 +230,7 @@ object fraSaida: TfraSaida
                 TabOrder = 6
               end
               object seQuantidade: TUniSpinEdit
-                Left = 21
+                Left = 16
                 Top = 123
                 Width = 80
                 Height = 26
@@ -246,7 +246,7 @@ object fraSaida: TfraSaida
                 FieldLabelAlign = laRight
               end
               object lbQuantidade: TUniLabel
-                Left = 21
+                Left = 16
                 Top = 104
                 Width = 65
                 Height = 13
@@ -257,8 +257,8 @@ object fraSaida: TfraSaida
                 TabOrder = 8
               end
               object UniLabel2: TUniLabel
-                Left = 21
-                Top = 165
+                Left = 16
+                Top = 173
                 Width = 115
                 Height = 13
                 Hint = ''
@@ -268,8 +268,8 @@ object fraSaida: TfraSaida
                 TabOrder = 9
               end
               object edValoProduto: TUniFormattedNumberEdit
-                Left = 21
-                Top = 184
+                Left = 16
+                Top = 192
                 Width = 111
                 Hint = ''
                 TabOrder = 10
@@ -279,13 +279,14 @@ object fraSaida: TfraSaida
                 ThousandSeparator = '.'
               end
               object cbSetor: TUniComboBox
-                Left = 21
-                Top = 240
-                Width = 356
+                Left = 389
+                Top = 123
+                Width = 333
                 Height = 33
                 Hint = ''
+                Style = csDropDownList
                 MaxLength = 40
-                Text = 'cbSetor'
+                Text = 'FATURAMENTO'
                 Items.Strings = (
                   'FATURAMENTO'
                   'COMERCIAL'
@@ -320,20 +321,22 @@ object fraSaida: TfraSaida
                 IconItems = <>
               end
               object UniLabel6: TUniLabel
-                Left = 23
-                Top = 293
-                Width = 35
+                Left = 389
+                Top = 173
+                Width = 111
                 Height = 13
                 Hint = ''
-                Caption = 'Nome '
+                Caption = 'Saida para ( Nome )'
                 ParentFont = False
                 Font.Style = [fsBold]
+                ParentColor = False
+                Color = clWhite
                 TabOrder = 12
               end
               object edNome: TUniEdit
-                Left = 21
-                Top = 312
-                Width = 356
+                Left = 389
+                Top = 192
+                Width = 333
                 Hint = ''
                 CharCase = ecUpperCase
                 MaxLength = 60
@@ -347,8 +350,8 @@ object fraSaida: TfraSaida
                     'ue ir'#225' receber o produto &nbsp"'#13#10'  });'#13#10'}'#13#10)
               end
               object UniLabel3: TUniLabel
-                Left = 23
-                Top = 221
+                Left = 389
+                Top = 104
                 Width = 31
                 Height = 13
                 Hint = ''
@@ -358,10 +361,10 @@ object fraSaida: TfraSaida
                 TabOrder = 14
               end
               object uniRGTipo: TUniRadioGroup
-                Left = 415
-                Top = 123
-                Width = 107
-                Height = 62
+                Left = 160
+                Top = 173
+                Width = 194
+                Height = 46
                 Hint = ''
                 BodyRTL = False
                 Items.Strings = (
@@ -373,11 +376,12 @@ object fraSaida: TfraSaida
                 Font.Style = [fsBold]
                 ParentColor = False
                 Color = clWhite
+                Columns = 2
                 OnClick = uniRGTipoClick
               end
               object UniLabel1: TUniLabel
-                Left = 415
-                Top = 104
+                Left = 160
+                Top = 154
                 Width = 89
                 Height = 13
                 Hint = ''
@@ -386,9 +390,36 @@ object fraSaida: TfraSaida
                 Font.Style = [fsBold]
                 TabOrder = 16
               end
+              object BtGrv: TUniFSButton
+                AlignWithMargins = True
+                Left = 595
+                Top = 262
+                Width = 131
+                Height = 35
+                Hint = ''
+                Margins.Left = 4
+                Margins.Top = 6
+                Margins.Right = 4
+                Margins.Bottom = 6
+                StyleButton = GoogleBlue3Round
+                BadgeText.Text = '0'
+                BadgeText.TextColor = '#FFFFFF'
+                BadgeText.TextSize = 10
+                BadgeText.TextStyle = 'bold'
+                BadgeText.BackgroundColor = '#D50000'
+                Caption = 'SALVAR'
+                ParentFont = False
+                Font.Color = clWhite
+                Font.Height = -13
+                Font.Name = 'Roboto'
+                Font.Style = [fsBold]
+                TabOrder = 17
+                ClientEvents.Enabled = False
+                OnClick = BtGrvClick
+              end
             end
             object lbEstoque: TUniLabel
-              Left = 408
+              Left = 514
               Top = 25
               Width = 81
               Height = 13
@@ -399,7 +430,7 @@ object fraSaida: TfraSaida
               TabOrder = 4
             end
             object UniLabel4: TUniLabel
-              Left = 506
+              Left = 612
               Top = 25
               Width = 76
               Height = 13
@@ -410,7 +441,7 @@ object fraSaida: TfraSaida
               TabOrder = 5
             end
             object UniLabel5: TUniLabel
-              Left = 599
+              Left = 705
               Top = 25
               Width = 89
               Height = 13
@@ -421,7 +452,7 @@ object fraSaida: TfraSaida
               TabOrder = 6
             end
             object UniPanel1: TUniPanel
-              Left = 408
+              Left = 514
               Top = 44
               Width = 74
               Height = 33
@@ -448,7 +479,7 @@ object fraSaida: TfraSaida
               end
             end
             object UniPanel2: TUniPanel
-              Left = 506
+              Left = 612
               Top = 44
               Width = 74
               Height = 33
@@ -475,7 +506,7 @@ object fraSaida: TfraSaida
               end
             end
             object UniPanel4: TUniPanel
-              Left = 607
+              Left = 713
               Top = 44
               Width = 74
               Height = 33
@@ -500,6 +531,53 @@ object fraSaida: TfraSaida
                 Color = clSkyBlue
                 TabOrder = 1
               end
+            end
+            object UniPanel6: TUniPanel
+              Left = 360
+              Top = 44
+              Width = 132
+              Height = 33
+              Hint = ''
+              TabOrder = 10
+              Caption = ''
+              LayoutConfig.Cls = 'borda'
+              object edPatrimonio: TUniEdit
+                AlignWithMargins = True
+                Left = 6
+                Top = 4
+                Width = 120
+                Height = 25
+                Hint = ''
+                Margins.Left = 5
+                Margins.Right = 5
+                CharCase = ecUpperCase
+                MaxLength = 15
+                Text = 'PATRIMONIO'
+                ParentFont = False
+                Font.Style = [fsBold]
+                Align = alClient
+                TabOrder = 1
+                ReadOnly = True
+                ClientEvents.ExtEvents.Strings = (
+                  
+                    'afterrender=function afterrender(sender, eOpts)'#13#10'{'#13#10'  Ext.create' +
+                    '('#39'Ext.tip.ToolTip'#39', {'#13#10'   target: sender.getEl(),'#13#10'   showDelay:' +
+                    '50,'#13#10'   hideDelay: 50,'#13#10'   html: "Numero do Patrim'#244'nio do produt' +
+                    'o"'#13#10'  });'#13#10'}')
+              end
+            end
+            object UniLabel9: TUniLabel
+              Left = 360
+              Top = 25
+              Width = 62
+              Height = 13
+              Hint = ''
+              Caption = 'Patrimonio'
+              ParentFont = False
+              Font.Style = [fsBold]
+              ParentColor = False
+              Color = clGradientInactiveCaption
+              TabOrder = 11
             end
           end
         end
@@ -551,7 +629,7 @@ object fraSaida: TfraSaida
     end
     object BtCan: TUniFSButton
       AlignWithMargins = True
-      Left = 80
+      Left = 42
       Top = 6
       Width = 30
       Height = 30
@@ -576,34 +654,7 @@ object fraSaida: TfraSaida
       TabOrder = 2
       ClientEvents.Enabled = False
       OnClick = BtCanClick
-    end
-    object BtGrv: TUniFSButton
-      AlignWithMargins = True
-      Left = 42
-      Top = 6
-      Width = 30
-      Height = 30
-      Hint = ''
-      Margins.Left = 4
-      Margins.Top = 6
-      Margins.Right = 4
-      Margins.Bottom = 6
-      StyleButton = GoogleBlue3Round
-      BadgeText.Text = '0'
-      BadgeText.TextColor = '#FFFFFF'
-      BadgeText.TextSize = 10
-      BadgeText.TextStyle = 'bold'
-      BadgeText.BackgroundColor = '#D50000'
-      Caption = '<i class="fas fa-save"></i>'
-      Align = alLeft
-      ParentFont = False
-      Font.Color = clWhite
-      Font.Height = -13
-      Font.Name = 'Roboto'
-      Font.Style = [fsBold]
-      TabOrder = 3
-      ClientEvents.Enabled = False
-      OnClick = BtGrvClick
+      ExplicitLeft = 80
     end
     object BtInc: TUniFSButton
       AlignWithMargins = True
@@ -629,7 +680,7 @@ object fraSaida: TfraSaida
       Font.Height = -13
       Font.Name = 'Roboto'
       Font.Style = [fsBold]
-      TabOrder = 4
+      TabOrder = 3
       ClientEvents.Enabled = False
       OnClick = BtIncClick
     end
@@ -641,7 +692,7 @@ object fraSaida: TfraSaida
       Hint = ''
       Visible = False
       Caption = '.'
-      TabOrder = 5
+      TabOrder = 4
     end
   end
   object dsSaida: TDataSource
@@ -673,8 +724,9 @@ object fraSaida: TfraSaida
     CancelButtonText = 'N'#227'o'
     ConfirmButtonColor = clMaroon
     CancelButtonColor = 6835774
-    Width = 350
+    Width = 500
     Padding = 20
+    ShowLoaderOnConfirm = True
     OnDismiss = UniSweetAlert1Dismiss
     OnConfirm = UniSweetAlert1Confirm
     Left = 892

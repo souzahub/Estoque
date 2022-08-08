@@ -237,7 +237,7 @@ end;
 
 procedure TfrCadastroUsuario.UniComboBox1Change(Sender: TObject);
 begin
-  showMessage(UniComboBox1.text);
+//  showMessage(UniComboBox1.text);
 end;
 
 procedure TfrCadastroUsuario.UniFrameCreate(Sender: TObject);

@@ -12,7 +12,6 @@ uses
   uFuncoes in 'uFuncoes.pas',
   uFrBalanco in 'uFrBalanco.pas' {frBalanco: TUniFrame},
   uFrEntrada in 'uFrEntrada.pas' {frEntrada: TUniFrame},
-  uFrSaida in 'uFrSaida.pas' {fraSaida: TUniFrame},
   uFormBuscaFornec in 'uFormBuscaFornec.pas' {formBuscaFornec: TUniForm},
   uFormBuscaProduto in 'uFormBuscaProduto.pas' {formBuscaProduto: TUniForm},
   uformCadGrupo in 'uformCadGrupo.pas' {formCadGrupo: TUniForm},
@@ -22,7 +21,12 @@ uses
   uFrRelatorioEstoque in 'uFrRelatorioEstoque.pas' {frRelatorioEstoque: TUniFrame},
   relatFornec in 'relatFornec.pas' {formRelatFornec: TUniForm},
   uFrLogSys in 'uFrLogSys.pas' {frLogSys: TUniFrame},
-  uFrEstoque in 'uFrEstoque.pas' {frEstoque: TUniFrame};
+  uFrEstoque in 'uFrEstoque.pas' {frEstoque: TUniFrame},
+  uFormTranferencia in 'uFormTranferencia.pas' {formTranferencia: TUniForm},
+  uFormInfoEstoque in 'uFormInfoEstoque.pas' {formInfoEstoque: TUniForm},
+  uFormIProdutoSaida in 'uFormIProdutoSaida.pas' {formIProdutoSaida: TUniForm},
+  uFormInfoEntrada in 'uFormInfoEntrada.pas' {formInfoEntrada: TUniForm},
+  uFrSaida in 'uFrSaida.pas' {fraSaida: TUniFrame};
 
 {$R *.res}
 

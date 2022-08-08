@@ -149,10 +149,6 @@ type
     IntegerField9: TIntegerField;
     StringField9: TStringField;
     IntegerField11: TIntegerField;
-    FloatField5: TFloatField;
-    IntegerField12: TIntegerField;
-    StringField10: TStringField;
-    StringField11: TStringField;
     RDWEstoqueBALANCAO: TIntegerField;
     RDWEstoqueDTBALANCAO: TSQLTimeStampField;
     RDWBalanco: TRESTDWClientSQL;
@@ -177,6 +173,19 @@ type
     RDWAtualizaBalancoDTBALANCAO: TSQLTimeStampField;
     RDWAtualizaBalancoGRUPO: TStringField;
     RDWSaidaPRINT: TStringField;
+    RDWEstoqueTRANSF: TStringField;
+    RDWEstoqueLOCALPRODUTO: TStringField;
+    RDWEstoqueRelatBALANCAO: TIntegerField;
+    RDWEstoqueRelatDTBALANCAO: TSQLTimeStampField;
+    RDWEstoqueRelatLOCALPRODUTO: TStringField;
+    RDWEstoqueOBS: TMemoField;
+    RDWEntradaOBS: TMemoField;
+    RDWMOVIENTRADAOBS: TMemoField;
+    RDWMOVIENTRADACUSTO: TFloatField;
+    RDWMOVIENTRADACPRODUTO: TIntegerField;
+    RDWMOVIENTRADALOCALPRODUTO: TStringField;
+    RDWMOVIENTRADAPATRIMONIO: TStringField;
+    RDWEstoqueI_SAIDA: TStringField;
     procedure RDWEntradaTIPOGetText(Sender: TField; var Text: string;
       DisplayText: Boolean);
     procedure RDWEstoquePRECOGetText(Sender: TField; var Text: string;
@@ -187,6 +196,12 @@ type
       DisplayText: Boolean);
     procedure RDWSaidaPRINTGetText(Sender: TField; var Text: string;
       DisplayText: Boolean);
+    procedure RDWEstoqueTRANSFGetText(Sender: TField; var Text: string;
+      DisplayText: Boolean);
+    procedure RDWEstoqueI_SAIDAGetText(Sender: TField; var Text: string;
+      DisplayText: Boolean);
+    procedure RDWEstoque2TRANSFGetText(Sender: TField;
+      var Text: string; DisplayText: Boolean);
   private
     { Private declarations }
   public
@@ -223,6 +238,13 @@ begin
       Text := 'USADO';
 end;
 
+procedure TdmDados.RDWEstoqueI_SAIDAGetText(Sender: TField;
+  var Text: string; DisplayText: Boolean);
+begin
+ if DisplayText then
+  Text := '<i title="Itens" class="x-fa fa-lg fa fa-info-circle"; style="color:#3442a8;cursor:pointer;font-style: normal;">&nbsp</i>';
+end;
+
 procedure TdmDados.RDWEstoquePRECOGetText(Sender: TField; var Text: string;
   DisplayText: Boolean);
 begin
@@ -230,11 +252,20 @@ begin
 
 end;
 
+procedure TdmDados.RDWEstoqueTRANSFGetText(Sender: TField;
+  var Text: string; DisplayText: Boolean);
+begin
+ if DisplayText then
+  begin
+    Text :='<span title="Editar" style="cursor:pointer">  <button type="button" class="btn btn-primary btn-sm" enable> Tranferir </button> </span>';
+  end;
+end;
+
 procedure TdmDados.RDWEstoqueVISUALIZARGetText(Sender: TField;
   var Text: string; DisplayText: Boolean);
 begin
    if DisplayText then
-  Text := '<i title="Imagem" class="x-fa fa-lg fa fa-info-circle"; style="color:#3442a8;cursor:pointer;font-style: normal;">&nbsp</i>';
+  Text := '<i title="Informações" class="x-fa fa-lg fa fa-info-circle"; style="color:#3442a8;cursor:pointer;font-style: normal;">&nbsp</i>';
 end;
 
 procedure TdmDados.RDWSaidaPRINTGetText(Sender: TField; var Text: string;
@@ -243,6 +274,15 @@ begin
    // chama o botao do boodstrap
  if DisplayText then
   Text := '<i title="Ativo" class="x-fa fa-lg fa-print"; style="color:#3442a8;cursor:pointer;font-style: normal;">&nbsp</i>';
+end;
+
+procedure TdmDados.RDWEstoque2TRANSFGetText(Sender: TField;
+  var Text: string; DisplayText: Boolean);
+begin
+ if DisplayText then
+  begin
+    Text :='<span title="Editar" style="cursor:pointer">  <button type="button" class="btn btn-primary btn-sm" enable> Tranferir </button> </span>';
+  end;
 end;
 
 initialization

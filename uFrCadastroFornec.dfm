@@ -92,6 +92,7 @@ object frCadastroFornec: TfrCadastroFornec
           Caption = ''
           Color = clNone
           LayoutConfig.Cls = 'cor1'
+          ExplicitLeft = 37
           ScrollHeight = 522
           ScrollWidth = 1034
           object edNome: TUniEdit

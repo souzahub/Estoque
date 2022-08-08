@@ -157,6 +157,7 @@ $(PreBuildEvent)]]></PreBuildEvent>
         <PreBuildEvent><![CDATA[taskkill /f /im $(OUTPUTFILENAME) 2>
 1 || exit /B 0
 $(PreBuildEvent)]]></PreBuildEvent>
+        <DCC_DcuOutput>.\dcu</DCC_DcuOutput>
     </PropertyGroup>
     <Import Project="Win32\Debug\files\img\estoque_ti.optset" Condition="'$(Cfg_1_Win32)'!='' And Exists('Win32\Debug\files\img\estoque_ti.optset')"/>
     <ItemGroup>
@@ -206,11 +207,6 @@ $(PreBuildEvent)]]></PreBuildEvent>
         </DCCReference>
         <DCCReference Include="uFrEntrada.pas">
             <Form>frEntrada</Form>
-            <FormType>dfm</FormType>
-            <DesignClass>TUniFrame</DesignClass>
-        </DCCReference>
-        <DCCReference Include="uFrSaida.pas">
-            <Form>fraSaida</Form>
             <FormType>dfm</FormType>
             <DesignClass>TUniFrame</DesignClass>
         </DCCReference>
@@ -264,6 +260,31 @@ $(PreBuildEvent)]]></PreBuildEvent>
             <FormType>dfm</FormType>
             <DesignClass>TUniFrame</DesignClass>
         </DCCReference>
+        <DCCReference Include="uFormTranferencia.pas">
+            <Form>formTranferencia</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TUniForm</DesignClass>
+        </DCCReference>
+        <DCCReference Include="uFormInfoEstoque.pas">
+            <Form>formInfoEstoque</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TUniForm</DesignClass>
+        </DCCReference>
+        <DCCReference Include="uFormIProdutoSaida.pas">
+            <Form>formIProdutoSaida</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TUniForm</DesignClass>
+        </DCCReference>
+        <DCCReference Include="uFormInfoEntrada.pas">
+            <Form>formInfoEntrada</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TUniForm</DesignClass>
+        </DCCReference>
+        <DCCReference Include="uFrSaida.pas">
+            <Form>fraSaida</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TUniFrame</DesignClass>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -282,7 +303,6 @@ $(PreBuildEvent)]]></PreBuildEvent>
         <BorlandProject>
             <Delphi.Personality>
                 <Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\bcboffice2k260.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\DataExplorerDBXPluginEnt260.bpl">DBExpress Enterprise Data Explorer Integration</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\bcbofficexp260.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dcloffice2k260.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>

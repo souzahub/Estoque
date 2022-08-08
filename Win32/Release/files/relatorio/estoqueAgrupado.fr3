@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<TfrxReport Tag="1" Version="6.5.15" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="167935" PreviewOptions.Zoom="1" PrintOptions.Printer="Padrão" PrintOptions.PrintOnSheet="0" ReportOptions.CreateDate="43949,6737074653" ReportOptions.Description.Text="" ReportOptions.LastChange="44743,5357207986" ScriptLanguage="PascalScript" ScriptText.Text="procedure MasterData1OnBeforePrint(Sender: TfrxComponent);&#13;&#10;begin&#13;&#10;&#13;&#10;end;&#13;&#10;&#13;&#10;begin&#13;&#10;&#13;&#10;end." OnReportPrint="frxReportOnReportPrint">
+  <Datasets>
+    <item DataSet="frxDBDataset2" DataSetName="frxDBAgrupada"/>
+  </Datasets>
+  <Variables>
+    <item Name=" variavel"/>
+    <item Name="xNumeroVenda"/>
+    <item Name="xTotalResesVenda"/>
+    <item Name="xPesoBrutoVenda"/>
+    <item Name="xPesoLiquidoVenda"/>
+    <item Name="xPesoArrobaVenda"/>
+    <item Name="xPesoMedioVenda"/>
+    <item Name="xTotalVenda"/>
+    <item Name="xTotalResesCompra"/>
+    <item Name="xPesoBrutoCompra"/>
+    <item Name="xPesoLiquidoCompra"/>
+    <item Name="xPesoArrobaCompra"/>
+    <item Name="xPesoMedioCompra"/>
+    <item Name="xTotalCompra"/>
+    <item Name="xTotalReses"/>
+    <item Name="xPesoBruto"/>
+    <item Name="xPesoLiquido"/>
+    <item Name="xPesoArroba"/>
+    <item Name="xPesoMedio"/>
+    <item Name="xTotal"/>
+    <item Name="xREGIAO"/>
+  </Variables>
+  <TfrxDataPage Name="Data" Height="1000" Left="0" Top="0" Width="1000"/>
+  <TfrxReportPage Name="Page1" PaperWidth="210" PaperHeight="297" PaperSize="256" LeftMargin="10" RightMargin="10" TopMargin="10" BottomMargin="10" ColumnWidth="0" ColumnPositions.Text="" Frame.Typ="0" MirrorMode="0" PrintIfEmpty="False" PrintOnPreviousPage="True" ResetPageNumbers="True" HGuides.Text="" VGuides.Text="">
+    <TfrxReportTitle Name="ReportTitle1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Frame.Typ="0" Height="140,0071119" Left="0" Top="18,89765" Width="718,1107">
+      <TfrxMemoView Name="Memo26" Align="baRight" AllowVectorExport="True" Left="648,73245621" Top="0" Width="40,67134859" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="0" Frame.Typ="0" ParentFont="False" Text="Página:"/>
+      <TfrxSysMemoView Name="SysMemo3" Align="baRight" AllowVectorExport="True" Left="689,4038048" Top="0" Width="28,7068952" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="0" Frame.Typ="0" ParentFont="False" Text="[PAGE#]"/>
+      <TfrxMemoView Name="Memo27" Align="baLeft" AllowVectorExport="True" Left="0" Top="37,32998456" Width="579,06261717" Height="34,61823761" DataSetName="frxDBDatasetCliente" Font.Charset="1" Font.Color="0" Font.Height="-27" Font.Name="Arial" Font.Style="1" Frame.Typ="0" ParentFont="False" Text="ESTOQUE ATUAL - AGRUPADO"/>
+      <TfrxMemoView Name="Memo66" Align="baLeft" AllowVectorExport="True" Left="0" Top="3,95949286" Width="31,14753907" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="0" Frame.Typ="0" ParentFont="False" Text="Data:"/>
+      <TfrxSysMemoView Name="SysMemo4" Align="baLeft" AllowVectorExport="True" Left="31,14753907" Top="3,95949286" Width="61,08784758" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="0" Frame.Typ="0" ParentFont="False" Text="[DATE]"/>
+      <TfrxLineView Name="Line2" Align="baCenter" AllowVectorExport="True" Left="0,000231890000000012" Top="74,43568333" Width="718,11023622" Height="0" Color="0" Frame.Typ="4"/>
+      <TfrxLineView Name="Line3" Align="baCenter" AllowVectorExport="True" Left="0,000231890000000012" Top="28,72139762" Width="718,11023622" Height="0" Color="0" Frame.Typ="4"/>
+      <TfrxMemoView Name="Memo1" AllowVectorExport="True" Left="0,95238095" Top="103,00711191" Width="88,88961059" Height="32,23097113" Font.Charset="1" Font.Color="0" Font.Height="-20" Font.Name="Arial" Font.Style="1" Frame.Typ="0" Fill.BackColor="-16777216" ParentFont="False" Text="REGIÃO -"/>
+      <TfrxMemoView Name="Memo2" Align="baLeft" AllowVectorExport="True" Left="89,84199154" Top="103,00711191" Width="629,29133858" Height="32,23097113" DataSet="frxDBDataset1" DataSetName="frxDBDetalhes" Font.Charset="1" Font.Color="0" Font.Height="-20" Font.Name="Arial" Font.Style="1" Frame.Typ="0" Fill.BackColor="-16777216" HideZeros="True" ParentFont="False" Text="[(&#60;xREGIAO&#62;)]"/>
+      <TfrxLineView Name="Line6" Align="baCenter" AllowVectorExport="True" Left="0,000231890000000012" Top="134,69047572" Width="718,11023622" Height="0" Color="0" Frame.Typ="4"/>
+    </TfrxReportTitle>
+    <TfrxPageHeader Name="PageHeader1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Frame.Typ="0" Height="18,86765621" Left="0" Top="181,41744" Width="718,1107"/>
+    <TfrxMasterData Name="MDSRegiao" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Frame.Typ="0" Height="27,1014097" Left="0" Top="340,1577" Width="718,1107" ColumnWidth="0" ColumnGap="0" DataSet="frxDBDataset2" DataSetName="frxDBAgrupada" RowCount="0">
+      <TfrxMemoView Name="Memo22" AllowVectorExport="True" Left="0,95238097" Top="3,76452944" Width="122,22294392" Height="18,8976378" DataField="DFAIXA" DataSet="frxDBDataset2" DataSetName="frxDBAgrupada" Font.Charset="1" Font.Color="0" Font.Height="-15" Font.Name="Arial" Font.Style="0" Frame.Typ="0" ParentFont="False" Text="[frxDBAgrupada.&#34;DFAIXA&#34;]"/>
+      <TfrxMemoView Name="Memo23" AllowVectorExport="True" Left="135,72853395" Top="3,77952756" Width="83,3175853" Height="18,8976378" DataField="RESES" DataSet="frxDBDataset2" DataSetName="frxDBAgrupada" DisplayFormat.FormatStr="%2.2n" DisplayFormat.Kind="fkNumeric" Font.Charset="1" Font.Color="0" Font.Height="-15" Font.Name="Arial" Font.Style="0" Frame.Typ="0" HideZeros="True" ParentFont="False" Text="[frxDBAgrupada.&#34;RESES&#34;]"/>
+      <TfrxMemoView Name="Memo24" AllowVectorExport="True" Left="223,5695538" Top="3,77952756" Width="84,43494563" Height="18,8976378" DataField="KG" DataSet="frxDBDataset2" DataSetName="frxDBAgrupada" DisplayFormat.FormatStr="%2.2n" DisplayFormat.Kind="fkNumeric" Font.Charset="1" Font.Color="0" Font.Height="-15" Font.Name="Arial" Font.Style="0" Frame.Typ="0" HideZeros="True" ParentFont="False" Text="[frxDBAgrupada.&#34;KG&#34;]"/>
+      <TfrxMemoView Name="Memo38" AllowVectorExport="True" Left="323,18260216" Top="3,77952756" Width="81,25984252" Height="18,8976378" DataField="ARROBA" DataSet="frxDBDataset2" DataSetName="frxDBAgrupada" DisplayFormat.FormatStr="%2.2n" DisplayFormat.Kind="fkNumeric" Font.Charset="1" Font.Color="0" Font.Height="-15" Font.Name="Arial" Font.Style="0" Frame.Typ="0" HAlign="haRight" HideZeros="True" ParentFont="False" Text="[frxDBAgrupada.&#34;ARROBA&#34;]"/>
+      <TfrxMemoView Name="Memo39" AllowVectorExport="True" Left="427,34908135" Top="3,77952756" Width="92,7184102" Height="18,8976378" DataField="VFAIXA" DataSet="frxDBDataset2" DataSetName="frxDBAgrupada" DisplayFormat.FormatStr="%2.2n" DisplayFormat.Kind="fkNumeric" Font.Charset="1" Font.Color="0" Font.Height="-15" Font.Name="Arial" Font.Style="0" Frame.Typ="0" HAlign="haRight" HideZeros="True" ParentFont="False" Text="[frxDBAgrupada.&#34;VFAIXA&#34;]"/>
+      <TfrxMemoView Name="Memo40" AllowVectorExport="True" Left="585,94825646" Top="3,77952756" Width="122,30521185" Height="18,8976378" DataField="VARROBA" DataSet="frxDBDataset2" DataSetName="frxDBAgrupada" DisplayFormat.FormatStr="%2.2n" DisplayFormat.Kind="fkNumeric" Font.Charset="1" Font.Color="0" Font.Height="-15" Font.Name="Arial" Font.Style="0" Frame.Typ="0" HAlign="haRight" ParentFont="False" Text="[frxDBAgrupada.&#34;VARROBA&#34;]"/>
+    </TfrxMasterData>
+    <TfrxGroupHeader Name="GroupHeader1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Frame.Typ="0" Height="58,23004304" Left="0" Top="260,78757" Width="718,1107" Condition="frxDBAgrupada.&#34;PERFIL&#34;" KeepTogether="True">
+      <TfrxMemoView Name="Memo31" AllowVectorExport="True" Left="0" Top="3,02362205" Width="67,86651669" Height="18,8976378" Font.Charset="1" Font.Color="0" Font.Height="-15" Font.Name="Arial" Font.Style="1" Frame.Typ="0" Fill.BackColor="-16777216" ParentFont="False" Text="Grupo -"/>
+      <TfrxMemoView Name="Memo32" Align="baLeft" AllowVectorExport="True" Left="67,86651669" Top="3,02362205" Width="650,24371953" Height="18,8976378" DataSet="frxDBDataset2" DataSetName="frxDBAgrupada" Font.Charset="1" Font.Color="0" Font.Height="-15" Font.Name="Arial" Font.Style="1" Frame.Typ="0" Fill.BackColor="-16777216" HideZeros="True" ParentFont="False" Text="[frxDBAgrupada.&#34;PERFIL&#34;]"/>
+      <TfrxLineView Name="Line5" Align="baCenter" AllowVectorExport="True" Left="0,000231890000000012" Top="26,92145904" Width="718,11023622" Height="0" Color="0" Frame.Typ="4"/>
+      <TfrxMemoView Name="Memo3" AllowVectorExport="True" Left="0,95238094" Top="34,01574803" Width="46,03246774" Height="18,8976378" DataSet="frxDBDataset2" DataSetName="frxDBAgrupada" Font.Charset="1" Font.Color="0" Font.Height="-15" Font.Name="Arial" Font.Style="1" Frame.Typ="0" ParentFont="False" Text="Faixa"/>
+      <TfrxMemoView Name="Memo4" AllowVectorExport="True" Left="135,23809524" Top="34,01574803" Width="51,74675345" Height="18,8976378" Font.Charset="1" Font.Color="0" Font.Height="-15" Font.Name="Arial" Font.Style="1" Frame.Typ="0" ParentFont="False" Text="Quant."/>
+      <TfrxMemoView Name="Memo5" AllowVectorExport="True" Left="224,76190475" Top="34,01574803" Width="66,03246773" Height="18,8976378" Font.Charset="1" Font.Color="0" Font.Height="-15" Font.Name="Arial" Font.Style="1" Frame.Typ="0" ParentFont="False" Text="Peso Kg"/>
+      <TfrxMemoView Name="Memo19" AllowVectorExport="True" Left="339,04761903" Top="34,01574803" Width="66,98484869" Height="18,8976378" Font.Charset="1" Font.Color="0" Font.Height="-15" Font.Name="Arial" Font.Style="1" Frame.Typ="0" ParentFont="False" Text="Peso @"/>
+      <TfrxMemoView Name="Memo20" AllowVectorExport="True" Left="424,76190474" Top="34,01574803" Width="105,08008679" Height="18,8976378" Font.Charset="1" Font.Color="0" Font.Height="-15" Font.Name="Arial" Font.Style="1" Frame.Typ="0" ParentFont="False" Text="Valor Atual @"/>
+      <TfrxMemoView Name="Memo25" AllowVectorExport="True" Left="609,52380952" Top="34,01574803" Width="104,12770584" Height="18,8976378" Font.Charset="1" Font.Color="0" Font.Height="-15" Font.Name="Arial" Font.Style="1" Frame.Typ="0" ParentFont="False" Text="Valor Total R$"/>
+    </TfrxGroupHeader>
+    <TfrxGroupFooter Name="GroupFooter1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Frame.Typ="0" Height="18,57544906" Left="0" Top="389,29159" Width="718,1107">
+      <TfrxLineView Name="Line4" Align="baCenter" AllowVectorExport="True" Left="0,000231890000000012" Top="0" Width="718,11023622" Height="0" Color="0" Frame.Typ="4"/>
+    </TfrxGroupFooter>
+    <TfrxFooter Name="Footer1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Frame.Typ="0" Height="80,9594797" Left="0" Top="430,86642" Width="718,1107">
+      <TfrxMemoView Name="Memo47" AllowVectorExport="True" Left="0" Top="0" Width="76,50865822" Height="28,42144732" Font.Charset="1" Font.Color="0" Font.Height="-20" Font.Name="Arial" Font.Style="1" Frame.Typ="0" ParentFont="False" Text="TOTAL"/>
+      <TfrxMemoView Name="Memo36" AllowVectorExport="True" Left="323,1496063" Top="30,23622047" Width="81,25984252" Height="18,8976378" DataSet="frxDBDataset1" DataSetName="frxDBDetalhes" DisplayFormat.FormatStr="%2.2n" DisplayFormat.Kind="fkNumeric" Font.Charset="1" Font.Color="0" Font.Height="-15" Font.Name="Arial" Font.Style="1" Frame.Typ="0" HAlign="haRight" HideZeros="True" ParentFont="False" Text="[SUM(&#60;frxDBAgrupada.&#34;ARROBA&#34;&#62;,MDSRegiao)]"/>
+      <TfrxMemoView Name="Memo37" AllowVectorExport="True" Left="427,46456693" Top="30,23622047" Width="92,5984252" Height="18,8976378" DataSet="frxDBDataset1" DataSetName="frxDBDetalhes" DisplayFormat.FormatStr="%2.2n" DisplayFormat.Kind="fkNumeric" Font.Charset="1" Font.Color="0" Font.Height="-15" Font.Name="Arial" Font.Style="1" Frame.Typ="0" HAlign="haRight" HideZeros="True" ParentFont="False" Text="[SUM(&#60;frxDBAgrupada.&#34;VFAIXA&#34;&#62;,MDSRegiao)]"/>
+      <TfrxMemoView Name="Memo41" AllowVectorExport="True" Left="585,82677165" Top="30,23622047" Width="121,3528309" Height="18,8976378" DataSet="frxDBDataset1" DataSetName="frxDBDetalhes" DisplayFormat.FormatStr="%2.2n" DisplayFormat.Kind="fkNumeric" Font.Charset="1" Font.Color="0" Font.Height="-15" Font.Name="Arial" Font.Style="1" Frame.Typ="0" HAlign="haRight" ParentFont="False" Text="[SUM(&#60;frxDBAgrupada.&#34;VARROBA&#34;&#62;,MDSRegiao)]"/>
+      <TfrxMemoView Name="Memo28" AllowVectorExport="True" Left="135,68503937" Top="30,23622047" Width="83,3175853" Height="18,8976378" DataSet="frxDBDataset2" DataSetName="frxDBAgrupada" DisplayFormat.FormatStr="%2.2n" DisplayFormat.Kind="fkNumeric" Font.Charset="1" Font.Color="0" Font.Height="-15" Font.Name="Arial" Font.Style="1" Frame.Typ="0" HideZeros="True" ParentFont="False" Text="[SUM(&#60;frxDBAgrupada.&#34;RESES&#34;&#62;,MDSRegiao)]"/>
+      <TfrxMemoView Name="Memo29" AllowVectorExport="True" Left="223,7480315" Top="30,77581857" Width="84,43494563" Height="18,8976378" DataSet="frxDBDataset2" DataSetName="frxDBAgrupada" DisplayFormat.FormatStr="%2.2n" DisplayFormat.Kind="fkNumeric" Font.Charset="1" Font.Color="0" Font.Height="-15" Font.Name="Arial" Font.Style="1" Frame.Typ="0" HideZeros="True" ParentFont="False" Text="[SUM(&#60;frxDBAgrupada.&#34;KG&#34;&#62;,MDSRegiao)]"/>
+      <TfrxMemoView Name="Memo30" AllowVectorExport="True" Left="77,14285715" Top="-0,65275286" Width="662,36520434" Height="28,34645669" DataSet="frxDBDataset2" DataSetName="frxDBAgrupada" DisplayFormat.FormatStr="%2.2n" DisplayFormat.Kind="fkNumeric" Font.Charset="1" Font.Color="0" Font.Height="-15" Font.Name="Arial" Font.Style="0" Frame.Typ="0" HideZeros="True" ParentFont="False" Text="____________________________________________________________________________________________________"/>
+    </TfrxFooter>
+  </TfrxReportPage>
+</TfrxReport>

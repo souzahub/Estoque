@@ -87,7 +87,6 @@ type
     Usuarios1: TUniMenuItem;
     Log2: TUniMenuItem;
     Sair1: TUniMenuItem;
-    lbOla: TUniLabel;
     UniURLFrame1: TUniURLFrame;
     Poduto1: TUniMenuItem;
     N1: TUniMenuItem;
@@ -95,6 +94,7 @@ type
     relatrio1: TUniMenuItem;
     frxdbBalanco: TfrxDBDataset;
     SweetCancel: TUniSweetAlert;
+    lbOla: TUniLabel;
     procedure mnuUsuarioClick(Sender: TObject);
     procedure xUniLblButtoDrowerClick(Sender: TObject);
     procedure UniFormScreenResize(Sender: TObject; AWidth,

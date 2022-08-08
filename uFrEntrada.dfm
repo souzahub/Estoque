@@ -2,14 +2,14 @@ object frEntrada: TfrEntrada
   Left = 0
   Top = 0
   Width = 1076
-  Height = 630
+  Height = 740
   OnCreate = UniFrameCreate
   TabOrder = 0
   object PnUsuario: TUniPanel
     Left = 0
     Top = 42
     Width = 1076
-    Height = 588
+    Height = 698
     Hint = ''
     Align = alClient
     TabOrder = 0
@@ -18,7 +18,7 @@ object frEntrada: TfrEntrada
       Left = 1
       Top = 1
       Width = 1074
-      Height = 586
+      Height = 696
       Hint = ''
       ActivePage = Tab1
       Align = alClient
@@ -31,13 +31,19 @@ object frEntrada: TfrEntrada
           Left = 5
           Top = 5
           Width = 1056
-          Height = 548
+          Height = 658
           Hint = ''
           Margins.Left = 5
           Margins.Top = 5
           Margins.Right = 5
           Margins.Bottom = 5
           BodyRTL = False
+          ClientEvents.ExtEvents.Strings = (
+            
+              'afterrender=function afterrender(sender, eOpts)'#13#10'{'#13#10'  Ext.create' +
+              '('#39'Ext.tip.ToolTip'#39', {'#13#10'   target: sender.getEl(),'#13#10'   showDelay:' +
+              '50,'#13#10'   hideDelay:50,'#13#10'   html: "Duplo Clique para Alterar a Obs' +
+              'erva'#231#227'o"'#13#10'  });'#13#10'}')
           DataSource = dsEntrada
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgTitleClick, dgFilterClearButton, dgAutoRefreshRow]
           LoadMask.Message = 'Carregando...'
@@ -111,7 +117,7 @@ object frEntrada: TfrEntrada
           Left = 0
           Top = 0
           Width = 1066
-          Height = 558
+          Height = 668
           Hint = ''
           Align = alClient
           Color = clBtnHighlight
@@ -121,7 +127,7 @@ object frEntrada: TfrEntrada
             Left = 3
             Top = 3
             Width = 1058
-            Height = 550
+            Height = 660
             Hint = ''
             AutoScroll = True
             Align = alClient
@@ -129,38 +135,15 @@ object frEntrada: TfrEntrada
             Caption = ''
             Color = clGradientInactiveCaption
             LayoutConfig.Cls = 'cor1'
-            ScrollHeight = 582
+            ScrollHeight = 660
             ScrollWidth = 1058
-            object edDataEntrada: TUniDateTimePicker
-              Left = 32
-              Top = 39
-              Width = 120
-              Hint = ''
-              DateTime = 43854.000000000000000000
-              DateFormat = 'dd/MM/yyyy'
-              TimeFormat = 'HH:mm:ss'
-              ReadOnly = True
-              TabOrder = 1
-              Color = 12189695
-            end
-            object lbEmissao: TUniLabel
-              Left = 32
-              Top = 20
-              Width = 91
-              Height = 13
-              Hint = ''
-              Caption = 'Data da Entrada'
-              ParentFont = False
-              Font.Style = [fsBold]
-              TabOrder = 2
-            end
             object uPn1: TUniPanel
-              Left = 32
-              Top = 84
-              Width = 833
+              Left = 33
+              Top = 16
+              Width = 856
               Height = 197
               Hint = ''
-              TabOrder = 3
+              TabOrder = 1
               BorderStyle = ubsFrameLowered
               Caption = ''
               Color = clWhite
@@ -303,22 +286,45 @@ object frEntrada: TfrEntrada
                 LayoutConfig.Cls = 'circulo'
                 OnClick = btClienteClick
               end
+              object edDataEntrada: TUniDateTimePicker
+                Left = 713
+                Top = 44
+                Width = 120
+                Hint = ''
+                DateTime = 43854.000000000000000000
+                DateFormat = 'dd/MM/yyyy'
+                TimeFormat = 'HH:mm:ss'
+                ReadOnly = True
+                TabOrder = 13
+                Color = 12189695
+              end
+              object lbEmissao: TUniLabel
+                Left = 713
+                Top = 25
+                Width = 91
+                Height = 13
+                Hint = ''
+                Caption = 'Data da Entrada'
+                ParentFont = False
+                Font.Style = [fsBold]
+                TabOrder = 14
+              end
             end
             object UniPanel1: TUniPanel
-              Left = 32
-              Top = 312
-              Width = 833
-              Height = 270
+              Left = 33
+              Top = 232
+              Width = 857
+              Height = 305
               Hint = ''
               AutoScroll = True
               ParentFont = False
-              TabOrder = 4
+              TabOrder = 2
               BorderStyle = ubsFrameLowered
               Caption = ''
               Color = clWhite
               LayoutConfig.Cls = 'borda'
-              ScrollHeight = 270
-              ScrollWidth = 833
+              ScrollHeight = 305
+              ScrollWidth = 857
               object lbQuantidade: TUniLabel
                 Left = 21
                 Top = 24
@@ -394,7 +400,7 @@ object frEntrada: TfrEntrada
               object edLocal: TUniEdit
                 Left = 198
                 Top = 43
-                Width = 435
+                Width = 475
                 Hint = ''
                 CharCase = ecUpperCase
                 MaxLength = 80
@@ -419,8 +425,8 @@ object frEntrada: TfrEntrada
                 TabOrder = 8
               end
               object UniLabel3: TUniLabel
-                Left = 21
-                Top = 200
+                Left = 706
+                Top = 24
                 Width = 62
                 Height = 13
                 Hint = ''
@@ -430,8 +436,8 @@ object frEntrada: TfrEntrada
                 TabOrder = 9
               end
               object edPatrimonio: TUniEdit
-                Left = 21
-                Top = 219
+                Left = 706
+                Top = 43
                 Width = 111
                 Hint = ''
                 CharCase = ecUpperCase
@@ -446,8 +452,8 @@ object frEntrada: TfrEntrada
                     'o"'#13#10'  });'#13#10'}')
               end
               object UniLabel1: TUniLabel
-                Left = 198
-                Top = 85
+                Left = 152
+                Top = 101
                 Width = 89
                 Height = 13
                 Hint = ''
@@ -457,10 +463,10 @@ object frEntrada: TfrEntrada
                 TabOrder = 11
               end
               object uniRGTipo: TUniRadioGroup
-                Left = 198
-                Top = 104
-                Width = 91
-                Height = 62
+                Left = 152
+                Top = 120
+                Width = 169
+                Height = 73
                 Hint = ''
                 Items.Strings = (
                   'NOVO'
@@ -473,6 +479,53 @@ object frEntrada: TfrEntrada
                 Font.Style = [fsBold]
                 ParentColor = False
                 Color = clWhite
+              end
+              object memoObs: TUniMemo
+                Left = 368
+                Top = 120
+                Width = 449
+                Height = 80
+                Hint = ''
+                ParentFont = False
+                TabOrder = 13
+              end
+              object lbObs: TUniLabel
+                Left = 368
+                Top = 101
+                Width = 73
+                Height = 13
+                Hint = ''
+                Caption = 'Observa'#231#245'es'
+                ParentFont = False
+                Font.Style = [fsBold]
+                TabOrder = 14
+              end
+              object BtGrv: TUniFSButton
+                AlignWithMargins = True
+                Left = 683
+                Top = 238
+                Width = 131
+                Height = 35
+                Hint = ''
+                Margins.Left = 4
+                Margins.Top = 6
+                Margins.Right = 4
+                Margins.Bottom = 6
+                StyleButton = GoogleBlue3Round
+                BadgeText.Text = '0'
+                BadgeText.TextColor = '#FFFFFF'
+                BadgeText.TextSize = 10
+                BadgeText.TextStyle = 'bold'
+                BadgeText.BackgroundColor = '#D50000'
+                Caption = 'SALVAR'
+                ParentFont = False
+                Font.Color = clWhite
+                Font.Height = -13
+                Font.Name = 'Roboto'
+                Font.Style = [fsBold]
+                TabOrder = 15
+                ClientEvents.Enabled = False
+                OnClick = BtGrvClick
               end
             end
           end
@@ -535,7 +588,7 @@ object frEntrada: TfrEntrada
     end
     object BtCan: TUniFSButton
       AlignWithMargins = True
-      Left = 118
+      Left = 80
       Top = 6
       Width = 30
       Height = 30
@@ -560,34 +613,7 @@ object frEntrada: TfrEntrada
       TabOrder = 3
       ClientEvents.Enabled = False
       OnClick = BtCanClick
-    end
-    object BtGrv: TUniFSButton
-      AlignWithMargins = True
-      Left = 80
-      Top = 6
-      Width = 30
-      Height = 30
-      Hint = ''
-      Margins.Left = 4
-      Margins.Top = 6
-      Margins.Right = 4
-      Margins.Bottom = 6
-      StyleButton = GoogleBlue3Round
-      BadgeText.Text = '0'
-      BadgeText.TextColor = '#FFFFFF'
-      BadgeText.TextSize = 10
-      BadgeText.TextStyle = 'bold'
-      BadgeText.BackgroundColor = '#D50000'
-      Caption = '<i class="fas fa-save"></i>'
-      Align = alLeft
-      ParentFont = False
-      Font.Color = clWhite
-      Font.Height = -13
-      Font.Name = 'Roboto'
-      Font.Style = [fsBold]
-      TabOrder = 4
-      ClientEvents.Enabled = False
-      OnClick = BtGrvClick
+      ExplicitLeft = 118
     end
     object BtAlt: TUniFSButton
       AlignWithMargins = True
@@ -615,7 +641,7 @@ object frEntrada: TfrEntrada
       Font.Height = -13
       Font.Name = 'Roboto'
       Font.Style = [fsBold]
-      TabOrder = 5
+      TabOrder = 4
       ClientEvents.Enabled = False
       OnClick = BtAltClick
     end
@@ -643,7 +669,7 @@ object frEntrada: TfrEntrada
       Font.Height = -13
       Font.Name = 'Roboto'
       Font.Style = [fsBold]
-      TabOrder = 6
+      TabOrder = 5
       ClientEvents.Enabled = False
       OnClick = BtIncClick
     end
@@ -668,6 +694,7 @@ object frEntrada: TfrEntrada
   end
   object dsEntrada: TDataSource
     DataSet = dmDados.RDWEntrada
+    OnDataChange = dsEntradaDataChange
     Left = 777
     Top = 9
   end
@@ -684,6 +711,7 @@ object frEntrada: TfrEntrada
     CancelButtonColor = 6835774
     Width = 400
     Padding = 20
+    ShowLoaderOnConfirm = True
     OnDismiss = UniSweetAlert1Dismiss
     OnConfirm = UniSweetAlert1Confirm
     Left = 596
@@ -738,7 +766,7 @@ object frEntrada: TfrEntrada
     ShowLoaderOnConfirm = True
     OnDismiss = SweetCancelDismiss
     OnConfirm = SweetCancelConfirm
-    Left = 80
-    Top = 120
+    Left = 816
+    Top = 200
   end
 end

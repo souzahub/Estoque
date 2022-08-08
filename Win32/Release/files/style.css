@@ -381,6 +381,36 @@ text-decoration: none !important;
     width: 16px;
 }
 
+/* cmodificar Ragio Group TODOS */
+
+.x-fieldset-default {
+    border: 1px solid #000000;; /* bordas lateral e borda inferior altura*/
+    padding: 9px 20px!important;
+    margin: 0!important;
+    border-radius: 4px!important;
+}
+.x-fieldset {
+    border-top: 1px solid #000000 !important; /* borda superior */
+    background: #ffffff; /* fundo  */
+    position: static;
+}
+
+.x-form-radio-default {
+    font: 13px/1 FontAwesome;
+    color: #000000 !important; /* circulo  */
+}
+
+.x-form-cb-label-default {
+    margin-top: 1px!important;
+    font: 300 13px/17px 'Roboto','Helvetica Neue',helvetica,arial,verdana,sans-serif!important;
+    color: #000000!important; /* fundo  */
+}
+
+.x-form-cb-checked .x-form-radio-default {
+    font: 14px/1 'Font Awesome 5 Free';
+}
+/* ---fim MOFIFICA RADIOGR */
+
 
 
 
